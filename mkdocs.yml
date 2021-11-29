@@ -1,6 +1,7 @@
 site_name: Lethean Documentaton
 theme:
   name: material
+  font: false
   palette:
     - media: "(prefers-color-scheme: light)"
       scheme: default
