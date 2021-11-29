@@ -3,6 +3,7 @@ copyright: Copyright &copy; 2017 - 2022 LetheanVPN
 repo_url: https://github.com/letheanVPN/documentation
 repo_name: letheanVPN/documentation
 edit_uri: edit/main/docs/
+site_url: https://docs.lt.hn
 theme:
   name: material
   font: false
