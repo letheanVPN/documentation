@@ -1,6 +1,6 @@
 # Wallet RPC
 
-Service API Doc: https://letheanvpn.github.io/app/injectables/WalletService.html
+Service API Doc: [WalletService](https://letheanvpn.github.io/app/injectables/WalletService.html)
 
 Access with Angular DI
 
