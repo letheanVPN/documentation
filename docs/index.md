@@ -1,17 +1,15 @@
-# Welcome to MkDocs
+# Lethean Technical Documentation
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+This website is for technical explanations and is aimed at developers, a user-friendly version will follow in the coming months.
 
-## Commands
+## Services
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
+* [FileService](services/filesystem.md)
 
-## Project layout
+## Submodules
 
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+- [Blockchain](https://github.com/letheanVPN/blockchain)
+- [Clientside Service](https://github.com/letheanVPN/lthn)
+- [GUI App](https://github.com/letheanVPN/app)
+- [Translations](https://github.com/letheanVPN/i18n)
+- [Config Templates](https://github.com/letheanVPN/config-templates)

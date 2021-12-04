@@ -35,19 +35,6 @@ theme:
     - header.autohide
 extra:
   generator: false
-  alternate:
-    - name: English
-      link: /en/
-      lang: en
-    - name: Russian
-      link: /ru/
-      lang: ru
-    - name: Chinese (Simplified)
-      link: /zh/
-      lang: zh
-    - name: Spanish
-      link: /es/
-      lang: es
   social:
     - icon: fontawesome/brands/twitter
       link: https://twitter.com/letheanVPN
@@ -63,8 +50,6 @@ plugins:
   - search:
       lang:
         - en
-        - ru
-        - es
 markdown_extensions:
   - abbr
   - admonition
