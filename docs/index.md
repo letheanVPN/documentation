@@ -5,6 +5,7 @@ This website is for technical explanations and is aimed at developers, a user-fr
 ## Services
 
 * [FileService](services/filesystem.md)
+* [WalletService](services/wallet.md)
 
 ## Submodules
 
