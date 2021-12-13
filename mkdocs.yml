@@ -12,14 +12,18 @@ theme:
     repo: fontawesome/brands/git-alt
   palette:
     - media: "(prefers-color-scheme: light)"
+      primary: light-blue
+      accent: blue
       scheme: default
       toggle:
-        icon: material/toggle-switch-off-outline
+        icon: material/lightbulb
         name: Switch to dark mode
     - media: "(prefers-color-scheme: dark)"
+      primary: blue-grey
+      accent: blue
       scheme: slate
       toggle:
-        icon: material/toggle-switch
+        icon: material/lightbulb-outline
         name: Switch to light mode
   features:
     - navigation.instant
@@ -33,6 +37,8 @@ theme:
     - search.highlight
     - search.share
     - header.autohide
+    - announce.dismiss
+
 extra:
   generator: false
   social:
@@ -42,7 +48,9 @@ extra:
       link: https://hub.docker.com/u/lthn
     - icon: fontawesome/brands/github
       link: https://github.com/letheanVPN
+
 plugins:
+  - social
   - git-revision-date-localized:
       type: date
       fallback_to_build_date: true
