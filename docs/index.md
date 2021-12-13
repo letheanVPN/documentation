@@ -1,8 +1,4 @@
-# Lethean Technical Documentation
-
-This website is for technical explanations and is aimed at developers, a user-friendly version will follow in the coming months.
-
-## Development Process
+# Development Process
 
 New code should be created on forks/feature branches and committed to `main` for testing.
 
