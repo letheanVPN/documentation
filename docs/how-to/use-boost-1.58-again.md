@@ -1,10 +1,10 @@
 # Boost 1.58 options
 
-This helped me, need a place to save the information.
-
 ## Ubuntu
 
-There is a ppa you can use to get boost 1.58
+There is a ppa you can use to get boost 1.58.
+
+https://launchpad.net/~kzemek/+archive/ubuntu/boost
 
 ```
 add-apt-repository ppa:kzemek/boost -y
