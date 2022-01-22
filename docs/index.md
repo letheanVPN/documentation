@@ -7,6 +7,7 @@ once happy `main` is stable a PR to `alpha` should be made to start finalising a
 ## Branch Rules
 
 - `main` Development is done on main via forks and PR's
+- `dev` Dont play here, unless you are going to PLAY
 - `alpha` Can diverge from `main` to hide not ready features, PUSH's are OK, backport to `main`.
 - `beta` Only PR's from `alpha` are allowed, no direct changes allowed here.
 - `rc` Release candidates, Can diverge from `beta` within scope, BugFixes only.
