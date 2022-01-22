@@ -8,6 +8,8 @@ theme:
   name: material
   font: false
   language: en
+  custom_dir: overrides
+  logo: images/lethean-logo.png
   icon:
     repo: fontawesome/brands/git-alt
   palette:
@@ -29,6 +31,7 @@ theme:
     - navigation.instant
     - navigation.tracking
     - navigation.tabs
+    - navigation.tabs.sticky
     - navigation.sections
     - navigation.expand
     - navigation.indexes
@@ -38,6 +41,7 @@ theme:
     - search.share
     - header.autohide
     - announce.dismiss
+    - toc.integrate
 
 extra:
   generator: false
@@ -48,7 +52,8 @@ extra:
       link: https://hub.docker.com/u/lthn
     - icon: fontawesome/brands/github
       link: https://github.com/letheanVPN
-
+extra_css:
+  - stylesheets/extra.css
 plugins:
   - social
   - git-revision-date-localized:
@@ -65,6 +70,8 @@ markdown_extensions:
   - def_list
   - footnotes
   - meta
+  - toc:
+      permalink: true
   - tables
   - pymdownx.betterem
   - pymdownx.details
