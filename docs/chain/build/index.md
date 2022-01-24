@@ -22,9 +22,9 @@ ca-certificates git
     this to be worthwhile, the machine should have one core and about 2GB of RAM
     available per thread.
 
-* The resulting executables can be found in `build/release/bin`
+* The resulting executables can be found in `build/<version>/release/bin` for current version it is `build/4.0.0/release/bin`
 
-* Add `PATH="$PATH:$HOME/lethean/build/release/bin"` to `.profile`
+* Add `PATH="$PATH:$HOME/lethean/build/4.0.0/release/bin"` to `.profile`
 
 * Run Lethean with `letheand --detach`
 
@@ -45,3 +45,16 @@ ca-certificates git
 * **Optional**: build documentation in `doc/html` (omit `HAVE_DOT=YES` if `graphviz` is not installed):
 
         HAVE_DOT=YES doxygen Doxyfile
+        
+* **Note**: Cleaning:
+
+    When you fetch repo for new version and build, it won't overwrite old build directory, but create new one based on version.
+    If you want to make clean build for current version you can call `make clean`. To clean all versions present `make clean-all` can be used.
+
+* **Note**: Building on system with boost >= 1.70:
+    
+    For now building is supported with boost version up to 1.69. If your system only provides boost version that is higher than supported, you can
+    build target boost locally alongside chain code. To do that, inside root directory of repository:
+    * Call `git submodule update --init --recursive` to download all boost source, this may take some time.
+    * Call `make release-static-linux-x86_64-local-boost` to build boost and chain code.
+
