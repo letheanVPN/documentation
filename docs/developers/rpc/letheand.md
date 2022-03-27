@@ -16,7 +16,7 @@ Start `letheand` [Start Arguments](../../chain/cli/letheand.md)
   - hash: string
   - height: int
   
-```http wd
+```http
 POST http://seed.lethean.io:48782/json_rpc
 Content-Type: application/json
 
