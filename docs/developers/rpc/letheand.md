@@ -15,7 +15,8 @@ Start `letheand` [Start Arguments](../../chain/cli/letheand.md)
 - Params:
   - hash: string
   - height: int
-```http request
+  
+```http wd
 POST http://seed.lethean.io:48782/json_rpc
 Content-Type: application/json
 
@@ -31,7 +32,7 @@ Content-Type: application/json
 
 ### Last Block Header
 
-```http request
+```http
 POST http://seed.lethean.io:48782/json_rpc
 Content-Type: application/json
 
@@ -73,7 +74,8 @@ Content-Type: application/json
 - Method: `getblockheaderbyhash`
 - Params:
   - hash: string
-```http request
+
+```http
 POST http://seed.lethean.io:48782/json_rpc 
 Content-Type: application/json
 
@@ -93,7 +95,7 @@ Content-Type: application/json
 - Params:
   - height: int
 
-```http request
+```http
 POST http://127.0.0.1:18081/json_rpc 
 Content-Type: application/json
 
@@ -109,7 +111,7 @@ Content-Type: application/json
 
 ### Get Transaction
 
-```http request
+```http
 POST http://seed.lethean.io:48782/gettransactions 
 Content-Type: application/json
 
@@ -123,14 +125,14 @@ Content-Type: application/json
 
 ### Get Transaction pool
 
-```http request
+```http
 POST http://127.0.0.1:18081/get_transaction_pool
 Content-Type: application/json
 ```
 
 ### Get Block Count
 
-```http request
+```http
 POST http://seed.lethean.io:48782/json_rpc 
 Content-Type: application/json
 
@@ -139,7 +141,7 @@ Content-Type: application/json
 
 ### Get Connections
 
-```http request
+```http
 POST http://seed.lethean.io:48782/json_rpc
 Content-Type: application/json
 
@@ -184,7 +186,7 @@ Content-Type: application/json
 
 ### Get Info
 
-```http request
+```http
 POST http://seed.lethean.io:48782/json_rpc
 Content-Type: application/json
 
@@ -222,7 +224,7 @@ Content-Type: application/json
 
 ### Hardfork info
 
-```http request
+```http
 POST http://seed.lethean.io:48782/json_rpc
 Content-Type: application/json
 
@@ -247,11 +249,11 @@ Content-Type: application/json
     "voting": 7,
     "window": 10080
   }
-}%
+}
 ```
 ### Get Fee Estimate
 
-```http request
+```http
 POST http://seed.lethean.io:48782/json_rpc
 Content-Type: application/json
 
@@ -269,5 +271,5 @@ Content-Type: application/json
     "fee": 11600,
     "status": "OK"
   }
-}%
+}
 ```
