@@ -1,6 +1,6 @@
 # Lethean Blockchain Daemon RPC
 
-Start `letheand` [Start Arguments](../../chain/cli/letheand.md)
+Start `letheand` [Start Arguments](../../apps/chain/cli/letheand.md)
 
 - RPC Port: `48782`
 - Host: `127.0.0.1`
