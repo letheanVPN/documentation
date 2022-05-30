@@ -1,4 +1,4 @@
-# Lethean Blockchain for Windows
+# LTHN Blockchain Node
 
 ## Downloads
 
