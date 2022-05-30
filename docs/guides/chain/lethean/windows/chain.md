@@ -30,11 +30,6 @@ taskkill /IM "letheand.exe" /F
 %USERPROFILE%\\Lethean\\cli\\letheand.exe --detach
 ```
 
-### Background Daemon
-```shell
-%USERPROFILE%\\Lethean\\cli\\letheand.exe --detach
-```
-
 ### Interactive
 ```shell
 %USERPROFILE%\\Lethean\\cli\\letheand.exe
