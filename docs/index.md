@@ -16,6 +16,6 @@ If you can't find information please raise a issue on our [GitHub](https://githu
 
 ## Team Contacts
 
-- [snider@lt.hn](mailto:snider@lt.hn) `54F0 8396 E7D9 7192 8BAD 3EC5 CB42 CEC2 399C C61C`
+- [snider@lt.hn](mailto:snider@lt.hn) PGP: [54F0 8396 E7D9 7192 8BAD 3EC5 CB42 CEC2 399C C61C](developers/keys/snider.md)
 - [darbs@lt.hn](mailto:snider@lt.hn)
 - [casey@lt.hn](mailto:snider@lt.hn)
