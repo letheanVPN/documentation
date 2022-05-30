@@ -3,19 +3,20 @@
 !!! info
 
     === "Windows"
-    
-        * [Lethean CLI](https://github.com/letheanVPN/blockchain-iz/releases/latest/download/windows.tar)
-        * [https://seed.lethean.io/blockchain.raw](https://seed.lethean.io/)
+
+        [Download Windows CLI](https://github.com/letheanVPN/blockchain-iz/releases/latest/download/windows.tar){ .md-button }
+        [Blockchain Export](https://seed.lethean.io/blockchain.raw){ .md-button }
 
     === "MacOS"
 
-        * [Lethean CLI](https://github.com/letheanVPN/blockchain-iz/releases/latest/download/lethean-cli-macos.zip)
-        * [https://seed.lethean.io/blockchain.raw](https://seed.lethean.io/)
+        [Download macOS CLI](https://github.com/letheanVPN/blockchain-iz/releases/latest/download/lethean-cli-macos.zip){ .md-button }
+        [Blockchain Export](https://seed.lethean.io/blockchain.raw){ .md-button }
+      
 
     === "Linux"
 
-        * [Lethean CLI](https://github.com/letheanVPN/blockchain-iz/releases/latest/download/linux.tar)
-        * [https://seed.lethean.io/blockchain.raw](https://seed.lethean.io/)
+        [Download Linux CLI](https://github.com/letheanVPN/blockchain-iz/releases/latest/download/linux.tar){ .md-button }
+        [Blockchain Export](https://seed.lethean.io/blockchain.raw){ .md-button }
         
 
 

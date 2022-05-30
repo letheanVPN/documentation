@@ -75,6 +75,7 @@ markdown_extensions:
   - toc:
       permalink: true
   - tables
+  - md_in_html
   - pymdownx.highlight:
       anchor_linenums: true
   - pymdownx.inlinehilite
@@ -83,7 +84,6 @@ markdown_extensions:
   - pymdownx.betterem
   - pymdownx.tabbed:
       alternate_style: true
-
   - pymdownx.emoji:
       emoji_index: !!python/name:materialx.emoji.twemoji
       emoji_generator: !!python/name:materialx.emoji.to_svg

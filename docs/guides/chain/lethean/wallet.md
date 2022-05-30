@@ -3,24 +3,26 @@
 !!! info
 
     === "Windows"
-    
-        * [Lethean CLI](https://github.com/letheanVPN/blockchain-iz/releases/latest/download/windows.tar)
-        * [https://seed.lethean.io/blockchain.raw](https://seed.lethean.io/)
-        * Remote Hosts: `seed.lethean.io`, `nodes.hashvault.pro`
+
+        [Download Windows CLI](https://github.com/letheanVPN/blockchain-iz/releases/latest/download/windows.tar){ .md-button }
+        [Blockchain Export](https://seed.lethean.io/blockchain.raw){ .md-button }
+
+        Remote Hosts: `seed.lethean.io`, `nodes.hashvault.pro`
 
     === "MacOS"
 
-        * [Lethean CLI](https://github.com/letheanVPN/blockchain-iz/releases/latest/download/lethean-cli-macos.zip)
-        * [https://seed.lethean.io/blockchain.raw](https://seed.lethean.io/)
-        * Remote Hosts: `seed.lethean.io`, `nodes.hashvault.pro`
+        [Download macOS CLI](https://github.com/letheanVPN/blockchain-iz/releases/latest/download/lethean-cli-macos.zip){ .md-button }
+        [Blockchain Export](https://seed.lethean.io/blockchain.raw){ .md-button }
+
+        Remote Hosts: `seed.lethean.io`, `nodes.hashvault.pro`
+      
 
     === "Linux"
 
-        * [Lethean CLI](https://github.com/letheanVPN/blockchain-iz/releases/latest/download/linux.tar)
-        * [https://seed.lethean.io/blockchain.raw](https://seed.lethean.io/)
-        * Remote Hosts: `seed.lethean.io`, `nodes.hashvault.pro`
-        
+        [Download Linux CLI](https://github.com/letheanVPN/blockchain-iz/releases/latest/download/linux.tar){ .md-button }
+        [Blockchain Export](https://seed.lethean.io/blockchain.raw){ .md-button }
 
+        Remote Hosts: `seed.lethean.io`, `nodes.hashvault.pro`
 
 ## Data Location
 
