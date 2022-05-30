@@ -12,6 +12,7 @@ theme:
   logo: images/lethean-logo.png
   icon:
     repo: fontawesome/brands/git-alt
+    code: octicons/alert-24
   palette:
     - media: "(prefers-color-scheme: light)"
       primary: light-blue
@@ -42,6 +43,7 @@ theme:
     - header.autohide
     - announce.dismiss
     - toc.integrate
+    - content.tabs.link
 
 extra:
   generator: false
@@ -73,11 +75,15 @@ markdown_extensions:
   - toc:
       permalink: true
   - tables
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
   - pymdownx.betterem
-  - pymdownx.details
+  - pymdownx.tabbed:
+      alternate_style: true
+
   - pymdownx.emoji:
       emoji_index: !!python/name:materialx.emoji.twemoji
       emoji_generator: !!python/name:materialx.emoji.to_svg
-  - pymdownx.highlight:
-      auto_title: true
-  - pymdownx.superfences
