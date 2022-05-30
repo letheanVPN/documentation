@@ -122,7 +122,7 @@
 === "Linux"
 
     ``` shell
-    $HOME/Lethean/cli//letheand
+    $HOME/Lethean/cli/letheand
     ```
 ### Exporting Chain data
 
@@ -135,7 +135,7 @@
 === "MacOS"
 
     ``` shell
-    $HOME/Lethean/cli/lethean-blockchain-export --data-dir=$HOME/Lethean/ --output-file=$HOME/Lethean/data.blockchain.raw
+    $HOME/Lethean/cli/lethean-blockchain-export --data-dir=$HOME/Lethean/data --output-file=$HOME/Lethean/data/blockchain.raw
     ```
 
 === "Linux"
@@ -155,11 +155,11 @@
 === "MacOS"
 
     ``` shell
-    $HOME/Lethean/cli/lethean-blockchain-export --data-dir=$HOME/Lethean/data --input-file=$HOME/Lethean/datablockchain.raw
+    $HOME/Lethean/cli/lethean-blockchain-export --data-dir=$HOME/Lethean/data --input-file=$HOME/Lethean/data/blockchain.raw
     ```
 
 === "Linux"
 
     ``` shell
-    $HOME/Lethean/cli/lethean-blockchain-export --data-dir$HOME/Lethean/datadata --input-file=$HOME/Lethean/datablockchain.raw
+    $HOME/Lethean/cli/lethean-blockchain-export --data-dir$HOME/Lethean/data --input-file=$HOME/Lethean/data/blockchain.raw
     ```
