@@ -88,9 +88,6 @@
 
 ### Background Daemon
 
-
-<img width="1184" alt="image" src="https://user-images.githubusercontent.com/631881/171013324-7bd68896-0eb1-4c74-b91a-fdaccaa1041c.png">
-
 === "Windows"
     
     ```shell
@@ -108,10 +105,9 @@
     ``` shell
     $HOME/Lethean/cli/letheand --detach 
     ```
+<img width="1184" alt="image" src="https://user-images.githubusercontent.com/631881/171013324-7bd68896-0eb1-4c74-b91a-fdaccaa1041c.png">
     
 ### Interactive
-
-<img width="1184" alt="image" src="https://user-images.githubusercontent.com/631881/171013058-6035dfe8-65e1-4f4c-9e06-c0c95afa1f0b.png">
 
 === "Windows"
     
@@ -130,9 +126,10 @@
     ``` shell
     $HOME/Lethean/cli/letheand
     ```
+<img width="1184" alt="image" src="https://user-images.githubusercontent.com/631881/171013058-6035dfe8-65e1-4f4c-9e06-c0c95afa1f0b.png">
+
 ### Exporting Chain data
 
-<img width="1188" alt="image" src="https://user-images.githubusercontent.com/631881/171013450-62460e66-6813-450d-a868-40bc1761ebb9.png">
 
 === "Windows"
     
@@ -151,6 +148,7 @@
     ``` shell
     $HOME/Lethean/cli/lethean-blockchain-export --data-dir=$HOME/Lethean/data --output-file=$HOME/Lethean/data/blockchain.raw
     ```
+<img width="1188" alt="image" src="https://user-images.githubusercontent.com/631881/171013450-62460e66-6813-450d-a868-40bc1761ebb9.png">
 
 ### Importing Chain data
 
