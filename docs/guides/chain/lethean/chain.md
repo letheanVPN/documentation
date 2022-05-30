@@ -88,6 +88,9 @@
 
 ### Background Daemon
 
+
+<img width="1184" alt="image" src="https://user-images.githubusercontent.com/631881/171013324-7bd68896-0eb1-4c74-b91a-fdaccaa1041c.png">
+
 === "Windows"
     
     ```shell
@@ -97,15 +100,18 @@
 === "MacOS"
 
     ``` shell
-    killall letheand
+    $HOME/Lethean/cli/letheand --detach 
     ```
 
 === "Linux"
 
     ``` shell
-    pkill letheand
+    $HOME/Lethean/cli/letheand --detach 
     ```
+    
 ### Interactive
+
+<img width="1184" alt="image" src="https://user-images.githubusercontent.com/631881/171013058-6035dfe8-65e1-4f4c-9e06-c0c95afa1f0b.png">
 
 === "Windows"
     
@@ -125,6 +131,8 @@
     $HOME/Lethean/cli/letheand
     ```
 ### Exporting Chain data
+
+<img width="1188" alt="image" src="https://user-images.githubusercontent.com/631881/171013450-62460e66-6813-450d-a868-40bc1761ebb9.png">
 
 === "Windows"
     
