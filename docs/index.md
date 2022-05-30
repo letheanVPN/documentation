@@ -1,6 +1,6 @@
 # Lethean Documentation
 
-If you can't find information please raise a issue on our GitHub, https://github.com/letheanVPN/documentation/issues/new
+If you can't find information please raise a issue on our [GitHub](https://github.com/letheanVPN/documentation/issues/new)
 
 ## Downloads
 - [Blockchain Binaries](https://github.com/letheanVPN/blockchain/releases/latest)
