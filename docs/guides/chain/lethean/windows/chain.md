@@ -16,10 +16,12 @@
 ### Getting to the blockchain folder
 
 1. Press the Windows key
-2. type `cmd.exe` + Press Enter
-3. change directory to Lethean user data `cd %USERPROFILE%\\Lethean\\`
+2. type `cmd.exe` then press the `ENTER` key
+3. change directory to Lethean user data; type `cd %USERPROFILE%\\Lethean\\` then press the `ENTER` key
 
 ### Stopping a running daemon
+
+> Copy the text, in the console `CTRL` + `V` to paste; then press the `ENTER` key
 
 ```shell
 taskkill /IM "letheand.exe" /F
