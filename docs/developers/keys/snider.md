@@ -1,4 +1,9 @@
-snider@lt.hn
+[Email: snider@lt.hn](mailto:snider@lt.hn)
+
+[Keybase](https://keybase.io/sniders)
+
+<a href="keybase://chat/sniders">keybase://chat/sniders</a>
+
 ```text
 -----BEGIN PGP PUBLIC KEY BLOCK-----
 
