@@ -7,7 +7,7 @@
 
 To work on the new GUI
 
-1) compile https://github.com/letheanVPN/blockchain-iTw3 with `-DBUILD_GUI -DTESTNET=true`
+1) compile https://github.com/letheanVPN/blockchain-iTw3 with `-DBUILD_GUI=true -DTESTNET=true`
 2) compile https://github.com/letheanVPN/iTw3_ui/tree/release `release` branch & run `npm run build --watch`
 3) launch step one compiled file with `Lethean --html-path=../iTw3_ui/html --gui-debug-mode --qt-dev-tools=vertical`
 
