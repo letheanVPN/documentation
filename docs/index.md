@@ -17,5 +17,4 @@ If you can't find information please raise a issue on our [GitHub](https://githu
 ## Team Contacts
 
 - [snider@lt.hn](mailto:snider@lt.hn) PGP: [54F0 8396 E7D9 7192 8BAD 3EC5 CB42 CEC2 399C C61C](developers/keys/snider.md)
-- [darbs@lt.hn](mailto:snider@lt.hn)
-- [casey@lt.hn](mailto:snider@lt.hn)
+- [darbs@lt.hn](mailto:darbs@lt.hn) PGP: [0E1C 31B8 196D 9BE5 3CDE  ED2B 7162 2FA8 4903 B893](developers/keys/darbs.md)
