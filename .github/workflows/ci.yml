@@ -2,7 +2,9 @@ name: ci
 on:
   push:
     branches:
-      - main
+      - main # Push events from main branch
+    tags:
+      - 'v*' # Push events matching v*, i.e. v1.0, v20.15.10
 jobs:
   deploy:
     runs-on: ubuntu-latest
