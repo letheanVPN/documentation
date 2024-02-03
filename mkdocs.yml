@@ -56,6 +56,7 @@ theme:
     - content.tabs.link
     - content.action.edit
     - content.action.view
+    - content.code.copy
 
 extra:
   generator: false
@@ -88,6 +89,7 @@ plugins:
       enabled: !ENV INSIDERS
       plugins:
         - optimize
+        - typeset
         - privacy:
             links_attr_map:
               target: _blank
