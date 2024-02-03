@@ -6,11 +6,12 @@ edit_uri: edit/main/docs/
 site_url: https://lt.hn
 theme:
   name: material
+  custom_dir: overrides
   font: 
     text: "Roboto"
     code: "Roboto Mono"
   language: en
-  logo: images/lethean-logo.png
+  logo: assets/images/lethean-logo.png
   icon:
     repo: fontawesome/brands/git-alt
     code: octicons/alert-24
@@ -38,6 +39,7 @@ theme:
         name: Switch to system preference
   features:
     - navigation.instant
+    - navigation.instant.prefetch
     - navigation.tracking
     - navigation.tabs
     - navigation.tabs.sticky
@@ -66,7 +68,7 @@ extra:
     - icon: fontawesome/brands/github
       link: https://github.com/letheanVPN
 extra_css:
-  - stylesheets/extra.css
+  - assets/stylesheets/extra.css
 plugins:
   - offline
   - privacy
@@ -104,3 +106,8 @@ markdown_extensions:
   - pymdownx.emoji:
       emoji_index: !!python/name:material.extensions.emoji.twemoji
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
+nav:
+  - Home: index.md
+  - Getting Started:
+    - Blockchain: getting-started/chain.md
+    - Wallet: getting-started/wallet.md
