@@ -86,7 +86,9 @@ plugins:
       enabled: !ENV INSIDERS
       plugins:
         - optimize
-        - privacy
+        - privacy:
+            assets_exclude:
+              - giscus.app/*
   
   - search:
       lang:
