@@ -3,6 +3,7 @@
 title: Home
 hide:
     - navigation
+    - toc
 ---
 # LetheanVPN
 

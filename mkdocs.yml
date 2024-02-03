@@ -44,13 +44,15 @@ theme:
     - navigation.instant.preview
     - navigation.tracking
     - navigation.tabs
-    - navigation.indexes 
+    - navigation.indexes
+    - navigation.expand
+    - navigation.sections
+    - navigation.path
+    - navigation.top
     - search.suggest
     - search.highlight
     - search.share
-    - header.autohide
     - announce.dismiss
-    - toc.integrate
     - content.tabs.link
     - content.action.edit
     - content.action.view
