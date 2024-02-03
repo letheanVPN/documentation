@@ -1,3 +1,7 @@
+---
+
+title: LetheanVPN Confidential Blockchain
+---
 # Lethean Documentation
 
 If you can't find information please raise a issue on our [GitHub](https://github.com/letheanVPN/documentation/issues/new)
