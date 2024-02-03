@@ -40,14 +40,11 @@ theme:
   features:
     - navigation.instant
     - navigation.instant.prefetch
+    - navigation.instant.progress
+    - navigation.instant.preview
     - navigation.tracking
     - navigation.tabs
-    - navigation.tabs.sticky
-    - navigation.sections
-    - navigation.expand
-    - navigation.indexes
-    - navigation.top
-    - navigation.path
+    - navigation.indexes 
     - search.suggest
     - search.highlight
     - search.share
@@ -106,8 +103,3 @@ markdown_extensions:
   - pymdownx.emoji:
       emoji_index: !!python/name:material.extensions.emoji.twemoji
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
-nav:
-  - Home: index.md
-  - Getting Started:
-    - Blockchain: getting-started/chain.md
-    - Wallet: getting-started/wallet.md

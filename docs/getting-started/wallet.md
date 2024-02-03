@@ -1,3 +1,7 @@
+---
+
+title: Wallet
+---
 # Lethean Wallet
 
 !!! info

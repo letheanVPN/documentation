@@ -1,6 +1,7 @@
 ---
 
-title: LetheanVPN Confidential Blockchain
+title: Home
+
 ---
 # Lethean Documentation
 
