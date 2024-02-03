@@ -1,9 +1,9 @@
 site_name: Lethean Documentation
-copyright: Copyright &copy; 2017 - 2022 LetheanVPN
+copyright: Copyright &copy; 2017 - 2024 LetheanVPN
 repo_url: https://github.com/letheanVPN/documentation
 repo_name: letheanVPN/documentation
 edit_uri: edit/main/docs/
-site_url: https://docs.lt.hn
+site_url: https://lt.hn
 theme:
   name: material
   font: 
