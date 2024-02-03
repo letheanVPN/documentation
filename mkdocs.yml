@@ -87,6 +87,8 @@ plugins:
       plugins:
         - optimize
         - privacy:
+            links_attr_map:
+              target: _blank
             assets_exclude:
               - giscus.app/*
   
