@@ -13,4 +13,9 @@ pip install mkdocs-material mkdocs-git-revision-date-localized-plugin
 mkdocs serve
 ```
 
+## Run Documentation Server with paid access
+```shell
+CI=true INSIDERS=true mkdocs serve
+```
+
 Visit:  http://127.0.0.1:8000/

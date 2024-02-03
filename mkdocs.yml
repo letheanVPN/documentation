@@ -68,19 +68,29 @@ extra_css:
   - assets/stylesheets/extra.css
 plugins:
   - offline
-  - privacy
-  - optimize
   - social
-  - git-revision-date-localized:
-      type: date
-      fallback_to_build_date: true
-      enable_creation_date: true
+  # CI=1 mkdocs build
+  - group:
+      enabled: !ENV CI
+      plugins:
+        - git-revision-date-localized:
+            type: date
+            fallback_to_build_date: true
+            enable_creation_date: true
+        - git-committers:
+            repository: letheanVPN/documentation
+            branch: main
+  # INSIDERS=1 mkdocs build
+  - group:
+      enabled: !ENV INSIDERS
+      plugins:
+        - optimize
+        - privacy
+  
   - search:
       lang:
         - en
-  - git-committers:
-      repository: letheanVPN/documentation
-      branch: main
+  
 markdown_extensions:
   - abbr
   - admonition
