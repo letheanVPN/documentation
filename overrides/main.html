@@ -1,0 +1,26 @@
+  {% extends "base.html" %}
+  {% block extrahead %}
+    <link rel="stylesheet" href="{{ 'assets/stylesheets/custom.css' | url }}">
+  {% endblock %}
+  {% block announce %}
+    For updates follow <strong>@letheanVPN</strong> on
+    <a href="https://twitter.com/letheanVPN" target="_blank">
+      <span class="twemoji twitter">
+        {% include ".icons/fontawesome/brands/twitter.svg" %}
+      </span>
+      <strong>Twitter</strong>
+    </a>
+    or join our
+    <a href="https://discord.com/invite/lethean-lthn-379876792003067906" target="_blank">
+      <span class="twemoji discord">
+        {% include ".icons/fontawesome/brands/discord.svg" %}
+      </span>
+      <strong>Discord</strong>
+  {% endblock %}
+<!-- Theme-related JavaScript -->
+{% block scripts %}
+  {{ super() }}
+
+  <!-- Extra JavaScript (can't be set in mkdocs.yml due to content hash) -->
+  <script src="{{ 'assets/javascripts/custom.js' | url }}"></script>
+{% endblock %}
