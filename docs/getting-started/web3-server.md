@@ -1,10 +1,31 @@
 ---
-title: Web3 Server
+title: dAppServer
+description: "Introducing dAppServer: Decentralized Data Management for PWAs"
+hide:
+    - toc
 ---
 
-We are developing a clientside application server that can be used by Progressive Web Applications to remove centralized user information.
+# Empowering Progressive Web Apps with User Information Sovereignty
 
-Our system provides a suite of restful HTTP and WebSocket endpoints that enhance PWA's with native app functionality and polyfills to override the underlying storage of localStorage, and sessionStorage to an encrypted dataspace.
+dAppServer is a revolutionary client-side application server designed to elevate Progressive Web Apps (PWAs) to a new level of decentralization and user empowerment. Our system removes the dependency on centralized user information storage, granting control back to the individuals who own it.
+
+## Unlocking Native App Functionality with Ease
+
+Through a rich suite of RESTful HTTP and WebSocket endpoints, dAppServer seamlessly integrates with PWAs, providing them with functionalities traditionally exclusive to native apps. We offer potent polyfills that transparently encrypt and store data within a secure, user-controlled dataspace, replacing the limitations of localStorage and sessionStorage.
+
+## Solving the Centralization Dilemma
+
+The development of our backend services presented a challenge: finding a streamlined approach to deploy, manage, and update numerous binaries. We also sought a solution that would:
+
+* Eliminate reliance on centralized user data repositories: Empower users to own and manage their information directly.
+* Serve HTML, assets, and API endpoints: Facilitate seamless interaction between applications and user data.
+## Revolutionizing Web3 through Decentralization
+
+Unlike many Web3 systems that merely leverage blockchains for transactions and identity, dAppServer takes the paradigm shift a step further. We enable complete data ownership on the client side. This allows LetherNet apps to rely solely on HTML and JavaScript, potentially hosted on decentralized file storage solutions like IPFS, CDNs, or any static file host. This dramatically reduces operational costs for developers, fostering innovation and encouraging broader participation, especially in regions with limited resources.
+
+## Join the Decentralization Movement
+
+With dAppServer, user sovereignty becomes a reality, unlocking an array of possibilities for developers and users alike. Explore our comprehensive documentation to learn more and embark on your journey towards a decentralized future.
 
 - [API Explorer](https://dappserver.github.io/server)
 
