@@ -25,7 +25,7 @@ Unlike many Web3 systems that merely leverage blockchains for transactions and i
 
 ## Join the Decentralization Movement
 
-With dAppServer, user sovereignty becomes a reality, unlocking an array of possibilities for developers and users alike. Explore our comprehensive documentation to learn more and embark on your journey toward a decentralized future.
+With dAppServer, user sovereignty becomes a reality, unlocking an array of possibilities for developers and users alike. Explore our comprehensive documentation to learn more and embark on your journey towards a decentralized future.
 
 - [API Explorer](https://dappserver.github.io/server)
 
@@ -36,7 +36,3 @@ With dAppServer, user sovereignty becomes a reality, unlocking an array of possi
 - [MacOS Intel](https://github.com/dAppServer/server/releases/latest/download/lethean-server-macos-amd64)
 - [Linux](https://github.com/dAppServer/server/releases/latest/download/lethean-server-linux-amd64)
 - [OpenAPI JSON](https://github.com/dAppServer/server/releases/latest/download/openapi.json)
-
-## Software Development Kits
-
-- [TypeScript - Angular](https://www.npmjs.com/package/@lethean/api-angular)
