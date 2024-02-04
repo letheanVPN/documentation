@@ -16,7 +16,12 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://lt.hn/getting-started/web3-server.html</loc>
+         <loc>https://lt.hn/getting-started/dappserver/index.html</loc>
+         <lastmod>2024-02-04</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://lt.hn/getting-started/dappserver/sdk/index.html</loc>
          <lastmod>2024-02-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
