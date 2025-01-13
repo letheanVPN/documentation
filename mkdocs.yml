@@ -71,8 +71,6 @@ extra_css:
   - assets/stylesheets/extra.css
 plugins:
   - offline
-  - social
-  - meta
   # CI=1 mkdocs build
   - group:
       enabled: !ENV CI
@@ -88,6 +86,7 @@ plugins:
   - group:
       enabled: !ENV INSIDERS
       plugins:
+        - meta
         - optimize
         - typeset
         - privacy:
