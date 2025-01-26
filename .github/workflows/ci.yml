@@ -21,16 +21,15 @@ jobs:
           key: ${{ github.ref }}
           path: .cache
       - run: sudo apt-get install -y libcairo2-dev libfreetype6-dev libffi-dev libjpeg-dev libpng-dev libz-dev pngquant
-      - run: pip install git+https://${{ secrets.MK_TOKEN }}@github.com/squidfunk/mkdocs-material-insiders.git
       - run: pip install mkdocs-git-revision-date-localized-plugin cairosvg mkdocs-git-committers-plugin-2 mkdocs-git-authors-plugin mkdocs-material[imaging]
       
       - name: Build Website
         if: startsWith(github.ref, 'refs/tags/') == false
-        run: CI=true INSIDERS=true mkdocs gh-deploy --force
+        run: CI=true INSIDERS=false mkdocs gh-deploy --force
 
       - name: Build Offline Version
         if: startsWith(github.ref, 'refs/tags/')
-        run: CI=true INSIDERS=true mkdocs build
+        run: CI=true INSIDERS=false mkdocs build
 
       - name: Zip Build
         if: startsWith(github.ref, 'refs/tags/')
