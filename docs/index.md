@@ -12,7 +12,7 @@ hide:
     <div class="hero-badges">
       <span class="badge">100% Open Source</span>
     </div>
-    <a href="/getting-started/" class="cta-button">Get Started</a>
+    <a href="/getting-started/wallet.html" class="cta-button">Get Started</a>
   </div>
 </div>
 
@@ -107,7 +107,7 @@ hide:
   <h2>Take Control of Your Digital Privacy</h2>
   <p>Join thousands of users who trust Lethean for their privacy needs</p>
   <div class="cta-buttons">
-    <a href="/getting-started/" class="cta-button">Quick Start Guide</a>
+    <a href="/getting-started/wallet.html" class="cta-button">Quick Start Guide</a>
     <a href="https://github.com/letheanVPN" class="cta-button secondary">View on GitHub</a>
   </div>
 </div>
