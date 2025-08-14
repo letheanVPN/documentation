@@ -3,3 +3,4 @@
 .cache
 mkdocs-material
 site
+.env
