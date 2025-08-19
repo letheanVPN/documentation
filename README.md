@@ -1,7 +1,7 @@
 # Documentation
 
-Editing this could be done all on github, the docs/ folder has the markdown files
-merging PR's will automatically update the documentation website.
+Editing this could be done all on GitHub, the docs/ folder has the markdown files
+Merging PR's will automatically update the documentation website.
 
 ## Install deps
 
