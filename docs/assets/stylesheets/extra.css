@@ -244,6 +244,41 @@
   background: #48BB78;
 }
 
+.timeline-item li ul {
+  margin-top: 0.5rem;
+  margin-left: 1rem;
+}
+
+.timeline-item li ul li {
+  font-size: 0.9rem;
+  margin: 0.25rem 0;
+}
+
+.timeline-item li ul li::before {
+  width: 8px;
+  height: 8px;
+  background: #a0aec0;
+}
+
+.timeline-item li ul li a {
+  color: #4A90E2;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.timeline-item li ul li a:hover {
+  color: #357ABD;
+  text-decoration: underline;
+}
+
+[data-md-color-scheme="slate"] .timeline-item li ul li a {
+  color: #63b3ed;
+}
+
+[data-md-color-scheme="slate"] .timeline-item li ul li a:hover {
+  color: #90cdf4;
+}
+
 .date {
   font-size: 0.8rem;
   color: #718096;
