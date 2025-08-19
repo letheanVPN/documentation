@@ -2,114 +2,118 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://lt.hn/index.html</loc>
-         <lastmod>2025-07-16</lastmod>
+         <lastmod>2025-08-19</lastmod>
+    </url>
+    <url>
+         <loc>https://lt.hn/tokenomics.html</loc>
+         <lastmod>2025-08-19</lastmod>
     </url>
     <url>
          <loc>https://lt.hn/getting-started/chain.html</loc>
-         <lastmod>2025-07-16</lastmod>
+         <lastmod>2025-08-19</lastmod>
     </url>
     <url>
          <loc>https://lt.hn/getting-started/wallet.html</loc>
-         <lastmod>2025-07-16</lastmod>
+         <lastmod>2025-08-19</lastmod>
     </url>
     <url>
          <loc>https://lt.hn/getting-started/dappserver/index.html</loc>
-         <lastmod>2025-07-16</lastmod>
+         <lastmod>2025-08-19</lastmod>
     </url>
     <url>
          <loc>https://lt.hn/getting-started/dappserver/sdk/index.html</loc>
-         <lastmod>2025-07-16</lastmod>
+         <lastmod>2025-08-19</lastmod>
     </url>
     <url>
          <loc>https://lt.hn/guides/chain/lethean/docker/chain.html</loc>
-         <lastmod>2025-07-16</lastmod>
+         <lastmod>2025-08-19</lastmod>
     </url>
     <url>
          <loc>https://lt.hn/guides/chain/lethean/docker/wallet.html</loc>
-         <lastmod>2025-07-16</lastmod>
+         <lastmod>2025-08-19</lastmod>
     </url>
     <url>
          <loc>https://lt.hn/guides/developers/index.html</loc>
-         <lastmod>2025-07-16</lastmod>
+         <lastmod>2025-08-19</lastmod>
     </url>
     <url>
          <loc>https://lt.hn/guides/developers/cli/lethean-blockchain-export.html</loc>
-         <lastmod>2025-07-16</lastmod>
+         <lastmod>2025-08-19</lastmod>
     </url>
     <url>
          <loc>https://lt.hn/guides/developers/cli/lethean-blockchain-import.html</loc>
-         <lastmod>2025-07-16</lastmod>
+         <lastmod>2025-08-19</lastmod>
     </url>
     <url>
          <loc>https://lt.hn/guides/developers/cli/lethean-wallet-rpc.html</loc>
-         <lastmod>2025-07-16</lastmod>
+         <lastmod>2025-08-19</lastmod>
     </url>
     <url>
          <loc>https://lt.hn/guides/developers/cli/lethean-wallet-vpn-rpc.html</loc>
-         <lastmod>2025-07-16</lastmod>
+         <lastmod>2025-08-19</lastmod>
     </url>
     <url>
          <loc>https://lt.hn/guides/developers/cli/letheand.html</loc>
-         <lastmod>2025-07-16</lastmod>
+         <lastmod>2025-08-19</lastmod>
     </url>
     <url>
          <loc>https://lt.hn/guides/developers/keys/darbs.html</loc>
-         <lastmod>2025-07-16</lastmod>
+         <lastmod>2025-08-19</lastmod>
     </url>
     <url>
          <loc>https://lt.hn/guides/developers/keys/snider.html</loc>
-         <lastmod>2025-07-16</lastmod>
+         <lastmod>2025-08-19</lastmod>
     </url>
     <url>
          <loc>https://lt.hn/guides/developers/rpc/index.html</loc>
-         <lastmod>2025-07-16</lastmod>
+         <lastmod>2025-08-19</lastmod>
     </url>
     <url>
          <loc>https://lt.hn/guides/developers/rpc/get-block-count.html</loc>
-         <lastmod>2025-07-16</lastmod>
+         <lastmod>2025-08-19</lastmod>
     </url>
     <url>
          <loc>https://lt.hn/guides/developers/rpc/get-block-header-by-hash.html</loc>
-         <lastmod>2025-07-16</lastmod>
+         <lastmod>2025-08-19</lastmod>
     </url>
     <url>
          <loc>https://lt.hn/guides/developers/rpc/get-block-header-by-height.html</loc>
-         <lastmod>2025-07-16</lastmod>
+         <lastmod>2025-08-19</lastmod>
     </url>
     <url>
          <loc>https://lt.hn/guides/developers/rpc/get-block.html</loc>
-         <lastmod>2025-07-16</lastmod>
+         <lastmod>2025-08-19</lastmod>
     </url>
     <url>
          <loc>https://lt.hn/guides/developers/rpc/get-connections.html</loc>
-         <lastmod>2025-07-16</lastmod>
+         <lastmod>2025-08-19</lastmod>
     </url>
     <url>
          <loc>https://lt.hn/guides/developers/rpc/get-fee-estimate.html</loc>
-         <lastmod>2025-07-16</lastmod>
+         <lastmod>2025-08-19</lastmod>
     </url>
     <url>
          <loc>https://lt.hn/guides/developers/rpc/get-hardfork-info.html</loc>
-         <lastmod>2025-07-16</lastmod>
+         <lastmod>2025-08-19</lastmod>
     </url>
     <url>
          <loc>https://lt.hn/guides/developers/rpc/get-info.html</loc>
-         <lastmod>2025-07-16</lastmod>
+         <lastmod>2025-08-19</lastmod>
     </url>
     <url>
          <loc>https://lt.hn/guides/developers/rpc/get-transaction-pool.html</loc>
-         <lastmod>2025-07-16</lastmod>
+         <lastmod>2025-08-19</lastmod>
     </url>
     <url>
          <loc>https://lt.hn/guides/developers/rpc/get-transaction.html</loc>
-         <lastmod>2025-07-16</lastmod>
+         <lastmod>2025-08-19</lastmod>
     </url>
     <url>
          <loc>https://lt.hn/guides/developers/rpc/last-block-header.html</loc>
-         <lastmod>2025-07-16</lastmod>
+         <lastmod>2025-08-19</lastmod>
     </url>
     <url>
          <loc>https://lt.hn/vpn/index.html</loc>
-         <lastmod>2025-07-16</lastmod>
+         <lastmod>2025-08-19</lastmod>
     </url>
 </urlset>
