@@ -76,11 +76,8 @@ hide:
       <h4>Q3-4 2025 In Progress</h4>
       <ul>
         <li class="active">Lethean Miner Launch <span class="date"></span></li>
-        <li class="active">New Lethean Chain<span class="date"></span>
-          <ul>
-            <li><a href="/tokenomics/">Tokenomics (Draft)</a></li>
-          </ul>
-        </li>
+        <li class="active">New Lethean Chain<span class="date"></span></li>
+        <li class="active"><a href="/tokenomics.html">Tokenomics</a><span class="date"></span></li>
       </ul>
     </div>
         <div class="timeline-item planning">
