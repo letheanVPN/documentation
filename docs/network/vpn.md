@@ -4,6 +4,9 @@ title: VPN
 ---
 # Setup VPN Docker
 
+> **⚠️ Notice**  
+> Do not use this, even for fun, it's WIP and not ready for any use.
+
 ## Generate Certificates:
 
 ### Defaults (easy)
