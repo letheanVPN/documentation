@@ -1,4 +1,7 @@
-# Building LetheanVPN Blockchain
+# Building The Blockchain
+
+> **⚠️ Notice**  
+> Please make sure you have read the [Developer Onboarding Guide](index.md) before continuing.
 
 This project uses a Makefile for building and Conan for dependency management. The primary build targets and instructions are below.
 
