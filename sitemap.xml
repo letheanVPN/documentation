@@ -5,10 +5,6 @@
          <lastmod>2025-09-25</lastmod>
     </url>
     <url>
-         <loc>https://lt.hn/tokenomics.html</loc>
-         <lastmod>2025-09-25</lastmod>
-    </url>
-    <url>
          <loc>https://lt.hn/getting-started/chain.html</loc>
          <lastmod>2025-09-25</lastmod>
     </url>
@@ -30,6 +26,14 @@
     </url>
     <url>
          <loc>https://lt.hn/network/vpn.html</loc>
+         <lastmod>2025-09-25</lastmod>
+    </url>
+    <url>
+         <loc>https://lt.hn/web3/index.html</loc>
+         <lastmod>2025-09-25</lastmod>
+    </url>
+    <url>
+         <loc>https://lt.hn/web3/tokenomics.html</loc>
          <lastmod>2025-09-25</lastmod>
     </url>
 </urlset>
