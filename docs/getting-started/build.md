@@ -5,6 +5,7 @@ This project uses a Makefile for building, with Conan for dependency management.
 ## Dependency Setup (Conan)
 
 Dependencies are managed via [Conan](https://conan.io/). The required libraries are listed in `conanfile.txt`:
+
 - zlib
 - boost
 - openssl
@@ -12,6 +13,31 @@ Dependencies are managed via [Conan](https://conan.io/). The required libraries 
 - jwt-cpp
 
 Conan will automatically install these when you build.
+
+
+
+=== "Windows"
+
+    ```powershell
+    choco install conan 
+    ```
+
+=== "MacOS"
+
+    ``` shell
+    brew install conan
+    ```
+
+=== "Linux"
+
+    ``` shell
+    apt-get install pipx
+    pipx ensurepath
+    refresh
+    pipx install conan
+    ```
+
+
 
 ## Build Targets
 
@@ -33,7 +59,49 @@ Example:
 ```
 make apple-clang-arm64-release
 ```
-This builds using the specified profile.
+This builds using the specified profile, the list of targets is:
+
+- `make apple-clang-arm64-release`
+- `make apple-clang-amd64-release`
+- `make gcc-linux-amd64-release`
+- `make msvc-194-amd64-release`
+
+## Documentation
+
+Please ensure code improvements also come with documentation updates, the documentation project is integrated
+into the blockchain repo, with helper cmake functions to build and run a local server.
+
+### Prerequisites
+
+
+=== "Windows"
+
+    ```powershell
+    choco install python --pre 
+    pip install -r docs/requirements.txt
+    ```
+
+=== "MacOS"
+
+    ``` shell
+    brew install python@3.9
+    pip3 install -r docs/requirements.txt
+    ```
+
+=== "Linux"
+
+    ``` shell
+    apt-get install pipx
+    pipx ensurepath
+    refresh
+    pipx install -r docs/requirements.txt
+    ```
+
+
+### Documentation Targets
+
+- `make docs`: Build documentation.
+- `make docs-dev`: Serve documentation for local development `http://127.0.0.1:8000`.
 
 ### Other Targets
 
