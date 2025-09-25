@@ -636,6 +636,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#testnet-builds" class="md-nav__link">
+    <span class="md-ellipsis">
+      Testnet Builds
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#documentation" class="md-nav__link">
     <span class="md-ellipsis">
       Documentation
@@ -1994,6 +2003,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#testnet-builds" class="md-nav__link">
+    <span class="md-ellipsis">
+      Testnet Builds
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#documentation" class="md-nav__link">
     <span class="md-ellipsis">
       Documentation
@@ -2086,7 +2104,7 @@
 
 
 <h1 id="building-letheanvpn-blockchain">Building LetheanVPN Blockchain<a class="headerlink" href="#building-letheanvpn-blockchain" title="Permanent link">&para;</a></h1>
-<p>This project uses a Makefile for building, with Conan for dependency management. Below are the main build targets and instructions.</p>
+<p>This project uses a Makefile for building and Conan for dependency management. The primary build targets and instructions are below.</p>
 <h2 id="dependency-setup-conan">Dependency Setup (Conan)<a class="headerlink" href="#dependency-setup-conan" title="Permanent link">&para;</a></h2>
 <p>Dependencies are managed via <a href="https://conan.io/">Conan</a>. The required libraries are listed in <code>conanfile.txt</code>:</p>
 <ul>
@@ -2132,16 +2150,18 @@
 Example:
 <div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>make apple-clang-arm64-release
 </code></pre></div>
-This builds using the specified profile, the list of targets is:</p>
+This builds using the specified profile; the list of targets is:</p>
 <ul>
 <li><code>make apple-clang-arm64-release</code></li>
 <li><code>make apple-clang-amd64-release</code></li>
 <li><code>make gcc-linux-amd64-release</code></li>
 <li><code>make msvc-194-amd64-release</code></li>
 </ul>
+<h2 id="testnet-builds">Testnet Builds<a class="headerlink" href="#testnet-builds" title="Permanent link">&para;</a></h2>
+<p>Builds default to <code>mainnet</code>. To create a <code>testnet</code> build, you need to add <code>TESTNET=1</code> with your make command, e.g <code>make apple-clang-arm64-release TESTNET=1</code></p>
 <h2 id="documentation">Documentation<a class="headerlink" href="#documentation" title="Permanent link">&para;</a></h2>
-<p>Please ensure code improvements also come with documentation updates, the documentation project is integrated
-into the blockchain repo, with helper cmake functions to build and run a local server.</p>
+<p>Please ensure code improvements also come with documentation updates. The documentation project is integrated.
+Into the blockchain repo, with helper CMake functions to build and run a local server.</p>
 <h3 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h3>
 <div class="tabbed-set tabbed-alternate" data-tabs="2:3"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><input id="__tabbed_2_3" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Windows</label><label for="__tabbed_2_2">MacOS</label><label for="__tabbed_2_3">Linux</label></div>
 <div class="tabbed-content">
@@ -2174,7 +2194,7 @@ into the blockchain repo, with helper cmake functions to build and run a local s
 <li><strong>test</strong>: Build and run tests (release mode).</li>
 <li><strong>test-debug</strong>: Build and run tests (debug mode).</li>
 <li><strong>docs</strong>: Build documentation.</li>
-<li><strong>docs-dev</strong>: Serve documentation for development.</li>
+<li><strong>docs-dev</strong>: Serve development documentation.</li>
 <li><strong>tags</strong>: Generate C++ tags for code navigation.</li>
 </ul>
 <h2 id="example-usage">Example Usage<a class="headerlink" href="#example-usage" title="Permanent link">&para;</a></h2>
@@ -2195,9 +2215,9 @@ into the blockchain repo, with helper cmake functions to build and run a local s
 </code></pre></div>
 <h2 id="notes">Notes<a class="headerlink" href="#notes" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Builds are parallelized based on your CPU cores.</li>
+<li>Builds are parallelised based on your CPU cores.</li>
 <li>Conan profiles are auto-detected if missing.</li>
-<li>All build artifacts are placed in the <code>build/</code> directory.</li>
+<li>All build artefacts are placed in the <code>build/</code> directory.</li>
 </ul>
 
 
@@ -2221,7 +2241,7 @@ into the blockchain repo, with helper cmake functions to build and run a local s
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="September 25, 2025 14:13:52 UTC">September 25, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="September 25, 2025 16:53:53 UTC">September 25, 2025</span>
   </span>
 
     
@@ -2252,6 +2272,11 @@ into the blockchain repo, with helper cmake functions to build and run a local s
         <a href="https://github.com/Snider" class="md-author" title="@Snider">
           
           <img src="https://avatars.githubusercontent.com/u/631881?v=4&size=72" alt="Snider">
+        </a>
+      
+        <a href="https://github.com/web-flow" class="md-author" title="@web-flow">
+          
+          <img src="https://avatars.githubusercontent.com/u/19864447?v=4&size=72" alt="web-flow">
         </a>
       
       
