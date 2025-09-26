@@ -30,7 +30,7 @@ title: Blockchain
 
 === "Windows"
     
-    ```shell
+    ``` shell
     %USERPROFILE%\\Lethean\\data\\lmdb 
     ```
 
@@ -75,7 +75,7 @@ title: Blockchain
 
 === "Windows"
     
-    ```shell
+    ``` shell
     taskkill /IM "letheand.exe" /F
     ```
 
@@ -95,7 +95,7 @@ title: Blockchain
 
 === "Windows"
     
-    ```shell
+    ``` shell
     %USERPROFILE%\\Lethean\\cli\\letheand.exe --detach 
     ```
 
@@ -116,7 +116,7 @@ title: Blockchain
 
 === "Windows"
     
-    ```shell
+    ``` shell
     %USERPROFILE%\\Lethean\\cli\\letheand.exe 
     ```
 
@@ -138,7 +138,7 @@ title: Blockchain
 
 === "Windows"
     
-    ```shell
+    ``` shell
     %USERPROFILE%\\Lethean\\cli\\lethean-blockchain-export.exe --data-dir=%USERPROFILE%\\Lethean\\data --output-file=%USERPROFILE%\\Lethean\\data\\blockchain.raw
     ```
 
@@ -159,7 +159,7 @@ title: Blockchain
 
 === "Windows"
     
-    ```shell
+    ``` shell
     %USERPROFILE%\\Lethean\\cli\\lethean-blockchain-export.exe --data-dir=%USERPROFILE%\\Lethean\\data --input-file=%USERPROFILE%\\Lethean\\data\\blockchain.raw
     ```
 
