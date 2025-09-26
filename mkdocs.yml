@@ -64,6 +64,25 @@ theme:
     - content.action.view
     - content.code.copy
 
+nav:
+  - Home: index.md
+  - Getting Started:
+    - getting-started/index.md
+    - getting-started/chain.md
+    - getting-started/wallet.md
+    - Developer:
+      - getting-started/developer/index.md
+      - getting-started/developer/build.md
+  - Updates:
+      - updates/index.md
+  - Network:
+    - network/index.md
+    - network/vpn.md
+  - Web3:
+    - web3/index.md
+    - web3/config.md
+    - web3/tokenomics.md
+
 extra:
   generator: false
   social:
@@ -77,6 +96,9 @@ extra_css:
   - assets/stylesheets/extra.css
 plugins:
   - offline
+  - meta
+  - blog:
+      blog_dir: updates
   # CI=1 mkdocs build
   - group:
       enabled: !ENV CI
