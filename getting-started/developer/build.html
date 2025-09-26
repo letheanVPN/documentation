@@ -685,19 +685,28 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#compile-using-make" class="md-nav__link">
+    <span class="md-ellipsis">
+      Compile Using Make
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Compile Using Make">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#build-targets" class="md-nav__link">
     <span class="md-ellipsis">
       Build Targets
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Build Targets">
-      <ul class="md-nav__list">
+</li>
         
           <li class="md-nav__item">
-  <a href="#dynamic-profile-builds" class="md-nav__link">
+  <a href="#testnet-builds" class="md-nav__link">
     <span class="md-ellipsis">
-      Dynamic Profile Builds
+      Testnet Builds
     </span>
   </a>
   
@@ -709,9 +718,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#testnet-builds" class="md-nav__link">
+  <a href="#compile-using-cmake" class="md-nav__link">
     <span class="md-ellipsis">
-      Testnet Builds
+      Compile Using CMake
     </span>
   </a>
   
@@ -1281,19 +1290,28 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#compile-using-make" class="md-nav__link">
+    <span class="md-ellipsis">
+      Compile Using Make
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Compile Using Make">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#build-targets" class="md-nav__link">
     <span class="md-ellipsis">
       Build Targets
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Build Targets">
-      <ul class="md-nav__list">
+</li>
         
           <li class="md-nav__item">
-  <a href="#dynamic-profile-builds" class="md-nav__link">
+  <a href="#testnet-builds" class="md-nav__link">
     <span class="md-ellipsis">
-      Dynamic Profile Builds
+      Testnet Builds
     </span>
   </a>
   
@@ -1305,9 +1323,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#testnet-builds" class="md-nav__link">
+  <a href="#compile-using-cmake" class="md-nav__link">
     <span class="md-ellipsis">
-      Testnet Builds
+      Compile Using CMake
     </span>
   </a>
   
@@ -1440,7 +1458,7 @@ Please make sure you have read the <a href="index.html">Developer Onboarding Gui
 </div>
 </div>
 </div>
-<h2 id="build-targets">Build Targets<a class="headerlink" href="#build-targets" title="Permanent link">&para;</a></h2>
+<h2 id="compile-using-make">Compile Using Make<a class="headerlink" href="#compile-using-make" title="Permanent link">&para;</a></h2>
 <p>Run <code>make help</code> to see available targets. Common targets include:</p>
 <ul>
 <li><strong>release</strong>: Build a release version.</li>
@@ -1449,7 +1467,7 @@ Please make sure you have read the <a href="index.html">Developer Onboarding Gui
 <li><strong>clean</strong>: Remove all build directories.</li>
 <li><strong>help</strong>: Show help message.</li>
 </ul>
-<h3 id="dynamic-profile-builds">Dynamic Profile Builds<a class="headerlink" href="#dynamic-profile-builds" title="Permanent link">&para;</a></h3>
+<h3 id="build-targets">Build Targets<a class="headerlink" href="#build-targets" title="Permanent link">&para;</a></h3>
 <p>Profiles are defined in <code>cmake/profiles/</code>. For each profile, a target is generated:
 <div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>make &lt;profile&gt;
 </span></code></pre></div>
@@ -1463,8 +1481,16 @@ This builds using the specified profile; the list of targets is:</p>
 <li><code>make gcc-linux-amd64-release</code></li>
 <li><code>make msvc-194-amd64-release</code></li>
 </ul>
-<h2 id="testnet-builds">Testnet Builds<a class="headerlink" href="#testnet-builds" title="Permanent link">&para;</a></h2>
+<h3 id="testnet-builds">Testnet Builds<a class="headerlink" href="#testnet-builds" title="Permanent link">&para;</a></h3>
 <p>Builds default to <code>mainnet</code>. To create a <code>testnet</code> build, you need to add <code>TESTNET=1</code> with your make command, e.g <code>make apple-clang-arm64-release TESTNET=1</code></p>
+<h2 id="compile-using-cmake">Compile Using CMake<a class="headerlink" href="#compile-using-cmake" title="Permanent link">&para;</a></h2>
+<p>The project uses CMake, the Makefile is just a wrapper; libraries are found using find_package, so either have them installed 
+or you can use Conan to install them by adding: </p>
+<p><code>-DCMAKE_PROJECT_TOP_LEVEL_INCLUDES="cmake/conan_provider.cmake"</code></p>
+<p>Putting that together, an example command would be:
+<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>cmake -B build/debug -S . -DCMAKE_PROJECT_TOP_LEVEL_INCLUDES=cmake/conan_provider.cmake -G Ninja -DCMAKE_BUILD_TYPE=Debug -DSTATIC=1 -DTESTNET=1
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>cmake --build=build/debug --config=Release
+</span></code></pre></div></p>
 <h2 id="documentation">Documentation<a class="headerlink" href="#documentation" title="Permanent link">&para;</a></h2>
 <p>Please ensure code improvements also come with documentation updates. The documentation project is integrated.
 Into the blockchain repo, with helper CMake functions to build and run a local server.</p>
@@ -1472,20 +1498,20 @@ Into the blockchain repo, with helper CMake functions to build and run a local s
 <div class="tabbed-set tabbed-alternate" data-tabs="2:3"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><input id="__tabbed_2_3" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Windows</label><label for="__tabbed_2_2">MacOS</label><label for="__tabbed_2_3">Linux</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<div class="language-powershell highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="n">choco</span> <span class="n">install</span> <span class="n">python</span> <span class="p">-</span><span class="n">-pre</span> 
-</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="n">pip</span> <span class="n">install</span> <span class="n">-r</span> <span class="n">docs</span><span class="p">/</span><span class="n">requirements</span><span class="p">.</span><span class="n">txt</span>
+<div class="language-powershell highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="n">choco</span> <span class="n">install</span> <span class="n">python</span> <span class="p">-</span><span class="n">-pre</span> 
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="n">pip</span> <span class="n">install</span> <span class="n">-r</span> <span class="n">docs</span><span class="p">/</span><span class="n">requirements</span><span class="p">.</span><span class="n">txt</span>
 </span></code></pre></div>
 </div>
 <div class="tabbed-block">
-<div class="language-shell highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>brew<span class="w"> </span>install<span class="w"> </span>python@3.9
-</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>pip3<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>docs/requirements.txt
+<div class="language-shell highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>brew<span class="w"> </span>install<span class="w"> </span>python@3.9
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>pip3<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>docs/requirements.txt
 </span></code></pre></div>
 </div>
 <div class="tabbed-block">
-<div class="language-shell highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>apt-get<span class="w"> </span>install<span class="w"> </span>pipx
-</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>pipx<span class="w"> </span>ensurepath
-</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>refresh
-</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>pipx<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>docs/requirements.txt
+<div class="language-shell highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>apt-get<span class="w"> </span>install<span class="w"> </span>pipx
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>pipx<span class="w"> </span>ensurepath
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>refresh
+</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>pipx<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>docs/requirements.txt
 </span></code></pre></div>
 </div>
 </div>
@@ -1504,20 +1530,20 @@ Into the blockchain repo, with helper CMake functions to build and run a local s
 <li><strong>tags</strong>: Generate C++ tags for code navigation.</li>
 </ul>
 <h2 id="example-usage">Example Usage<a class="headerlink" href="#example-usage" title="Permanent link">&para;</a></h2>
-<div class="language-sh highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="c1"># Build release</span>
-</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>make<span class="w"> </span>release
-</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>
-</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="c1"># Build debug</span>
-</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>make<span class="w"> </span>debug
-</span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a>
-</span><span id="__span-8-7"><a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a><span class="c1"># Build a specific profile</span>
-</span><span id="__span-8-8"><a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a>make<span class="w"> </span>apple-clang-arm64-release
-</span><span id="__span-8-9"><a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a>
-</span><span id="__span-8-10"><a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a><span class="c1"># Clean build directories</span>
-</span><span id="__span-8-11"><a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a>make<span class="w"> </span>clean
-</span><span id="__span-8-12"><a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a>
-</span><span id="__span-8-13"><a id="__codelineno-8-13" name="__codelineno-8-13" href="#__codelineno-8-13"></a><span class="c1"># Build and run tests</span>
-</span><span id="__span-8-14"><a id="__codelineno-8-14" name="__codelineno-8-14" href="#__codelineno-8-14"></a>make<span class="w"> </span><span class="nb">test</span>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="c1"># Build release</span>
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>make<span class="w"> </span>release
+</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>
+</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="c1"># Build debug</span>
+</span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>make<span class="w"> </span>debug
+</span><span id="__span-9-6"><a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a>
+</span><span id="__span-9-7"><a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a><span class="c1"># Build a specific profile</span>
+</span><span id="__span-9-8"><a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a>make<span class="w"> </span>apple-clang-arm64-release
+</span><span id="__span-9-9"><a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a>
+</span><span id="__span-9-10"><a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a><span class="c1"># Clean build directories</span>
+</span><span id="__span-9-11"><a id="__codelineno-9-11" name="__codelineno-9-11" href="#__codelineno-9-11"></a>make<span class="w"> </span>clean
+</span><span id="__span-9-12"><a id="__codelineno-9-12" name="__codelineno-9-12" href="#__codelineno-9-12"></a>
+</span><span id="__span-9-13"><a id="__codelineno-9-13" name="__codelineno-9-13" href="#__codelineno-9-13"></a><span class="c1"># Build and run tests</span>
+</span><span id="__span-9-14"><a id="__codelineno-9-14" name="__codelineno-9-14" href="#__codelineno-9-14"></a>make<span class="w"> </span><span class="nb">test</span>
 </span></code></pre></div>
 <h2 id="notes">Notes<a class="headerlink" href="#notes" title="Permanent link">&para;</a></h2>
 <ul>
@@ -1547,7 +1573,7 @@ Into the blockchain repo, with helper CMake functions to build and run a local s
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="September 25, 2025 19:12:35 UTC">September 25, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="September 26, 2025 17:49:56 UTC">September 26, 2025</span>
   </span>
 
     
