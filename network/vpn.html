@@ -1403,45 +1403,45 @@ Do not use this, even for fun, it's WIP and not ready for any use.</p>
 </blockquote>
 <h2 id="generate-certificates">Generate Certificates:<a class="headerlink" href="#generate-certificates" title="Permanent link">&para;</a></h2>
 <h3 id="defaults-easy">Defaults (easy)<a class="headerlink" href="#defaults-easy" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>docker<span class="w"> </span>run<span class="w"> </span>--rm<span class="w"> </span>-v<span class="w"> </span><span class="k">$(</span><span class="nb">pwd</span><span class="k">)</span>:/home/lthn/openvpn<span class="w"> </span>lthn/openvpn<span class="w"> </span>generate_certs.sh<span class="w"> </span>--defaults
-</code></pre></div>
+<div class="language-shell highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>docker<span class="w"> </span>run<span class="w"> </span>--rm<span class="w"> </span>-v<span class="w"> </span><span class="k">$(</span><span class="nb">pwd</span><span class="k">)</span>:/home/lthn/openvpn<span class="w"> </span>lthn/openvpn<span class="w"> </span>generate_certs.sh<span class="w"> </span>--defaults
+</span></code></pre></div>
 <h3 id="custom-harder">Custom (harder)<a class="headerlink" href="#custom-harder" title="Permanent link">&para;</a></h3>
 <h4 id="1-root-certificate-authority">1) Root Certificate Authority<a class="headerlink" href="#1-root-certificate-authority" title="Permanent link">&para;</a></h4>
 <ul>
 <li><code>&lt;your-capass&gt;</code> = The password for the root CA VPN Certificate</li>
 <li><code>&lt;cacn&gt;</code> = CommonName you can create multiple certs if you are running whitelabel VPN services multiple clients
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>docker<span class="w"> </span>run<span class="w"> </span>-v<span class="w"> </span><span class="k">$(</span><span class="nb">pwd</span><span class="k">)</span>:/home/lthn/openvpn<span class="w"> </span>--rm<span class="w"> </span>lthn/openvpn<span class="w"> </span>generate_certs.sh<span class="w"> </span>--ca<span class="w"> </span>--with-capass<span class="w"> </span>&lt;your-capass&gt;<span class="w"> </span>--with-cacn<span class="w"> </span>&lt;cacn&gt;
-</code></pre></div></li>
+<div class="language-shell highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>docker<span class="w"> </span>run<span class="w"> </span>-v<span class="w"> </span><span class="k">$(</span><span class="nb">pwd</span><span class="k">)</span>:/home/lthn/openvpn<span class="w"> </span>--rm<span class="w"> </span>lthn/openvpn<span class="w"> </span>generate_certs.sh<span class="w"> </span>--ca<span class="w"> </span>--with-capass<span class="w"> </span>&lt;your-capass&gt;<span class="w"> </span>--with-cacn<span class="w"> </span>&lt;cacn&gt;
+</span></code></pre></div></li>
 </ul>
 <h4 id="server-certificate">Server Certificate<a class="headerlink" href="#server-certificate" title="Permanent link">&para;</a></h4>
 <ul>
 <li><code>&lt;your-capass&gt;</code> = the password for the cert from step 1</li>
 <li><code>&lt;your-serverpass&gt;</code> = the password for the server certificate thats about to be made</li>
 <li><code>&lt;your-server-dns&gt;</code> = typically the machine hostname <code>$(hostname)</code> or the dns enterypoint 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>docker<span class="w"> </span>run<span class="w"> </span>-v<span class="w"> </span><span class="k">$(</span><span class="nb">pwd</span><span class="k">)</span>:/home/lthn/openvpn<span class="w"> </span>--rm<span class="w"> </span>lthn/openvpn<span class="w"> </span>generate_certs.sh<span class="w"> </span>--server<span class="w"> </span>--with-capass<span class="w"> </span>&lt;your-capass&gt;<span class="w"> </span>--with-serverpass<span class="w"> </span>&lt;your-serverpass&gt;<span class="w"> </span>--with-servercn<span class="w"> </span>&lt;your-server-dns&gt;
-</code></pre></div></li>
+<div class="language-shell highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>docker<span class="w"> </span>run<span class="w"> </span>-v<span class="w"> </span><span class="k">$(</span><span class="nb">pwd</span><span class="k">)</span>:/home/lthn/openvpn<span class="w"> </span>--rm<span class="w"> </span>lthn/openvpn<span class="w"> </span>generate_certs.sh<span class="w"> </span>--server<span class="w"> </span>--with-capass<span class="w"> </span>&lt;your-capass&gt;<span class="w"> </span>--with-serverpass<span class="w"> </span>&lt;your-serverpass&gt;<span class="w"> </span>--with-servercn<span class="w"> </span>&lt;your-server-dns&gt;
+</span></code></pre></div></li>
 </ul>
 <h3 id="client-certificate">Client Certificate<a class="headerlink" href="#client-certificate" title="Permanent link">&para;</a></h3>
 <ul>
 <li><code>&lt;your-capass&gt;</code> = the password for the CA Cert</li>
 <li><code>&lt;clientpass&gt;</code> = the password for the client cert about to be made</li>
 <li><code>&lt;clientcn&gt;</code> = client commonname
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>docker<span class="w"> </span>run<span class="w"> </span>-v<span class="w"> </span><span class="k">$(</span><span class="nb">pwd</span><span class="k">)</span>:/home/lthn/openvpn<span class="w"> </span>--rm<span class="w"> </span>lthn/openvpn<span class="w"> </span>generate_certs.sh<span class="w"> </span>--client<span class="w"> </span>--with-capass<span class="w"> </span>&lt;your-capass&gt;<span class="w"> </span>--with-clientpass<span class="w"> </span>&lt;clientpass&gt;<span class="w"> </span>--with-clientcn<span class="w"> </span>&lt;clientcn&gt;
-</code></pre></div></li>
+<div class="language-shell highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>docker<span class="w"> </span>run<span class="w"> </span>-v<span class="w"> </span><span class="k">$(</span><span class="nb">pwd</span><span class="k">)</span>:/home/lthn/openvpn<span class="w"> </span>--rm<span class="w"> </span>lthn/openvpn<span class="w"> </span>generate_certs.sh<span class="w"> </span>--client<span class="w"> </span>--with-capass<span class="w"> </span>&lt;your-capass&gt;<span class="w"> </span>--with-clientpass<span class="w"> </span>&lt;clientpass&gt;<span class="w"> </span>--with-clientcn<span class="w"> </span>&lt;clientcn&gt;
+</span></code></pre></div></li>
 </ul>
 <h2 id="generate-a-openvpn-profile">Generate a OpenVPN profile<a class="headerlink" href="#generate-a-openvpn-profile" title="Permanent link">&para;</a></h2>
 <h3 id="using-the-default-certificates">Using the default Certificates<a class="headerlink" href="#using-the-default-certificates" title="Permanent link">&para;</a></h3>
 <ul>
 <li><code>&lt;your-server-public-dns&gt;</code> = typically the machine hostname <code>$(hostname)</code> or the dns enterypoint 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>docker<span class="w"> </span>run<span class="w"> </span>-v<span class="w"> </span><span class="k">$(</span><span class="nb">pwd</span><span class="k">)</span>:/home/lthn/openvpn<span class="w"> </span>--rm<span class="w"> </span>lthn/openvpn<span class="w"> </span>generate_client_profile.sh<span class="w"> </span>Lethean_VPN_Client<span class="w"> </span>&lt;your-server-public-dns&gt;
-</code></pre></div></li>
+<div class="language-shell highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>docker<span class="w"> </span>run<span class="w"> </span>-v<span class="w"> </span><span class="k">$(</span><span class="nb">pwd</span><span class="k">)</span>:/home/lthn/openvpn<span class="w"> </span>--rm<span class="w"> </span>lthn/openvpn<span class="w"> </span>generate_client_profile.sh<span class="w"> </span>Lethean_VPN_Client<span class="w"> </span>&lt;your-server-public-dns&gt;
+</span></code></pre></div></li>
 </ul>
 <h3 id="using-custom-certificates">Using custom certificates<a class="headerlink" href="#using-custom-certificates" title="Permanent link">&para;</a></h3>
 <ul>
 <li><code>&lt;clientcn&gt;</code> = client commonname</li>
 <li><code>&lt;your-server-dns&gt;</code> = typically the machine hostname <code>$(hostname)</code> or the dns enterypoint 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="w"> </span>docker<span class="w"> </span>run<span class="w"> </span>-v<span class="w"> </span><span class="k">$(</span><span class="nb">pwd</span><span class="k">)</span>:/home/lthn/openvpn<span class="w"> </span>--rm<span class="w"> </span>lthn/openvpn<span class="w"> </span>generate_client_profile.sh<span class="w"> </span>&lt;client-cert-cn&gt;<span class="w"> </span>&lt;your-server-public-dns&gt;
-</code></pre></div></li>
+<div class="language-shell highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="w"> </span>docker<span class="w"> </span>run<span class="w"> </span>-v<span class="w"> </span><span class="k">$(</span><span class="nb">pwd</span><span class="k">)</span>:/home/lthn/openvpn<span class="w"> </span>--rm<span class="w"> </span>lthn/openvpn<span class="w"> </span>generate_client_profile.sh<span class="w"> </span>&lt;client-cert-cn&gt;<span class="w"> </span>&lt;your-server-public-dns&gt;
+</span></code></pre></div></li>
 </ul>
 
 
