@@ -42,7 +42,7 @@ Conan will automatically install these when you build.
 
 
 
-## Build Targets
+## Compile Using Make
 
 Run `make help` to see available targets. Common targets include:
 
@@ -52,7 +52,7 @@ Run `make help` to see available targets. Common targets include:
 - **clean**: Remove all build directories.
 - **help**: Show help message.
 
-### Dynamic Profile Builds
+### Build Targets
 
 Profiles are defined in `cmake/profiles/`. For each profile, a target is generated:
 ```
@@ -69,10 +69,23 @@ This builds using the specified profile; the list of targets is:
 - `make gcc-linux-amd64-release`
 - `make msvc-194-amd64-release`
 
-## Testnet Builds
+### Testnet Builds
 
 Builds default to `mainnet`. To create a `testnet` build, you need to add `TESTNET=1` with your make command, e.g `make apple-clang-arm64-release TESTNET=1`
 
+
+## Compile Using CMake
+
+The project uses CMake, the Makefile is just a wrapper; libraries are found using find_package, so either have them installed 
+or you can use Conan to install them by adding: 
+
+`-DCMAKE_PROJECT_TOP_LEVEL_INCLUDES="cmake/conan_provider.cmake"`
+
+Putting that together, an example command would be:
+```
+cmake -B build/debug -S . -DCMAKE_PROJECT_TOP_LEVEL_INCLUDES=cmake/conan_provider.cmake -G Ninja -DCMAKE_BUILD_TYPE=Debug -DSTATIC=1 -DTESTNET=1
+cmake --build=build/debug --config=Release
+```
 
 ## Documentation
 
