@@ -134,21 +134,39 @@ Into the blockchain repo, with helper CMake functions to build and run a local s
 
 ## Example Usage
 
-```sh
-# Build release
+### Build release
+```shell
 make release
+```
 
-# Build debug
+### Build debug
+```shell
 make debug
+```
 
-# Build a specific profile
+### Compile for Windows
+```shell
+make msvc-194-amd64-release
+```
+
+### Compile for Linux
+```shell
+make gcc-linux-amd64-release
+```
+
+### Compile for Apple ARM
+```shell
 make apple-clang-arm64-release
+```
 
-# Clean build directories
+### Compile for Apple AMD64
+```shell
+make apple-clang-amd64-release
+```
+
+### Clean build directories
+```shell
 make clean
-
-# Build and run tests
-make test
 ```
 
 ## Notes
