@@ -73,6 +73,7 @@ nav:
     - Developer:
       - getting-started/developer/index.md
       - getting-started/developer/build.md
+      - getting-started/developer/docker.md
   - Updates:
       - updates/index.md
   - Network:
