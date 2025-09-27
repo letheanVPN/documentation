@@ -60,18 +60,19 @@ make <profile>
 ```
 Example:
 ```
-make apple-clang-arm64-release
+make apple-clang-armv8
 ```
 This builds using the specified profile; the list of targets is:
 
-- `make apple-clang-arm64-release`
-- `make apple-clang-amd64-release`
-- `make gcc-linux-amd64-release`
-- `make msvc-194-amd64-release`
+- `make apple-clang-armv8`
+- `make apple-clang-x86_64`
+- `make gcc-linux-x86_64`
+- `make gcc-linux-armv8`
+- `make msvc-194-x86_64`
 
 ### Testnet Builds
 
-Builds default to `mainnet`. To create a `testnet` build, you need to add `TESTNET=1` with your make command, e.g `make apple-clang-arm64-release TESTNET=1`
+Builds default to `mainnet`. To create a `testnet` build, you need to add `TESTNET=1` with your make command, e.g `make apple-clang-armv8 TESTNET=1`
 
 
 ## Compile Using CMake
@@ -146,22 +147,22 @@ make debug
 
 ### Compile for Windows
 ```shell
-make msvc-194-amd64-release
+make msvc-194-x86_64
 ```
 
 ### Compile for Linux
 ```shell
-make gcc-linux-amd64-release
+make gcc-linux-x86_64
 ```
 
 ### Compile for Apple ARM
 ```shell
-make apple-clang-arm64-release
+make apple-clang-armv8
 ```
 
 ### Compile for Apple AMD64
 ```shell
-make apple-clang-amd64-release
+make apple-clang-x86_64
 ```
 
 ### Clean build directories
