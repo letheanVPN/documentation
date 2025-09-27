@@ -1610,17 +1610,18 @@ Please make sure you have read the <a href="index.html">Developer Onboarding Gui
 <div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>make &lt;profile&gt;
 </span></code></pre></div>
 Example:
-<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>make apple-clang-arm64-release
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>make apple-clang-armv8
 </span></code></pre></div>
 This builds using the specified profile; the list of targets is:</p>
 <ul>
-<li><code>make apple-clang-arm64-release</code></li>
-<li><code>make apple-clang-amd64-release</code></li>
-<li><code>make gcc-linux-amd64-release</code></li>
-<li><code>make msvc-194-amd64-release</code></li>
+<li><code>make apple-clang-armv8</code></li>
+<li><code>make apple-clang-x86_64</code></li>
+<li><code>make gcc-linux-x86_64</code></li>
+<li><code>make gcc-linux-armv8</code></li>
+<li><code>make msvc-194-x86_64</code></li>
 </ul>
 <h3 id="testnet-builds">Testnet Builds<a class="headerlink" href="#testnet-builds" title="Permanent link">&para;</a></h3>
-<p>Builds default to <code>mainnet</code>. To create a <code>testnet</code> build, you need to add <code>TESTNET=1</code> with your make command, e.g <code>make apple-clang-arm64-release TESTNET=1</code></p>
+<p>Builds default to <code>mainnet</code>. To create a <code>testnet</code> build, you need to add <code>TESTNET=1</code> with your make command, e.g <code>make apple-clang-armv8 TESTNET=1</code></p>
 <h2 id="compile-using-cmake">Compile Using CMake<a class="headerlink" href="#compile-using-cmake" title="Permanent link">&para;</a></h2>
 <p>The project uses CMake, the Makefile is just a wrapper; libraries are found using find_package, so either have them installed 
 or you can use Conan to install them by adding: </p>
@@ -1675,16 +1676,16 @@ Into the blockchain repo, with helper CMake functions to build and run a local s
 <div class="language-shell highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>make<span class="w"> </span>debug
 </span></code></pre></div>
 <h3 id="compile-for-windows">Compile for Windows<a class="headerlink" href="#compile-for-windows" title="Permanent link">&para;</a></h3>
-<div class="language-shell highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>make<span class="w"> </span>msvc-194-amd64-release
+<div class="language-shell highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>make<span class="w"> </span>msvc-194-x86_64
 </span></code></pre></div>
 <h3 id="compile-for-linux">Compile for Linux<a class="headerlink" href="#compile-for-linux" title="Permanent link">&para;</a></h3>
-<div class="language-shell highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>make<span class="w"> </span>gcc-linux-amd64-release
+<div class="language-shell highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>make<span class="w"> </span>gcc-linux-x86_64
 </span></code></pre></div>
 <h3 id="compile-for-apple-arm">Compile for Apple ARM<a class="headerlink" href="#compile-for-apple-arm" title="Permanent link">&para;</a></h3>
-<div class="language-shell highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>make<span class="w"> </span>apple-clang-arm64-release
+<div class="language-shell highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>make<span class="w"> </span>apple-clang-armv8
 </span></code></pre></div>
 <h3 id="compile-for-apple-amd64">Compile for Apple AMD64<a class="headerlink" href="#compile-for-apple-amd64" title="Permanent link">&para;</a></h3>
-<div class="language-shell highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>make<span class="w"> </span>apple-clang-amd64-release
+<div class="language-shell highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>make<span class="w"> </span>apple-clang-x86_64
 </span></code></pre></div>
 <h3 id="clean-build-directories">Clean build directories<a class="headerlink" href="#clean-build-directories" title="Permanent link">&para;</a></h3>
 <div class="language-shell highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>make<span class="w"> </span>clean
@@ -1717,7 +1718,7 @@ Into the blockchain repo, with helper CMake functions to build and run a local s
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="September 26, 2025 18:02:09 UTC">September 26, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="September 27, 2025 00:21:30 UTC">September 27, 2025</span>
   </span>
 
     
