@@ -79,7 +79,7 @@ hide:
       <ul>
         <li class="active">Lethean Miner Launch <span class="date"></span></li>
         <li class="active">New Lethean Chain<span class="date"></span></li>
-        <li class="active"><a href="/tokenomics.html">Tokenomics</a><span class="date"></span></li>
+        <li class="active"><a href="web3/tokenomics.html">Tokenomics</a><span class="date"></span></li>
       </ul>
     </div>
         <div class="timeline-item planning">
@@ -89,12 +89,13 @@ hide:
         <li class="planned">Relaunch Exit Node Network <span class="date"></span></li>
         <li class="planned">Lethean App Release <span class="date"></span></li>
         <li class="planned">Lethean Marketplace Beta <span class="date"></span></li>
+        <li class="planned">Self-Hosted Company Ledger <span class="date"></span></li>
       </ul>
     </div>
     <div class="timeline-item completed">
       <div class="timeline-marker"></div>
       <h4>Completed </h4>
-        <h5>Lethean community managed project since 2020 </h4>
+        <h5>Lethean community managed project since 2020 </h5>
       <ul>
         <li class="completed">Lethean Algorithm Change to CN<span class="date">Feb 2018</span></li>
         <li class="completed">Lethean Algorithm Change to CN V7<span class="date">Apr 2018</span></li>
