@@ -86,10 +86,13 @@ hide:
       <div class="timeline-marker"></div>
       <h4>2025-2026 Planning</h4>
       <ul>
-        <li class="planned">Relaunch Exit Node Network <span class="date"></span></li>
+        <li class="planned">Relaunch & Expand the Decentralized Gateway Network<span class="date"></span></li>
         <li class="planned">Lethean App Release <span class="date"></span></li>
         <li class="planned">Lethean Marketplace Beta <span class="date"></span></li>
-        <li class="planned">Self-Hosted Company Ledger <span class="date"></span></li>
+        <li class="planned">Introduce Lethean for Business <span class="date"></span></li>
+        <li class="planned">Self-Hosted Digital Ledgers <span class="date"></span></li>
+        <li class="planned">Blockchain-Verified Certificates of Authenticity <span class="date"></span></li>
+        <li class="planned">Real-Time Supply Chain Intelligence <span class="date"></span></li>
       </ul>
     </div>
     <div class="timeline-item completed">
