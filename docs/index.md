@@ -7,42 +7,44 @@ hide:
 
 <div class="hero-section">
   <div class="hero-content">
-    <h1>Secure Your Digital Freedom with Lethean</h1>
-    <p class="hero-subtitle">Open-source privacy solutions with zero compromises</p>
+    <h1>Confidential Infrastructure for Assured Information Exchange</h1>
+    <p class="hero-subtitle">Securing digital commerce and information logistics with federated, auditable, and sovereign data logistics.</p>
     <div class="hero-badges">
-      <span class="badge">100% Open Source</span>
+      <span class="badge">Perpetual License</span>
+      <span class="badge">Free Forever</span>
+      <span class="badge">Sovereign Control</span>
     </div>
-    <a href="/getting-started/wallet.html" class="cta-button">Get Started</a>
+    <a href="/getting-started/" class="cta-button">Begin Integration</a>
   </div>
 </div>
 
 <div class="features-grid">
   <div class="feature-card">
-    <img src="./assets/images/secure-data-storage.jpg?auto=compress&cs=tinysrgb&w=300" alt="Secure Data Storage">
-    <h3>Secure Data Storage</h3>
-    <p>Complete control over your data with enterprise-grade encryption</p>
-    <a href="/getting-started/dappserver/" class="get-started">Get Started →</a>
+    <img src="./assets/images/secure-data-storage.jpg?auto=compress&cs=tinysrgb&w=300" alt="Sovereign Data Control">
+    <h3>Sovereign Data Control</h3>
+    <p>Maintain absolute authority over your data with robust, end-to-end encryption.</p>
+    <a href="/getting-started/dappserver/" class="get-started">Explore the Framework →</a>
   </div>
   
   <div class="feature-card">
-    <img src="./assets/images/private-transaction-net.png?auto=compress&cs=tinysrgb&w=300" alt="Private Transactions">
-    <h3>Private Transaction Network</h3>
-    <p>Confidential transactions with military-grade privacy</p>
-    <a href="/getting-started/wallet.html" class="get-started">Get Started →</a>
+    <img src="./assets/images/private-transaction-net.png?auto=compress&cs=tinysrgb&w=300" alt="Confidential Transactions">
+    <h3>Confidential Transactions</h3>
+    <p>Execute transactions with verifiable integrity and assured confidentiality.</p>
+    <a href="/getting-started/wallet.html" class="get-started">Learn More →</a>
   </div>
   
   <div class="feature-card">
-    <img src="./assets/images/decentralised-vpn.jpg?auto=compress&cs=tinysrgb&w=300" alt="VPN Infrastructure">
-    <h3>Decentralized VPN</h3>
-    <p>Global network of secure nodes for unrestricted access</p>
-    <a href="/vpn/" class="get-started">Get Started →</a>
+    <img src="./assets/images/decentralised-vpn.jpg?auto=compress&cs=tinysrgb&w=300" alt="Resilient Network Infrastructure">
+    <h3>Resilient Infrastructure</h3>
+    <p>Utilise a distributed global network for secure and reliable data transit.</p>
+    <a href="/network/" class="get-started">Review the Architecture →</a>
   </div>
   
   <div class="feature-card">
-    <img src="./assets/images/cross-platform.jpeg?auto=compress&cs=tinysrgb&w=300" alt="Cross Platform">
-    <h3>Cross-Platform</h3>
-    <p>Seamless integration across all your devices</p>
-    <a href="/getting-started/dappserver/sdk/" class="get-started">Get Started →</a>
+    <img src="./assets/images/cross-platform.jpeg?auto=compress&cs=tinysrgb&w=300" alt="Unified Platform Access">
+    <h3>Unified Platform Access</h3>
+    <p>Ensure consistent integration across your entire operational hardware stack.</p>
+    <a href="/getting-started/developer/" class="get-started">Begin Integration →</a>
   </div>
 </div>
 
@@ -50,20 +52,20 @@ hide:
   <h2>Why Choose Lethean?</h2>
   <div class="benefits-grid">
     <div class="benefit-card">
-      <h4>Complete Data Sovereignty</h4>
-      <p>You own and control 100% of your data</p>
+      <h4>Operational Integrity</h4>
+      <p>By guaranteeing data sovereignty, you retain full control over your operational destiny, free from third-party dependence.</p>
     </div>
     <div class="benefit-card">
-      <h4>Enterprise-Grade Privacy</h4>
-      <p>Military-grade encryption standards</p>
+      <h4>Assured Commercial Confidentiality</h4>
+      <p>Protect sensitive commercial intelligence and intellectual property with cryptographically secure transaction protocols.</p>
     </div>
     <div class="benefit-card">
-      <h4>User-Friendly Interface</h4>
-      <p>Designed for simplicity and ease of use</p>
+      <h4>Reduced Implementation Overhead</h4>
+      <p>A unified, platform-agnostic design simplifies integration and reduces the long-term cost of ownership.</p>
     </div>
     <div class="benefit-card">
-      <h4>Regulatory Compliance</h4>
-      <p>Built to meet global privacy standards</p>
+      <h4>Designed for Future Compliance</h4>
+      <p>An adaptable, decentralised architecture provides a robust foundation for navigating complex regulatory landscapes.</p>
     </div>
   </div>
 </div>
@@ -105,19 +107,16 @@ hide:
 </div>
 
 <div class="cta-section">
-  <h2>Take Control of Your Digital Privacy</h2>
-  <p>Join thousands of users who trust Lethean for their privacy needs</p>
+  <h2>Reclaim Your Digital Sovereignty</h2>
+  <p>Join a growing community building the future of assured information exchange. Explore the framework and get involved today.</p>
+  
   <div class="cta-buttons">
     <a href="/getting-started/wallet.html" class="cta-button">Quick Start Guide</a>
     <a href="https://github.com/letheanVPN" class="cta-button secondary">View on GitHub</a>
   </div>
-</div>
 
-<div class="community-section">
-  <h2>Join Our Community</h2>
-  <div class="community-links">
+  <div class="community-links" style="margin-top: 2rem;">
     <a href="https://discord.com/invite/lethean-lthn-379876792003067906" class="community-link">Discord</a>
-    <a href="https://github.com/letheanVPN" class="community-link">GitHub</a>
     <a href="https://twitter.com/letheanVPN" class="community-link">Twitter</a>
   </div>
 </div>
