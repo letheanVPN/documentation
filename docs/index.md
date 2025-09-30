@@ -8,7 +8,7 @@ hide:
 <div class="hero-section">
   <div class="hero-content">
     <h1>Confidential Infrastructure for Assured Information Exchange</h1>
-    <p class="hero-subtitle">Securing digital commerce and information logistics with federated, auditable, and sovereign data logistics.</p>
+    <p class="hero-subtitle">Securing digital commerce and information exchange with federated, auditable, and sovereign data logistics.</p>
     <div class="hero-badges">
       <span class="badge">Perpetual License</span>
       <span class="badge">Free Forever</span>
