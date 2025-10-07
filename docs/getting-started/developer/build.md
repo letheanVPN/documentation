@@ -5,6 +5,21 @@
 
 This project uses a Makefile for building and Conan for dependency management. The primary build targets and instructions are below.
 
+## Simple Compile Instructions
+
+One of the historical issues for the project has been the complexity of building the codebase.
+Our system is designed to be as simple as possible, with a single Makefile to rule them all.
+
+```shell
+git clone --recursive https://github.com/letheanVPN/blockchain.git
+make build TESTNET=1
+```
+
+That's it! Project dependencies will be installed automatically via Conan, Conan is downloaded, the system version is ignored;
+So it will never conflict with any existing Conan installation you may have, we also host a compile cache, speeding up compile time even more.
+
+Everything below is optional, for developers, you can just run `make help` or just `make` to see available targets.
+
 ## Dependency Setup (Conan)
 
 Dependencies are managed via [Conan](https://conan.io/). The required libraries are listed in `conanfile.txt`:
