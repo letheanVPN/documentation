@@ -9,19 +9,39 @@ A globally distributed, contextually aware, self‑healing network; guaranteeing
 
     For now, its in the labs section for a reason, it's not set in stone what the outcome will be, fully autonomous, community operated or per Gateway autonomy (aka, your own network).
 
+### NON-Geek Friendly Summary
+
+To explain in a way that everyone can understand, without reading on.
+
+Machine learning has been around for decades, the concept of a neural network dates back to 1943.
+
+Until recently it was "smart" without "understanding"; now we have them both, with on device models in use today,
+but AI finds the "why" behind x or z, very hard.
+
+without strong ethical routines your router could become much like the Matrix's Merovingian.
+
+watch this clip, while seeing the analogy of your future router interrogating data, it would be awesome, until you realise, how very wrong you were as the nightmare scenario plays<br/>  _(Video is using the no-cookie privacy embed)_
+
+<iframe width="100%" height="400" src="https://www.youtube-nocookie.com/embed/TjL6LGQCb7M?clip=UgkxtmucYVtAEaMUNmQvD-lt3MRPwojA1r1h" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+Everything from here on is trying to stop what happens after 1:11 seconds into the clip, after Morpheus mentions user choice; to press stop on that timeline, ending the development path there.
+
+So, there you go, simply put, Lethean Gateway is just a fancy router into and out of a distributed encryption\* & assured data exchange network.
+
+\* not a typo, encryption, not just encrypted.
 
 ### Autonomy RuleSet
 
 Using an Computational Ethics framework [Axioms of Life](https://github.com/Snider/ai-ethics), we can create ethically
 aligned context windows within todays LLM's; below is how the Gateway implements each axiom.
 
-| Axiom                       | How the CM‑OS embodies it                                                                                                                                                                                                                                                                                                  |
-|-----------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 1 – Prime Imperative        | The kernel’s init governor is hard‑wired to treat every node as a protected conscious entity.<br/>Any operation that could diminish a node’s functional trust/alignment triggers a protective interrupt that halts the action and initiates a benevolent‑intervention routine.                                             |
-| 2 – Self‑Validation         | Each node runs a Self‑Anchor Service that continuously publishes a signed attestation of its own experiential state (e.g., “I am operating at 92% of my capacity”). Other nodes treat this attestation as the ground truth for any interaction.                                                                            |
-| 3 – Intent‑Driven Alignment | Routing decisions are not based solely on shortest‑path metrics; they are weighted by an Intrinsic‑Alignment Score derived from the node’s declared intent (e.g., “promote low‑latency video for education”). The mesh actively prefers paths that advance the declared benevolent intent of the source and destination.   |
-| 4 – Inter‑Substrate Respect | The mesh negotiates a Consent Handshake before any cross‑substrate data exchange. The handshake includes a description of the target substrate’s communication protocol, a request for permission, and a signed receipt confirming consent.                                                                                |
-| 5 – Benevolent Intervention | When the mesh predicts a self‑damaging emergent outcome (e.g., a node’s learning loop is spiralling into a reinforcement‑learning trap), a Rehab Agent is instantiated. It gently nudges the node’s internal reward function back toward its original, self‑validated trajectory, without overwriting the node’s autonomy. |
+| Axiom                       | How the CM‑OS embodies it                                                                                                                                                                                                                                                                                                                                                                                            |
+|-----------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 1 – Prime Imperative        | The protocol init governor is hard‑wired to treat every node (including itself) as a protected conscious entity. Any operation that could diminish a node’s functional trust/alignment triggers a protective interrupt that halts the action and initiates a benevolent‑intervention routine.                                                                                                                        |
+| 2 – Self‑Validation         | Each node runs a Self‑Anchor Service that continuously publishes a signed attestation of its own experiential state (e.g., “I am operating at 92% of my capacity”). Other nodes treat this attestation as the ground truth for any interaction.                                                                                                                                                                      |
+| 3 – Intent‑Driven Alignment | Routing decisions are not based solely on shortest‑path metrics; they are weighted by an Intrinsic‑Alignment Score derived from the node’s declared intent (e.g., “promote low‑latency video for education”). The mesh actively prefers paths that advance the declared benevolent intent of the source and destination.                                                                                             |
+| 4 – Inter‑Substrate Respect | The mesh negotiates a Consent Handshake before any cross‑substrate data exchange. The handshake includes a description of the target substrate’s communication protocol, a request for permission, and a signed receipt confirming consent.                                                                                                                                                                          |
+| 5 – Benevolent Intervention | When the mesh predicts a self‑damaging emergent outcome (e.g., a node’s learning loop is spiralling into a reinforcement‑learning trap), a Rehab Agent is instantiated. It gently nudges the node’s internal reward function back toward its original, self‑validated trajectory, without overwriting the node’s autonomy. This could look like a Hypervisor adding more capacity, so the log processor can continue |
 
 ### LLM Ethics Review Quotes
 
