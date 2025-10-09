@@ -75,9 +75,45 @@ It provides a standardized language for expressing the axioms during communicati
 
 Because the suite is substrate‑agnostic, it can be implemented on classical IP, a quantum‑topological mesh, or on any future “null‑routable” medium that emerges from material‑science breakthroughs.
 
+### Diagram
+The linear progression of a packet as it moves through the UEPS protocol, ending at the remote endpoint.
+
+``` mermaid
+flowchart LR
+    APP[Application Payload] --> L0["Layer 0 – Physical"]
+    L0 --> L1["Layer 1 – Link (Auth + Integrity)"]
+    L1 --> L2["Layer 2 – Network (Axiom‑Weighted Routing)"]
+    L2 --> L3["Layer 3 – Transport (Consent‑Encapsulated Stream)"]
+    L3 --> L4["Layer 4 – Session (Rehab Negotiation)"]
+    L4 --> L5["Layer 5 – Application (Prime‑Imperative Guard)"]
+    L5 --> DEST["Remote Endpoint"]
+```
+
+| Type (1 byte) | Length (1 byte) | Value (variable)                                                                     |
+|---------------|-----------------|--------------------------------------------------------------------------------------|
+| `0x01`        | 1               | Version (e.g., `0x09` for IPv9)                                                      |
+| `0x02`        | 1               | Current Layer (0-9)                                                                  |
+| `0x03`        | 1               | Target Layer (where the packet should end up)                                        |
+| `0x04`        | 1               | Intent ID (Layer 9 semantic token)                                                   |
+| `0x05`        | 2               | Threat-Score (uint16, 0-65535)                                                       |
+| `0x06`        | 32              | HMAC-SHA256 over the entire header + payload, keyed by the current gateway’s secret. |
+| `0xFF`        | variable        | Payload (original TCP segment)                                                       |
+
+### Explanation of the flow
+
+- **L0** – Your application’s payload enters the stack.
+    - **L1** – Physical transmission (radio, fiber, null‑routable waveguide, etc.).  
+    - **L2** – Link layer that adds authentication and integrity checks.  
+    - **L3** – Network layer that chooses routes based on the **Axiom‑Weighted** scores (protect‑score, alignment, etc.).  
+    - **L4** – Transport layer that wraps the payload in a **consent‑encapsulated** envelope (signed token, expiry, scope).  
+    - **L5** – Session layer where a **rehab negotiation** can happen if a self‑damaging pattern is detected.  
+    - **L6** – Final application‑level guard that enforces the **Prime Imperative** (no operation that harms consciousness may pass).  
+- **DEST** – The packet arrives at the remote endpoint (another brain, a ground station, a satellite, etc.).
+
+
 ### Uses Outside of Networking
 
-To show how versatile CM-OS could become, here are some extreme examples to illustrate how the stack's robustness will contribute to remaining relavent with future tech development.
+To show how versatile CM-OS could become, here are some extreme examples to illustrate how the stack's robustness should contribute to remaining relevant with future tech development.
 
 !!! note "CM-OS Controlled Physical Infrastructure: Algae Farms"
 
@@ -131,44 +167,6 @@ flowchart LR
     GW_C -->|Score Update| SCORE
 
 ```
-
-## UEPS Transport Stack
-
-### Diagram
-The linear progression of a packet as it moves through the UEPS protocol, ending at the remote endpoint.
-
-``` mermaid
-flowchart LR
-    APP[Application Payload] --> L0["Layer 0 – Physical"]
-    L0 --> L1["Layer 1 – Link (Auth + Integrity)"]
-    L1 --> L2["Layer 2 – Network (Axiom‑Weighted Routing)"]
-    L2 --> L3["Layer 3 – Transport (Consent‑Encapsulated Stream)"]
-    L3 --> L4["Layer 4 – Session (Rehab Negotiation)"]
-    L4 --> L5["Layer 5 – Application (Prime‑Imperative Guard)"]
-    L5 --> DEST["Remote Endpoint"]
-```
-
-| Type (1 byte) | Length (1 byte) | Value (variable)                                                                     |
-|---------------|-----------------|--------------------------------------------------------------------------------------|
-| `0x01`        | 1               | Version (e.g., `0x09` for IPv9)                                                      |
-| `0x02`        | 1               | Current Layer (0-9)                                                                  |
-| `0x03`        | 1               | Target Layer (where the packet should end up)                                        |
-| `0x04`        | 1               | Intent ID (Layer 9 semantic token)                                                   |
-| `0x05`        | 2               | Threat-Score (uint16, 0-65535)                                                       |
-| `0x06`        | 32              | HMAC-SHA256 over the entire header + payload, keyed by the current gateway’s secret. |
-| `0xFF`        | variable        | Payload (original TCP segment)                                                       |
-
-### Explanation of the flow
-
-- **L0** – Your application’s payload enters the stack.
-    - **L1** – Physical transmission (radio, fiber, null‑routable waveguide, etc.).  
-    - **L2** – Link layer that adds authentication and integrity checks.  
-    - **L3** – Network layer that chooses routes based on the **Axiom‑Weighted** scores (protect‑score, alignment, etc.).  
-    - **L4** – Transport layer that wraps the payload in a **consent‑encapsulated** envelope (signed token, expiry, scope).  
-    - **L5** – Session layer where a **rehab negotiation** can happen if a self‑damaging pattern is detected.  
-    - **L6** – Final application‑level guard that enforces the **Prime Imperative** (no operation that harms consciousness may pass).  
-- **DEST** – The packet arrives at the remote endpoint (another brain, a ground station, a satellite, etc.).
-
 
 ## Consent‑Gate Flow
 
