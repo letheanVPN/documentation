@@ -2,66 +2,70 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://lt.hn/index.html</loc>
-         <lastmod>2025-10-07</lastmod>
+         <lastmod>2025-10-09</lastmod>
     </url>
     <url>
          <loc>https://lt.hn/getting-started/index.html</loc>
-         <lastmod>2025-10-07</lastmod>
+         <lastmod>2025-10-09</lastmod>
     </url>
     <url>
          <loc>https://lt.hn/getting-started/chain.html</loc>
-         <lastmod>2025-10-07</lastmod>
+         <lastmod>2025-10-09</lastmod>
     </url>
     <url>
          <loc>https://lt.hn/getting-started/wallet.html</loc>
-         <lastmod>2025-10-07</lastmod>
+         <lastmod>2025-10-09</lastmod>
     </url>
     <url>
          <loc>https://lt.hn/getting-started/developer/index.html</loc>
-         <lastmod>2025-10-07</lastmod>
+         <lastmod>2025-10-09</lastmod>
     </url>
     <url>
          <loc>https://lt.hn/getting-started/developer/build.html</loc>
-         <lastmod>2025-10-07</lastmod>
+         <lastmod>2025-10-09</lastmod>
     </url>
     <url>
          <loc>https://lt.hn/getting-started/developer/docker.html</loc>
-         <lastmod>2025-10-07</lastmod>
+         <lastmod>2025-10-09</lastmod>
     </url>
     <url>
          <loc>https://lt.hn/network/index.html</loc>
-         <lastmod>2025-10-07</lastmod>
+         <lastmod>2025-10-09</lastmod>
     </url>
     <url>
          <loc>https://lt.hn/network/vpn.html</loc>
-         <lastmod>2025-10-07</lastmod>
+         <lastmod>2025-10-09</lastmod>
     </url>
     <url>
          <loc>https://lt.hn/updates/index.html</loc>
-         <lastmod>2025-10-07</lastmod>
+         <lastmod>2025-10-09</lastmod>
     </url>
     <url>
          <loc>https://lt.hn/updates/2024/08/19/testy.html</loc>
-         <lastmod>2025-10-07</lastmod>
+         <lastmod>2025-10-09</lastmod>
     </url>
     <url>
          <loc>https://lt.hn/web3/index.html</loc>
-         <lastmod>2025-10-07</lastmod>
+         <lastmod>2025-10-09</lastmod>
     </url>
     <url>
          <loc>https://lt.hn/web3/config.html</loc>
-         <lastmod>2025-10-07</lastmod>
+         <lastmod>2025-10-09</lastmod>
     </url>
     <url>
          <loc>https://lt.hn/web3/tokenomics.html</loc>
-         <lastmod>2025-10-07</lastmod>
+         <lastmod>2025-10-09</lastmod>
+    </url>
+    <url>
+         <loc>https://lt.hn/web3/labs/gateway.html</loc>
+         <lastmod>2025-10-09</lastmod>
     </url>
     <url>
          <loc>https://lt.hn/updates/archive/2024.html</loc>
-         <lastmod>2025-10-07</lastmod>
+         <lastmod>2025-10-09</lastmod>
     </url>
     <url>
          <loc>https://lt.hn/updates/category/general.html</loc>
-         <lastmod>2025-10-07</lastmod>
+         <lastmod>2025-10-09</lastmod>
     </url>
 </urlset>
