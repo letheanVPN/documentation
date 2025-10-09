@@ -83,6 +83,7 @@ nav:
     - web3/index.md
     - web3/config.md
     - web3/tokenomics.md
+    - web3/labs/gateway.md
 
 extra:
   generator: false
@@ -146,7 +147,11 @@ markdown_extensions:
   - pymdownx.inlinehilite
   - pymdownx.snippets
   - pymdownx.details
-  - pymdownx.superfences
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
   - pymdownx.betterem
   - pymdownx.tabbed:
       alternate_style: true
