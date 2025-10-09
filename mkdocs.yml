@@ -1,5 +1,5 @@
 site_name: Lethean Documentation
-copyright: Copyright &copy; 2017 - 2025 LetheanVPN
+copyright: LetheanVPN &copy; EUPL-1.2 &mdash; 2017 to &infin; and beyond
 repo_url: https://github.com/letheanVPN/documentation
 repo_name: letheanVPN/documentation
 edit_uri: edit/main/docs/
@@ -98,8 +98,10 @@ extra:
 extra_css:
   - assets/stylesheets/extra.css
 plugins:
-  - offline
-  - meta
+  - offline:
+  - tags:
+      listings: true
+  - meta:
   - blog:
       blog_dir: updates
   # CI=1 mkdocs build
