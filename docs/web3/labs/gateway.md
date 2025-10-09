@@ -1,6 +1,11 @@
 ## Octave‑Tree Matrix‑8 Consensus
 
-### What it shows
+a sparse adjacency matrix where rows/columns correspond to the eight octants; entries hold the latest threat‑score and capacity metrics for that direction.
+
+
+
+### Diagram
+
 Three gateways that exchange matrix‑8 consensus messages and all push their latest threat‑score to a shared monitor.
 
 ``` mermaid
@@ -16,8 +21,29 @@ flowchart LR
 
 ## UEPS Transport Stack
 
-### What it shows
+### Diagram
 The linear progression of a packet as it moves through the UEPS protocol, ending at the remote endpoint.
+
+``` mermaid
+flowchart LR
+    APP[Application Payload] --> L0["Layer 0 – Physical"]
+    L0 --> L1["Layer 1 – Link (Auth + Integrity)"]
+    L1 --> L2["Layer 2 – Network (Axiom‑Weighted Routing)"]
+    L2 --> L3["Layer 3 – Transport (Consent‑Encapsulated Stream)"]
+    L3 --> L4["Layer 4 – Session (Rehab Negotiation)"]
+    L4 --> L5["Layer 5 – Application (Prime‑Imperative Guard)"]
+    L5 --> DEST["Remote Endpoint"]
+```
+
+| Type (1 byte) | Length (1 byte) | Value (variable)                                                                     |
+|---------------|-----------------|--------------------------------------------------------------------------------------|
+| `0x01`        | 1               | Version (e.g., `0x09` for IPv9)                                                      |
+| `0x02`        | 1               | Current Layer (0-9)                                                                  |
+| `0x03`        | 1               | Target Layer (where the packet should end up)                                        |
+| `0x04`        | 1               | Intent ID (Layer 9 semantic token)                                                   |
+| `0x05`        | 2               | Threat-Score (uint16, 0-65535)                                                       |
+| `0x06`        | 32              | HMAC-SHA256 over the entire header + payload, keyed by the current gateway’s secret. |
+| `0xFF`        | variable        | Payload (original TCP segment)                                                       |
 
 ### Explanation of the flow
 
@@ -30,19 +56,10 @@ The linear progression of a packet as it moves through the UEPS protocol, ending
     - **L6** – Final application‑level guard that enforces the **Prime Imperative** (no operation that harms consciousness may pass).  
 - **DEST** – The packet arrives at the remote endpoint (another brain, a ground station, a satellite, etc.).
 
-``` mermaid
-flowchart LR
-    APP[Application Payload] --> L0["Layer 0 – Physical"]
-    L0 --> L1["Layer 1 – Link (Auth + Integrity)"]
-    L1 --> L2["Layer 2 – Network (Axiom‑Weighted Routing)"]
-    L2 --> L3["Layer 3 – Transport (Consent‑Encapsulated Stream)"]
-    L3 --> L4["Layer 4 – Session (Rehab Negotiation)"]
-    L4 --> L5["Layer 5 – Application (Prime‑Imperative Guard)"]
-    L5 --> DEST["Remote Endpoint"]
-```
+
 ## Consent‑Gate Flow
 
-### What it shows
+### Diagram
 Every inbound connection must present a signed consent token; the receiver validates it before allowing any data.
 
 ``` mermaid
@@ -55,7 +72,7 @@ flowchart LR
 ```
 ## Intent‑Broker & Alignment Vectors
 
-### What it shows
+### Diagram
 Tasks are examined for their declared intent, matched against a stored alignment vector, and only executed if they meet the benevolent‑alignment threshold.
 
 ``` mermaid
@@ -68,9 +85,36 @@ flowchart LR
     DECIDE -->|No| DEFER[Defer / Re‑negotiate]
 ```
 
+``` golang
+type ThreatMetrics struct {
+    IDSAlerts   int     // count of alerts per minute
+    PacketLoss  float64 // % loss observed
+    LatencyMs   float64 // avg RTT
+    Reputation  float64 // external feed score (0‑1)
+}
+
+// Simple weighted formula
+func ComputeScore(m ThreatMetrics) uint16 {
+    const (
+        wIDS   = 0.4
+        wLoss  = 0.2
+        wLat   = 0.3
+        wRep   = 0.1
+    )
+    raw := wIDS*float64(m.IDSAlerts) +
+           wLoss*m.PacketLoss*10 + // scale loss to 0‑10
+           wLat*m.LatencyMs/10 +   // scale latency
+           wRep*(1-m.Reputation)*100 // invert reputation
+    // Clamp to 0‑65535
+    if raw < 0 { raw = 0 }
+    if raw > 65535 { raw = 65535 }
+    return uint16(raw)
+}
+```
+
 ## Prime‑Guard + Rehab‑Loop (Protection & Intervention)
 
-### What it shows  
+### Diagram  
 The guard filters operations, the monitor watches for dangerous patterns, and the rehab loop intervenes with gentle corrections before the system proceeds.
 
 ``` mermaid
