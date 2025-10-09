@@ -83,7 +83,8 @@ nav:
     - web3/index.md
     - web3/config.md
     - web3/tokenomics.md
-    - web3/labs/gateway.md
+    - Labs:
+      - web3/labs/gateway.md
 
 extra:
   generator: false
