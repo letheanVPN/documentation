@@ -1,193 +1,134 @@
 # Building The Blockchain
 
-> **⚠️ Notice**  
-> Please make sure you have read the [Developer Onboarding Guide](index.md) before continuing.
 
-This project uses a Makefile for building and Conan for dependency management. The primary build targets and instructions are below.
+### Dependencies
+| component / version                                                         | minimum <br>(not recommended but may work) | recommended    | most recent of what we have ever tested |
+|-----------------------------------------------------------------------------|--------------------------------------------|----------------|-----------------------------------------|
+| gcc (Linux)                                                                 | 8.4.0                                      | 9.4.0          | 12.3.0                                  |
+| llvm/clang (Linux)                                                          | UNKNOWN                                    | 7.0.1          | 8.0.0                                   |
+| [MSVC](https://visualstudio.microsoft.com/downloads/) (Windows)             | 2017 (15.9.30)                             | 2022 (17.11.5) | 2022 (17.12.3)                          |
+| [XCode](https://developer.apple.com/downloads/) (macOS)                     | 12.3                                       | 14.3           | 15.2                                    |
+| [CMake](https://cmake.org/download/)                                        | 3.26.3                                     | 3.26.3         | 3.31.6                                  |
 
-## Simple Compile Instructions
+## Cloning
 
-One of the historical issues for the project has been the complexity of building the codebase.
-Our system is designed to be as simple as possible, with a single Makefile to rule them all.
+Be sure to clone the repository properly, with `--recursive` flag, or you'll get angry:<br/>
+`git clone --recursive https://github.com/letheanVPN/blockchain.git`
 
-```shell
-git clone --recursive https://github.com/letheanVPN/blockchain.git
-make build TESTNET=1
-```
+# Building
 
-That's it! Project dependencies will be installed automatically via Conan, Conan is downloaded, the system version is ignored;
-So it will never conflict with any existing Conan installation you may have, we also host a compile cache, speeding up compile time even more.
+The project uses a `Makefile` that provides a simple and powerful interface for building.
+It automatically handles dependency installation with Conan and compilation with CMake.
 
-Everything below is optional, for developers, you can just run `make help` or just `make` to see available targets.
+You need CMake and Make installed on your system, other than that you don't need to worry about Python, Conan, Boost, OpenSSL, or any other dependencies.
 
-## Dependency Setup (Conan)
+The final packages are created as they are due to a historical distribution method used in china: USB Stick, CD, DVD, etc.
 
-Dependencies are managed via [Conan](https://conan.io/). The required libraries are listed in `conanfile.txt`:
+We use CPack, so our packages are self-contained, have searchable HTML documentation, and are ready to be installed on any system.
 
-- zlib
-- boost
-- openssl
-- miniupnpc
-- jwt-cpp
+To skip the packing step, use `make build` as defined in the section below for Advanced Build Customization
 
-Conan will automatically install these when you build.
+## Simple Workflow Builds (Recommended)
 
+For most use cases, these two commands are all you need. They handle the entire build process from start to finish.
 
-
-=== "Windows"
-
-    ```powershell
-    choco install conan 
+*   **Build for Mainnet:**
+    ```shell
+    make mainnet
     ```
 
-=== "MacOS"
-
-    ``` shell
-    brew install conan
+*   **Build for Testnet:**
+    ```shell
+    make testnet
     ```
 
-=== "Linux"
+## Creating Release Packages
 
-    ``` shell
-    apt-get install pipx
-    pipx ensurepath
-    refresh
-    pipx install conan
+To create distributable packages (e.g., `.zip`, `.msi`, `.pkg`, `.deb`), run the `release` target. This will build the project, build the documentation, and then package everything.
+
+ ```shell
+ make release TESTNET=1
+ ```
+The final packages will be located in the `build/packages/` directory
+
+## Advanced Build Customization (Makefile Variables)
+
+For advanced use cases, you can override variables in the `Makefile` to customize the build process.
+
+*   **Build a `testnet` version:**
+    ```shell
+    make build TESTNET=1
+    ```
+*   **Build a statically-linked version:**
+    ```shell
+    make build STATIC=1
+    ```
+*   **Build a Debug build with 8 compile threads:**
+    ```shell
+    make build BUILD_TYPE=Debug CPU_CORES=8
+    ```
+*   **Use custom CMakePresets:**
+    ```shell
+    make build PRESET_CONFIGURE=my-config-preset PRESET_BUILD=my-build-preset
     ```
 
+| Variable           | Description                                                            | Default Value           |
+|--------------------|------------------------------------------------------------------------|-------------------------|
+| `BUILD_TYPE`       | Sets the build configuration (e.g., `Release`, `Debug`).               | `Release`               |
+| `TESTNET`          | Set to `1` to build for the test network.                              | `0`                     |
+| `STATIC`           | Set to `1` to link libraries statically.                               | `0`                     |
+| `CPU_CORES`        | Number of CPU cores to use for parallel compilation.                   | Auto-detected           |
+| `BUILD_VERSION`    | The version string to embed in the binaries.                           | `6.0.1`                 |
+| `BUILD_FOLDER`     | The output directory for the build.                                    | `build/release`         |
+| `PRESET_CONFIGURE` | The CMake preset to use for the `configure` step.                      | `conan-release`         |
+| `PRESET_BUILD`     | The CMake preset to use for the `build` step.                          | `conan-release`         |
+| `CONAN_CACHE`      | The path for the local Conan cache, where the dependencies are stored. | `./build/sdk`           |
+| `CONAN_EXECUTABLE` | The path to the usable Conan executable.                               | `./build/bin/conan`     |
+| `CONAN_URL`        | The URL for the Conan remote repository.                               | `artifacts.host.uk.com` |
+| `CONAN_USER`       | The username for the Conan remote.                                     | `public`                |
+| `CONAN_PASSWORD`   | The password for the Conan remote.                                     |                         |
 
+## Build Profiles (CMake Presets)
 
-## Compile Using Make
+Our build system uses [CMake Presets](https://cmake.org/cmake/help/latest/manual/cmake-presets.7.html) to manage configurations for different platforms, compilers, and build types. While the simple `make mainnet` and `make testnet` targets are sufficient for most developers, you can use presets for more granular control over the build process.
 
-Run `make help` to see available targets. Common targets include:
+Presets are automatically detected from the `cmake/presets` directory. You can list available presets by checking the contents of `CMakePresets.json` and `ConanPresets.json` in the build directory after running a configure step.
 
-- **release**: Build a release version.
-- **debug**: Build a debug version.
-- **static**: Build a static release.
-- **clean**: Remove all build directories.
-- **help**: Show help message.
+### Using Presets
 
-### Build Targets
+To build with a specific preset, you can use the `PRESET_CONFIGURE` and `PRESET_BUILD` variables with the `make build` command.
 
-Profiles are defined in `cmake/profiles/`. For each profile, a target is generated:
-```
-make <profile>
-```
-Example:
-```
-make apple-clang-armv8
-```
-This builds using the specified profile; the list of targets is:
+For example, to build for Linux with GCC for x86_64 architecture, you might use a command like this:
 
-- `make apple-clang-armv8`
-- `make apple-clang-x86_64`
-- `make gcc-linux-x86_64`
-- `make gcc-linux-armv8`
-- `make msvc-194-x86_64`
-
-### Testnet Builds
-
-Builds default to `mainnet`. To create a `testnet` build, you need to add `TESTNET=1` with your make command, e.g `make apple-clang-armv8 TESTNET=1`
-
-
-## Compile Using CMake
-
-The project uses CMake, the Makefile is just a wrapper; libraries are found using find_package, so either have them installed 
-or you can use Conan to install them by adding: 
-
-`-DCMAKE_PROJECT_TOP_LEVEL_INCLUDES="cmake/conan_provider.cmake"`
-
-Putting that together, an example command would be:
-```
-cmake -B build/debug -S . -DCMAKE_PROJECT_TOP_LEVEL_INCLUDES=cmake/conan_provider.cmake -G Ninja -DCMAKE_BUILD_TYPE=Debug -DSTATIC=1 -DTESTNET=1
-cmake --build=build/debug --config=Release
-```
-
-## Documentation
-
-Please ensure code improvements also come with documentation updates. The documentation project is integrated.
-Into the blockchain repo, with helper CMake functions to build and run a local server.
-
-### Prerequisites
-
-
-=== "Windows"
-
-    ```powershell
-    choco install python --pre 
-    pip install -r docs/requirements.txt
-    ```
-
-=== "MacOS"
-
-    ``` shell
-    brew install python@3.9
-    pip3 install -r docs/requirements.txt
-    ```
-
-=== "Linux"
-
-    ``` shell
-    apt-get install pipx
-    pipx ensurepath
-    refresh
-    pipx install -r docs/requirements.txt
-    ```
-
-
-### Documentation Targets
-
-- `make docs`: Build documentation.
-- `make docs-dev`: Serve documentation for local development `http://127.0.0.1:8000`.
-
-### Other Targets
-
-- **test**: Build and run tests (release mode).
-- **test-debug**: Build and run tests (debug mode).
-- **docs**: Build documentation.
-- **docs-dev**: Serve development documentation.
-- **tags**: Generate C++ tags for code navigation.
-
-## Example Usage
-
-### Build release
 ```shell
-make release
+make build PRESET_CONFIGURE=gcc-linux-x86_64
 ```
 
-### Build debug
-```shell
-make debug
-```
+This is equivalent to the old build system's `make gcc-linux-x86_64` target.
 
-### Compile for Windows
-```shell
-make msvc-194-x86_64
-```
+### Available Presets
 
-### Compile for Linux
-```shell
-make gcc-linux-x86_64
-```
+The following presets are commonly available, corresponding to different target platforms and architectures:
 
-### Compile for Apple ARM
-```shell
-make apple-clang-armv8
-```
+*   `apple-clang-armv8`: Apple Silicon (ARM64) with Apple Clang.
+*   `apple-clang-x86_64`: Intel-based Macs (x86_64) with Apple Clang.
+*   `gcc-linux-x86_64`: Linux (x86_64) with GCC.
+*   `gcc-linux-armv8`: Linux (ARM64) with GCC.
+*   `msvc-194-x86_64`: Windows (x86_64) with MSVC 2022.
 
-### Compile for Apple AMD64
-```shell
-make apple-clang-x86_64
-```
+You can also create your own presets for custom build configurations. Refer to the CMake documentation for more details on creating presets.
 
-### Clean build directories
-```shell
-make clean
-```
+## Cleaning the Build Directory
 
-## Notes
+ALWAYS USE `make clean` to clean the build directory, manually deleting the `build/release`, `build/SOME_FOLDER` will cause you issues.
 
-- Builds are parallelised based on your CPU cores.
-- Conan profiles are auto-detected if missing.
-- All build artefacts are placed in the `build/` directory.
+Our `make clean` triggers a cmake script that completely resets the build directory &amp; dynamically added CMakePresets to its cached warm-up state,  
+the selective clean script can be edited here: `cmake/CleanBuild.cmake` or directly run from the repo root `cmake -P cmake/CleanBuild.cmake`
 
+You can NUKE the build directory with `make clean-build` which is `rm -rf build`.
+
+If you do manually delete build folders and get CMake errors (if you have compiled anything previously, you will), 
+the ConanPresets.json file has entries in the `include` property, delete them all and try again.
+
+This happens because CMakePresets.json includes ConanPresets.json, that has the list of toolchains to use that gets populated during the CMake config step, 
+when you manually delete a folder, the toolchain is now a broken path, and CMake throws a fatal error.
