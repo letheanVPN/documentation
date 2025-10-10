@@ -695,6 +695,84 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#building" class="md-nav__link">
+    <span class="md-ellipsis">
+      Building
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#simple-workflow-builds-recommended" class="md-nav__link">
+    <span class="md-ellipsis">
+      Simple Workflow Builds (Recommended)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creating-release-packages" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creating Release Packages
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#advanced-build-customization-makefile-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      Advanced Build Customization (Makefile Variables)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#build-profiles-cmake-presets" class="md-nav__link">
+    <span class="md-ellipsis">
+      Build Profiles (CMake Presets)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Build Profiles (CMake Presets)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#using-presets" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using Presets
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#available-presets" class="md-nav__link">
+    <span class="md-ellipsis">
+      Available Presets
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cleaning-the-build-directory" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cleaning the Build Directory
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1312,6 +1390,84 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#building" class="md-nav__link">
+    <span class="md-ellipsis">
+      Building
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#simple-workflow-builds-recommended" class="md-nav__link">
+    <span class="md-ellipsis">
+      Simple Workflow Builds (Recommended)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creating-release-packages" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creating Release Packages
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#advanced-build-customization-makefile-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      Advanced Build Customization (Makefile Variables)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#build-profiles-cmake-presets" class="md-nav__link">
+    <span class="md-ellipsis">
+      Build Profiles (CMake Presets)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Build Profiles (CMake Presets)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#using-presets" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using Presets
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#available-presets" class="md-nav__link">
+    <span class="md-ellipsis">
+      Available Presets
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cleaning-the-build-directory" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cleaning the Build Directory
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1391,7 +1547,7 @@
 <h2 id="cloning">Cloning<a class="headerlink" href="#cloning" title="Permanent link">&para;</a></h2>
 <p>Be sure to clone the repository properly, with <code>--recursive</code> flag, or you'll get angry:<br/>
 <code>git clone --recursive https://github.com/letheanVPN/blockchain.git</code></p>
-<h1 id="building">Building<a class="headerlink" href="#building" title="Permanent link">&para;</a></h1>
+<h2 id="building">Building<a class="headerlink" href="#building" title="Permanent link">&para;</a></h2>
 <p>The project uses a <code>Makefile</code> that provides a simple and powerful interface for building.
 It automatically handles dependency installation with Conan and compilation with CMake.</p>
 <p>You need CMake and Make installed on your system, other than that you don't need to worry about Python, Conan, Boost, OpenSSL, or any other dependencies.</p>
@@ -1559,7 +1715,7 @@ when you manually delete a folder, the toolchain is now a broken path, and CMake
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="October 10, 2025 13:25:29 UTC">October 10, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="October 10, 2025 14:03:51 UTC">October 10, 2025</span>
   </span>
 
     
