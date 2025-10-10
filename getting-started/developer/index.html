@@ -1235,135 +1235,9 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#prerequisites" class="md-nav__link">
-    <span class="md-ellipsis">
-      Prerequisites
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#repository-layout" class="md-nav__link">
     <span class="md-ellipsis">
       Repository Layout
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#branching-issue-workflow" class="md-nav__link">
-    <span class="md-ellipsis">
-      Branching &amp; Issue Workflow
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Branching &amp; Issue Workflow">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#issue-creation" class="md-nav__link">
-    <span class="md-ellipsis">
-      Issue Creation
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Issue Creation">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#checklist" class="md-nav__link">
-    <span class="md-ellipsis">
-      Checklist
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#branch-naming" class="md-nav__link">
-    <span class="md-ellipsis">
-      Branch Naming
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#pull-request" class="md-nav__link">
-    <span class="md-ellipsis">
-      Pull Request
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#local-development-building-the-code" class="md-nav__link">
-    <span class="md-ellipsis">
-      Local Development – Building the Code
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Local Development – Building the Code">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#conan-dependency-installation" class="md-nav__link">
-    <span class="md-ellipsis">
-      Conan Dependency Installation
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#build-profiles" class="md-nav__link">
-    <span class="md-ellipsis">
-      Build Profiles
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#common-shortcuts" class="md-nav__link">
-    <span class="md-ellipsis">
-      Common Shortcuts
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#parallel-builds" class="md-nav__link">
-    <span class="md-ellipsis">
-      Parallel Builds
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#running-the-test-suite" class="md-nav__link">
-    <span class="md-ellipsis">
-      Running the Test Suite
     </span>
   </a>
   
@@ -1380,7 +1254,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#prerequisites_1" class="md-nav__link">
+  <a href="#prerequisites" class="md-nav__link">
     <span class="md-ellipsis">
       Prerequisites
     </span>
@@ -1406,35 +1280,8 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#documentation-checklist" class="md-nav__link">
-    <span class="md-ellipsis">
-      Documentation Checklist
-    </span>
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#continuous-integration-checks" class="md-nav__link">
-    <span class="md-ellipsis">
-      Continuous-Integration Checks
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#release-checklist-maintainers" class="md-nav__link">
-    <span class="md-ellipsis">
-      Release Checklist (Maintainers)
-    </span>
-  </a>
   
 </li>
       
@@ -1502,26 +1349,8 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#install-conan" class="md-nav__link">
-    <span class="md-ellipsis">
-      Install Conan
-    </span>
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#faq-troubleshooting" class="md-nav__link">
-    <span class="md-ellipsis">
-      FAQ / Troubleshooting
-    </span>
-  </a>
   
 </li>
       
@@ -1558,296 +1387,60 @@
 
 
 <h1 id="developer-onboarding-guide">Developer Onboarding Guide<a class="headerlink" href="#developer-onboarding-guide" title="Permanent link">&para;</a></h1>
-<p>How to go from a GitHub issue to a merged Pull Request for the LetheanVPN Blockchain.</p>
-<h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h2>
-<table>
-<thead>
-<tr>
-<th>Platform</th>
-<th>Packages</th>
-<th>Installation Commands</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Common</td>
-<td>git ≥2.30, make, python ≥3.9, conan ≥2.0, cmake ≥3.22, a supported C/C++ compiler</td>
-<td>(see OS-specific rows)</td>
-</tr>
-<tr>
-<td>Windows</td>
-<td>Chocolatey, PowerShell</td>
-<td>powershell<br>choco install conan<br>choco install python --pre<br>pip install -r docs/requirements.txt<br></td>
-</tr>
-<tr>
-<td>macOS</td>
-<td>Homebrew</td>
-<td>brew install conan<br>brew install python@3.9<br>pip3 install -r docs/requirements.txt<br></td>
-</tr>
-<tr>
-<td>Linux</td>
-<td>apt (or distro-specific), pipx</td>
-<td>apt-get update &amp;&amp; apt-get install -y pipx<br>pipx ensurepath<br>refresh   # reload $PATH<br>pipx install conan<br>pipx install -r docs/requirements.txt<br></td>
-</tr>
-</tbody>
-</table>
-<p><strong>Tip:</strong> After installing the Python requirements, you can verify them with:</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>pip list | grep -E &#39;mkdocs|jinja2&#39;
-</span></code></pre></div>
 <h2 id="repository-layout">Repository Layout<a class="headerlink" href="#repository-layout" title="Permanent link">&para;</a></h2>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>├─ conanfile.txt           # Third-party libs
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>├─ cmake/
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>│   └─ profiles/           # Conan + CMake toolchain profiles
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>├─ docs/
-</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>│   ├─ requirements.txt    # MkDocs + plugins
-</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>│   └─ *.md                # Documentation sources
-</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>├─ src/                    # C++ source tree
-</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>├─ tests/                  # Unit / integration tests
-</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>├─ Makefile                # High-level build driver
-</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>├─ README.md
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>├─ conanfile.py           # Third-party libs
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>├─ cmake/
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>│   └─ profiles/           # Conan + CMake toolchain profiles
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>├─ docs/
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>│   ├─ requirements.txt    # MkDocs + plugins
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>│   └─ *.md                # Documentation sources
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>├─ src/                    # C++ source tree
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>├─ tests/                  # Unit / integration tests
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>├─ Makefile                # High-level build driver
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>├─ README.md
 </span></code></pre></div>
-<h2 id="branching-issue-workflow">Branching &amp; Issue Workflow<a class="headerlink" href="#branching-issue-workflow" title="Permanent link">&para;</a></h2>
-<h3 id="issue-creation">Issue Creation<a class="headerlink" href="#issue-creation" title="Permanent link">&para;</a></h3>
-<ol>
-<li>Open a GitHub Issue.</li>
-<li>Choose an appropriate label (bug, enhancement, docs, ...).</li>
-<li>Assign a milestone if the work belongs to a release.</li>
-</ol>
-<h4 id="checklist">Checklist<a class="headerlink" href="#checklist" title="Permanent link">&para;</a></h4>
-<ul>
-<li>Title follows <type>: short description.</li>
-<li>Description contains reproduction steps or design goals.</li>
-<li>Acceptance criteria are clearly listed.</li>
-</ul>
-<h3 id="branch-naming">Branch Naming<a class="headerlink" href="#branch-naming" title="Permanent link">&para;</a></h3>
-<p><div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>dev-&lt;issue-number&gt;-&lt;short-slug&gt;
-</span></code></pre></div>
-<strong>Example:</strong> <code>dev-1234-add-grpc-gateway</code></p>
-<ul>
-<li>Create the branch after the issue exists (so you know the number).</li>
-<li>Keep the branch short-lived; aim to merge within a few days.</li>
-</ul>
-<h3 id="pull-request">Pull Request<a class="headerlink" href="#pull-request" title="Permanent link">&para;</a></h3>
-<table>
-<thead>
-<tr>
-<th>Field</th>
-<th>Recommended Value</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Base branch</td>
-<td>dev</td>
-</tr>
-<tr>
-<td>Title template</td>
-<td>[ #<issue-number> ] <short-summary></td>
-</tr>
-<tr>
-<td>Description template</td>
-<td>markdown<br>## Related Issue<br>Closes #<issue-number><br><br>## Summary<br><One-sentence summary><br><br>## Checklist<br>- [ ] Code builds (<code>make &lt;profile&gt;</code>) <br>- [ ] Tests pass (<code>make test</code> or <code>make test-debug</code>) <br>- [ ] Docs updated (<code>make docs</code>) <br>- [ ] C++ tags regenerated (<code>make tags</code>) <br>- [ ] No lint/format warnings (run <code>clang-format -i</code> if applicable)<br></td>
-</tr>
-<tr>
-<td>Reviewers</td>
-<td>At least one senior maintainer; optionally a domain expert (crypto, networking, ...)</td>
-</tr>
-</tbody>
-</table>
-<h2 id="local-development-building-the-code">Local Development – Building the Code<a class="headerlink" href="#local-development-building-the-code" title="Permanent link">&para;</a></h2>
-<h3 id="conan-dependency-installation">Conan Dependency Installation<a class="headerlink" href="#conan-dependency-installation" title="Permanent link">&para;</a></h3>
-<p>Conan resolves the libraries listed in <code>conanfile.txt</code>. The Makefile automatically runs <code>conan install</code> for the selected profile, so you normally don’t need to invoke Conan manually.</p>
-<p><strong>If you modify the dependency list, run:</strong></p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>make clean &amp;&amp; make &lt;profile&gt;
-</span></code></pre></div>
-<p>to force a fresh Conan install.</p>
-<h3 id="build-profiles">Build Profiles<a class="headerlink" href="#build-profiles" title="Permanent link">&para;</a></h3>
-<p>All profiles live in <code>cmake/profiles/</code>. Invoke a profile with:
-<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>make &lt;profile&gt; [TESTNET=1]
-</span></code></pre></div></p>
-<p><strong>Examples:</strong></p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>make apple-clang-arm64-release
-</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>make gcc-linux-amd64-release TESTNET=1
-</span></code></pre></div>
-<p><strong>Notes:</strong></p>
-<ul>
-<li>Artefacts are placed under <code>build/&lt;profile&gt;/</code>.</li>
-<li><code>TESTNET=1</code> toggles the CMake flag <code>-DTESTNET=1</code> (test-net mode).</li>
-<li>Omitting TESTNET defaults to main-net (0).</li>
-</ul>
-<h3 id="common-shortcuts">Common Shortcuts<a class="headerlink" href="#common-shortcuts" title="Permanent link">&para;</a></h3>
-<table>
-<thead>
-<tr>
-<th>Target</th>
-<th>Command</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Release build</td>
-<td>make release</td>
-</tr>
-<tr>
-<td>Debug build</td>
-<td>make debug</td>
-</tr>
-<tr>
-<td>Static release</td>
-<td>make static</td>
-</tr>
-<tr>
-<td>Clean all build dirs</td>
-<td>make clean</td>
-</tr>
-<tr>
-<td>Show help</td>
-<td>make help</td>
-</tr>
-<tr>
-<td>Run tests (release)</td>
-<td>make test</td>
-</tr>
-<tr>
-<td>Run tests (debug)</td>
-<td>make test-debug</td>
-</tr>
-</tbody>
-</table>
-<h3 id="parallel-builds">Parallel Builds<a class="headerlink" href="#parallel-builds" title="Permanent link">&para;</a></h3>
-<p>The Makefile detects the number of CPU cores and passes <code>-j&lt;N&gt;</code> to CMake. Override with an environment variable if needed:
-<div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>CPU_CORES=4 make release
-</span></code></pre></div></p>
-<h2 id="running-the-test-suite">Running the Test Suite<a class="headerlink" href="#running-the-test-suite" title="Permanent link">&para;</a></h2>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>make test          # Release-mode tests
-</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>make test-debug    # Debug-mode tests
-</span></code></pre></div>
-<ul>
-<li>Tests use the same Conan dependencies, so a clean build is recommended after large dependency changes.</li>
-<li>Fix any failing test locally before pushing the branch.</li>
-</ul>
 <h2 id="documentation-workflow">Documentation Workflow<a class="headerlink" href="#documentation-workflow" title="Permanent link">&para;</a></h2>
-<h3 id="prerequisites_1">Prerequisites<a class="headerlink" href="#prerequisites_1" title="Permanent link">&para;</a></h3>
+<h3 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h3>
 <p>Python packages from <code>docs/requirements.txt</code> (already installed in the Prerequisites section).</p>
 <h3 id="build-the-site">Build the Site<a class="headerlink" href="#build-the-site" title="Permanent link">&para;</a></h3>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>make docs
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>make docs
 </span></code></pre></div>
 <ul>
 <li>Generates a static site under <code>build/docs</code>.</li>
 <li>Commit any updated Markdown files; the generated site can be committed optionally (CI can rebuild).</li>
 </ul>
 <h3 id="serve-locally-live-reload">Serve Locally (Live Reload)<a class="headerlink" href="#serve-locally-live-reload" title="Permanent link">&para;</a></h3>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>make docs-dev
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>make docs-dev
 </span></code></pre></div>
 <ul>
 <li>Starts a MkDocs server at <a href="http://127.0.0.1:8000/">http://127.0.0.1:8000</a>.</li>
 <li>The server watches <code>docs/</code> and reloads on changes.</li>
 </ul>
-<h3 id="documentation-checklist">Documentation Checklist<a class="headerlink" href="#documentation-checklist" title="Permanent link">&para;</a></h3>
-<ul>
-<li>Updated the relevant .md files.</li>
-<li>Ran <code>make docs</code> locally and verified the rendered output.</li>
-<li>Checked navigation (<code>mkdocs.yml</code>) still works.</li>
-</ul>
-<h2 id="continuous-integration-checks">Continuous-Integration Checks<a class="headerlink" href="#continuous-integration-checks" title="Permanent link">&para;</a></h2>
-<p>CI expects the following to succeed for every PR:</p>
-<ul>
-<li>Conan install succeeds for the profile used in the matrix.</li>
-<li><code>make &lt;profile&gt;</code> finishes without errors.</li>
-<li><code>make test</code> exits with status 0.</li>
-<li><code>make docs</code> runs without broken links.</li>
-<li>Lint/formatting (if configured) passes.</li>
-</ul>
-<h2 id="release-checklist-maintainers">Release Checklist (Maintainers)<a class="headerlink" href="#release-checklist-maintainers" title="Permanent link">&para;</a></h2>
-<ol>
-<li>Ensure <code>main</code> is up-to-date with <code>dev</code>.</li>
-<li>Merge any outstanding PRs targeting <code>dev</code>.</li>
-<li>Tag the release:
-   <div class="language-text highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>git tag -a vX.Y.Z -m &quot;Release X.Y.Z&quot;
-</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>git push origin vX.Y.Z
-</span></code></pre></div></li>
-<li>Produce a statically linked binary: <code>make static</code>.</li>
-<li>Upload artefacts to the GitHub Release page.</li>
-<li>Update <code>CHANGELOG.md</code> with merged PR titles.</li>
-</ol>
 <h2 id="handy-one-liners-copy-paste">Handy One-Liners (Copy-Paste)<a class="headerlink" href="#handy-one-liners-copy-paste" title="Permanent link">&para;</a></h2>
 <h3 id="clone-initial-setup">Clone &amp; initial setup<a class="headerlink" href="#clone-initial-setup" title="Permanent link">&para;</a></h3>
-<div class="language-shell highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/LetheanVPN/blockchain.git
-</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="nb">cd</span><span class="w"> </span>blockchain
-</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>make<span class="w"> </span>configure
+<div class="language-shell highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>git<span class="w"> </span>clone<span class="w"> </span>--recursive<span class="w"> </span>https://github.com/LetheanVPN/blockchain.git
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="nb">cd</span><span class="w"> </span>blockchain
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>make<span class="w"> </span>configure
 </span></code></pre></div>
 <h3 id="show-make-targets">Show Make targets<a class="headerlink" href="#show-make-targets" title="Permanent link">&para;</a></h3>
-<div class="language-shell highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>make<span class="w"> </span><span class="nb">help</span>
+<div class="language-shell highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>make<span class="w"> </span><span class="nb">help</span>
 </span></code></pre></div>
 <h3 id="start-a-feature-branch">Start a feature branch<a class="headerlink" href="#start-a-feature-branch" title="Permanent link">&para;</a></h3>
-<div class="language-shell highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>git<span class="w"> </span>checkout<span class="w"> </span>dev
-</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>git<span class="w"> </span>pull<span class="w"> </span>origin<span class="w"> </span>dev
-</span><span id="__span-13-3"><a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a>git<span class="w"> </span>checkout<span class="w"> </span>-b<span class="w"> </span>dev-123456-my-feature
+<div class="language-shell highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>git<span class="w"> </span>checkout<span class="w"> </span>dev
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>git<span class="w"> </span>pull<span class="w"> </span>origin<span class="w"> </span>dev
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>git<span class="w"> </span>checkout<span class="w"> </span>-b<span class="w"> </span>dev-123456-my-feature
 </span></code></pre></div>
 <h3 id="build-a-testnet-binary">Build a testnet binary<a class="headerlink" href="#build-a-testnet-binary" title="Permanent link">&para;</a></h3>
-<div class="language-shell highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>make<span class="w"> </span>gcc-linux-amd64-release<span class="w"> </span><span class="nv">TESTNET</span><span class="o">=</span><span class="m">1</span>
+<div class="language-shell highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>make<span class="w"> </span>gcc-linux-amd64<span class="w"> </span><span class="nv">TESTNET</span><span class="o">=</span><span class="m">1</span>
 </span></code></pre></div>
 <h3 id="serve-docs-locally">Serve docs locally<a class="headerlink" href="#serve-docs-locally" title="Permanent link">&para;</a></h3>
-<div class="language-shell highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>make<span class="w"> </span>docs-dev
+<div class="language-shell highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>make<span class="w"> </span>docs-dev
 </span></code></pre></div>
 <h3 id="run-all-checks-before-opening-a-pr">Run all checks before opening a PR<a class="headerlink" href="#run-all-checks-before-opening-a-pr" title="Permanent link">&para;</a></h3>
-<div class="language-shell highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>make<span class="w"> </span>clean<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>make<span class="w"> </span>gcc-linux-amd64-release<span class="w"> </span><span class="nv">TESTNET</span><span class="o">=</span><span class="m">1</span>
-</span><span id="__span-16-2"><a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a>make<span class="w"> </span><span class="nb">test</span>
-</span><span id="__span-16-3"><a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a>make<span class="w"> </span>docs
+<div class="language-shell highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>make<span class="w"> </span>clean<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>make<span class="w"> </span>gcc-linux-amd64<span class="w"> </span><span class="nv">TESTNET</span><span class="o">=</span><span class="m">1</span>
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>make<span class="w"> </span><span class="nb">test</span>
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>make<span class="w"> </span>docs
 </span></code></pre></div>
-<h3 id="install-conan">Install Conan<a class="headerlink" href="#install-conan" title="Permanent link">&para;</a></h3>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Windows</label><label for="__tabbed_1_2">MacOS</label><label for="__tabbed_1_3">Linux</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<div class="language-powershell highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="n">choco</span> <span class="n">install</span> <span class="n">conan</span> 
-</span></code></pre></div>
-</div>
-<div class="tabbed-block">
-<div class="language-shell highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>brew<span class="w"> </span>install<span class="w"> </span>conan
-</span></code></pre></div>
-</div>
-<div class="tabbed-block">
-<div class="language-shell highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>apt-get<span class="w"> </span>install<span class="w"> </span>pipx
-</span><span id="__span-19-2"><a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a>pipx<span class="w"> </span>ensurepath
-</span><span id="__span-19-3"><a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a>refresh
-</span><span id="__span-19-4"><a id="__codelineno-19-4" name="__codelineno-19-4" href="#__codelineno-19-4"></a>pipx<span class="w"> </span>install<span class="w"> </span>conan
-</span></code></pre></div>
-</div>
-</div>
-</div>
-<h2 id="faq-troubleshooting">FAQ / Troubleshooting<a class="headerlink" href="#faq-troubleshooting" title="Permanent link">&para;</a></h2>
-<table>
-<thead>
-<tr>
-<th>Question</th>
-<th>Answer</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Conan cannot find a profile.</td>
-<td>Run <code>make &lt;profile&gt;</code> once; the Makefile will auto-detect missing profiles and create a default one under <code>~/.conan2/profiles/</code>. You can also inspect <code>cmake/profiles/</code> for the expected name.</td>
-</tr>
-<tr>
-<td>MkDocs server fails with ModuleNotFoundError.</td>
-<td>Ensure you installed the Python requirements for your OS (<code>pip install -r docs/requirements.txt</code>). Re-activate your virtual environment or restart the terminal if you used pipx.</td>
-</tr>
-<tr>
-<td>Tests crash on macOS with SIGABRT.</td>
-<td>Verify you are using the correct Apple-Clang profile (<code>apple-clang-arm64-release</code> on M1/M2, <code>apple-clang-amd64-release</code> on Intel). Clean the build directory (<code>make clean</code>) and rebuild.</td>
-</tr>
-<tr>
-<td>make docs produces broken links.</td>
-<td>Run <code>mkdocs build --strict</code> locally to see the exact failures, then fix the offending Markdown or nav entries.</td>
-</tr>
-<tr>
-<td>Parallel builds cause “file not found” errors.</td>
-<td>Some Conan packages generate files lazily; increase the timeout with <code>CONAN_RETRY=5</code> or temporarily disable parallelism (<code>CPU_CORES=1</code>).</td>
-</tr>
-</tbody>
-</table>
-<hr />
-<p><strong>Happy hacking! 🎉 If anything feels unclear, open an issue or ping a maintainer – we’re here to help you get your contribution merged smoothly.</strong></p>
 
 
 
@@ -1870,7 +1463,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="September 25, 2025 19:12:35 UTC">September 25, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="October 10, 2025 13:25:29 UTC">October 10, 2025</span>
   </span>
 
     
