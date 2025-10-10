@@ -30,7 +30,7 @@ So, there you go, simply put, Lethean Gateway is just a fancy router into and ou
 
 \* not a typo, encryption, not just encrypted.
 
-### Autonomy RuleSet
+### Unified Ethical Protocol Stack (UEPS) a.k.a Autonomy RuleSet
 
 Using an Computational Ethics framework [Axioms of Life](https://github.com/Snider/ai-ethics), we can create ethically
 aligned context windows within todays LLM's; below is how the Gateway implements each axiom.
@@ -79,7 +79,7 @@ aligned context windows within todays LLM's; below is how the Gateway implements
     The work proposes nothing less than a universal meta-ethics for conscious beings.
 
 
-## Universal Ethical Protocol Suite (UEPS) Protocol Stack
+## UEPS Network Protocol
 
 A protocol stack that can be layered on top of any physical transport (RF, fiber, quantum‑photonic).
 It provides a standardized language for expressing the axioms during communication.
@@ -95,6 +95,19 @@ It provides a standardized language for expressing the axioms during communicati
 
 Because the suite is substrate‑agnostic, it can be implemented on classical IP, a quantum‑topological mesh, or on any future “null‑routable” medium that emerges from material‑science breakthroughs.
 
+## TLV 
+
+| Type (1 byte) | Length (1 byte) | Value (variable)                                                                     |
+|---------------|-----------------|--------------------------------------------------------------------------------------|
+| `0x01`        | 1               | Version (e.g., `0x09` for IPv9)                                                      |
+| `0x02`        | 1               | Current Layer (0-9)                                                                  |
+| `0x03`        | 1               | Target Layer (where the packet should end up)                                        |
+| `0x04`        | 1               | Intent ID (Layer 9 semantic token)                                                   |
+| `0x05`        | 2               | Threat-Score (uint16, 0-65535)                                                       |
+| `0x06`        | 32              | HMAC-SHA256 over the entire header + payload, keyed by the current gateway’s secret. |
+| `0xFF`        | variable        | Payload (original TCP segment)                                                       |
+
+
 ### Diagram
 The linear progression of a packet as it moves through the UEPS protocol, ending at the remote endpoint.
 
@@ -108,16 +121,6 @@ flowchart LR
     L4 --> L5["Layer 5 – Application (Prime‑Imperative Guard)"]
     L5 --> DEST["Remote Endpoint"]
 ```
-
-| Type (1 byte) | Length (1 byte) | Value (variable)                                                                     |
-|---------------|-----------------|--------------------------------------------------------------------------------------|
-| `0x01`        | 1               | Version (e.g., `0x09` for IPv9)                                                      |
-| `0x02`        | 1               | Current Layer (0-9)                                                                  |
-| `0x03`        | 1               | Target Layer (where the packet should end up)                                        |
-| `0x04`        | 1               | Intent ID (Layer 9 semantic token)                                                   |
-| `0x05`        | 2               | Threat-Score (uint16, 0-65535)                                                       |
-| `0x06`        | 32              | HMAC-SHA256 over the entire header + payload, keyed by the current gateway’s secret. |
-| `0xFF`        | variable        | Payload (original TCP segment)                                                       |
 
 ### Explanation of the flow
 
@@ -187,6 +190,34 @@ flowchart LR
     GW_C -->|Score Update| SCORE
 
 ```
+## Threat-Score Monitor
+
+``` golang
+type ThreatMetrics struct {
+    IDSAlerts   int     // count of alerts per minute
+    PacketLoss  float64 // % loss observed
+    LatencyMs   float64 // avg RTT
+    Reputation  float64 // external feed score (0‑1)
+}
+
+// Simple weighted formula
+func ComputeScore(m ThreatMetrics) uint16 {
+    const (
+        wIDS   = 0.4
+        wLoss  = 0.2
+        wLat   = 0.3
+        wRep   = 0.1
+    )
+    raw := wIDS*float64(m.IDSAlerts) +
+           wLoss*m.PacketLoss*10 + // scale loss to 0‑10
+           wLat*m.LatencyMs/10 +   // scale latency
+           wRep*(1-m.Reputation)*100 // invert reputation
+    // Clamp to 0‑65535
+    if raw < 0 { raw = 0 }
+    if raw > 65535 { raw = 65535 }
+    return uint16(raw)
+}
+```
 
 ## Consent‑Gate Flow
 
@@ -214,33 +245,6 @@ flowchart LR
     SCORE --> DECIDE{Score ≥ Threshold?}
     DECIDE -->|Yes| EXEC[Execute Task]
     DECIDE -->|No| DEFER[Defer / Re‑negotiate]
-```
-
-``` golang
-type ThreatMetrics struct {
-    IDSAlerts   int     // count of alerts per minute
-    PacketLoss  float64 // % loss observed
-    LatencyMs   float64 // avg RTT
-    Reputation  float64 // external feed score (0‑1)
-}
-
-// Simple weighted formula
-func ComputeScore(m ThreatMetrics) uint16 {
-    const (
-        wIDS   = 0.4
-        wLoss  = 0.2
-        wLat   = 0.3
-        wRep   = 0.1
-    )
-    raw := wIDS*float64(m.IDSAlerts) +
-           wLoss*m.PacketLoss*10 + // scale loss to 0‑10
-           wLat*m.LatencyMs/10 +   // scale latency
-           wRep*(1-m.Reputation)*100 // invert reputation
-    // Clamp to 0‑65535
-    if raw < 0 { raw = 0 }
-    if raw > 65535 { raw = 65535 }
-    return uint16(raw)
-}
 ```
 
 ## Prime‑Guard + Rehab‑Loop (Protection & Intervention)
