@@ -15,7 +15,7 @@
 Be sure to clone the repository properly, with `--recursive` flag, or you'll get angry:<br/>
 `git clone --recursive https://github.com/letheanVPN/blockchain.git`
 
-# Building
+## Building
 
 The project uses a `Makefile` that provides a simple and powerful interface for building.
 It automatically handles dependency installation with Conan and compilation with CMake.
