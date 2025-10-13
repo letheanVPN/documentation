@@ -14,7 +14,7 @@ hide:
       <span class="badge">Free Forever</span>
       <span class="badge">Sovereign Control</span>
     </div>
-    <a href="/getting-started/" class="cta-button">Begin Integration</a>
+    <a href="https://github.com/letheanVPN/blockchain/tree/dev-api?tab=readme-ov-file#lethean-networkethics-encoded" class="cta-button">Begin Integration</a>
   </div>
 </div>
 
