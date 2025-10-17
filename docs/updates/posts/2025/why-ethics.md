@@ -8,7 +8,7 @@ tags:
   - Infrastructure
   - Development
 description: >
-  Build system improvements, new chain features and a new API in development
+  Beyond Rules, Towards Intrinsic Alignment
 title: Why Ethics?
 ---
 
