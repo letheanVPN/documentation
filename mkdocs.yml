@@ -99,6 +99,7 @@ extra:
 extra_css:
   - assets/stylesheets/extra.css
 plugins:
+  - social:
   - offline:
   - tags:
       listings: true
