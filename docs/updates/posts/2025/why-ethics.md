@@ -9,7 +9,7 @@ tags:
   - Development
 description: >
   Build system improvements, new chain features and a new API in development
-title: Development Update
+title: Why Ethics?
 ---
 
 # Why Ethics? Beyond Rules, Towards Intrinsic Alignment
