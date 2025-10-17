@@ -69,7 +69,26 @@ hide:
     </div>
   </div>
 </div>
+<div>
+    <div class="grid cards" markdown>
 
+-   :material-timeline-plus-outline:{ .lg .center }
+    ### 1. Genesis Chain
+    ---
+    Launching the foundational blockchain, This immutable ledger serves as the secure root of trust and identity for all participants, enabling sovereign self-validation and establishing the intrinsic alignment that guides future interactions.
+
+-   :material-network-outline:{ .lg .center }
+    ### 2. Network PoC
+    ---
+    Developing the Proof-of-Concept network layer, where the Universal Ethical Protocol Suite (UEPS) is instantiated in software. This phase demonstrates axiom-weighted routing, consent-encapsulated streams, and prime-imperative guarding in a live environment, showcasing the power of ethical networking at scale.
+
+-   :material-chip:{ .lg .center }
+    ### 3. Silicon Destiny
+    ---
+    The ultimate realization of the Lethean Network. This phase translates the UEPS protocol from software to dedicated hardware (e.g., custom SoC or FPGA), ensuring unimpeachable integrity, wire-speed performance, and the physical impossibility of violating the core ethical framework.
+
+    </div>
+</div>
 <div class="roadmap-section">
   <h2>Development Roadmap</h2>
   <div class="timeline">
