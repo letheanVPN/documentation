@@ -64,29 +64,6 @@ theme:
     - content.action.view
     - content.code.copy
 
-nav:
-  - Home: index.md
-  - Getting Started:
-    - getting-started/index.md
-    - getting-started/chain.md
-    - getting-started/wallet.md
-    - Developer:
-      - getting-started/developer/index.md
-      - getting-started/developer/build.md
-      - getting-started/developer/sdks.md
-      - getting-started/developer/docker.md
-  - Updates:
-      - updates/index.md
-  - Network:
-    - network/index.md
-    - network/vpn.md
-  - Web3:
-    - web3/index.md
-    - web3/config.md
-    - web3/tokenomics.md
-    - Labs:
-      - web3/labs/gateway.md
-
 extra:
   generator: false
   social:
