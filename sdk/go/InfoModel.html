@@ -1,0 +1,6554 @@
+  
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://lt.hn/sdk/go/InfoModel.html">
+      
+      
+        <link rel="prev" href="HeightModel.html">
+      
+      
+        <link rel="next" href="InfoUtilsSdkClientGo.html">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.22">
+    
+    
+      
+        <title>InfoModel - Lethean Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.84d31ad4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+        <script src="https://unpkg.com/iframe-worker/shim"></script>
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+      
+        <meta  property="og:type"  content="website" >
+      
+        <meta  property="og:title"  content="InfoModel - Lethean Documentation" >
+      
+        <meta  property="og:description"  content="None" >
+      
+        <meta  property="og:image"  content="https://lt.hn/assets/images/social/sdk/go/InfoModel.png" >
+      
+        <meta  property="og:image:type"  content="image/png" >
+      
+        <meta  property="og:image:width"  content="1200" >
+      
+        <meta  property="og:image:height"  content="630" >
+      
+        <meta  property="og:url"  content="https://lt.hn/sdk/go/InfoModel.html" >
+      
+        <meta  name="twitter:card"  content="summary_large_image" >
+      
+        <meta  name="twitter:title"  content="InfoModel - Lethean Documentation" >
+      
+        <meta  name="twitter:description"  content="None" >
+      
+        <meta  name="twitter:image"  content="https://lt.hn/assets/images/social/sdk/go/InfoModel.png" >
+      
+    
+    
+    <link rel="stylesheet" href="../../assets/stylesheets/custom.css">
+  
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="lethean" data-md-color-accent="blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#infomodel" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+        <aside class="md-banner">
+          <div class="md-banner__inner md-grid md-typeset">
+            
+              <button class="md-banner__button md-icon" aria-label="Don't show this again">
+                
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+              </button>
+            
+            
+    For updates follow <strong>@letheanVPN</strong> on
+    <a href="https://twitter.com/letheanVPN" target="_blank">
+      <span class="twemoji twitter">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M459.4 151.7c.3 4.5.3 9.1.3 13.6 0 138.7-105.6 298.6-298.6 298.6-59.5 0-114.7-17.2-161.1-47.1 8.4 1 16.6 1.3 25.3 1.3 49.1 0 94.2-16.6 130.3-44.8-46.1-1-84.8-31.2-98.1-72.8 6.5 1 13 1.6 19.8 1.6 9.4 0 18.8-1.3 27.6-3.6-48.1-9.7-84.1-52-84.1-103v-1.3c14 7.8 30.2 12.7 47.4 13.3-28.3-18.8-46.8-51-46.8-87.4 0-19.5 5.2-37.4 14.3-53C87.4 130.8 165 172.4 252.1 176.9c-1.6-7.8-2.6-15.9-2.6-24C249.5 95.1 296.3 48 354.4 48c30.2 0 57.5 12.7 76.7 33.1 23.7-4.5 46.5-13.3 66.6-25.3-7.8 24.4-24.4 44.8-46.1 57.8 21.1-2.3 41.6-8.1 60.4-16.2-14.3 20.8-32.2 39.3-52.6 54.3"/></svg>
+      </span>
+      <strong>Twitter</strong>
+    </a>
+    or join our
+    <a href="https://discord.com/invite/lethean-lthn-379876792003067906" target="_blank">
+      <span class="twemoji discord">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M492.5 69.8c-.2-.3-.4-.6-.8-.7-38.1-17.5-78.4-30-119.7-37.1-.4-.1-.8 0-1.1.1s-.6.4-.8.8c-5.5 9.9-10.5 20.2-14.9 30.6-44.6-6.8-89.9-6.8-134.4 0-4.5-10.5-9.5-20.7-15.1-30.6-.2-.3-.5-.6-.8-.8s-.7-.2-1.1-.2C162.5 39 122.2 51.5 84.1 69c-.3.1-.6.4-.8.7C7.1 183.5-13.8 294.6-3.6 404.2c0 .3.1.5.2.8s.3.4.5.6c44.4 32.9 94 58 146.8 74.2.4.1.8.1 1.1 0s.7-.4.9-.7c11.3-15.4 21.4-31.8 30-48.8.1-.2.2-.5.2-.8s0-.5-.1-.8-.2-.5-.4-.6-.4-.3-.7-.4c-15.8-6.1-31.2-13.4-45.9-21.9-.3-.2-.5-.4-.7-.6s-.3-.6-.3-.9 0-.6.2-.9.3-.5.6-.7c3.1-2.3 6.2-4.7 9.1-7.1.3-.2.6-.4.9-.4s.7 0 1 .1c96.2 43.9 200.4 43.9 295.5 0 .3-.1.7-.2 1-.2s.7.2.9.4c2.9 2.4 6 4.9 9.1 7.2.2.2.4.4.6.7s.2.6.2.9-.1.6-.3.9-.4.5-.6.6c-14.7 8.6-30 15.9-45.9 21.8-.2.1-.5.2-.7.4s-.3.4-.4.7-.1.5-.1.8.1.5.2.8c8.8 17 18.8 33.3 30 48.8.2.3.6.6.9.7s.8.1 1.1 0c52.9-16.2 102.6-41.3 147.1-74.2.2-.2.4-.4.5-.6s.2-.5.2-.8c12.3-126.8-20.5-236.9-86.9-334.5zm-302 267.7c-29 0-52.8-26.6-52.8-59.2s23.4-59.2 52.8-59.2c29.7 0 53.3 26.8 52.8 59.2 0 32.7-23.4 59.2-52.8 59.2m195.4 0c-29 0-52.8-26.6-52.8-59.2s23.4-59.2 52.8-59.2c29.7 0 53.3 26.8 52.8 59.2 0 32.7-23.2 59.2-52.8 59.2"/></svg>
+      </span>
+      <strong>Discord</strong>
+  
+          </div>
+          
+            <script>var el=document.querySelector("[data-md-component=announce]");if(el){var content=el.querySelector(".md-typeset");__md_hash(content.innerHTML)===__md_get("__announce")&&(el.hidden=!0)}</script>
+          
+        </aside>
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../index.html" title="Lethean Documentation" class="md-header__button md-logo" aria-label="Lethean Documentation" data-md-component="logo">
+      
+  <img src="../../assets/images/lethean-logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Lethean Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              InfoModel
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="lethean" data-md-color-accent="blue"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9zM20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12zm-9.15 3.96h2.3L12 9z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="lethean" data-md-color-accent="blue"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="lethean" data-md-color-accent="blue"  aria-label="Switch to system preference"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to system preference" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/letheanVPN/documentation" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    letheanVPN/documentation
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../index.html" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../getting-started/index.html" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Getting started
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../network/index.html" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Network
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="index.html" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Sdk
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../updates/index.html" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Updates
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../web3/index.html" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Web3
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../index.html" title="Lethean Documentation" class="md-nav__button md-logo" aria-label="Lethean Documentation" data-md-component="logo">
+      
+  <img src="../../assets/images/lethean-logo.png" alt="logo">
+
+    </a>
+    Lethean Documentation
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/letheanVPN/documentation" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    letheanVPN/documentation
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../getting-started/index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Getting started
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Getting started
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/chain.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Blockchain
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/wallet.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Wallet
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_4" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../getting-started/developer/index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Developer
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            Developer
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/developer/build.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Building The Blockchain
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/developer/docker.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Docker for Lethean
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/developer/sdks.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Building SDK Packages
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../network/index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Network
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Network
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../network/vpn.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    VPN
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Sdk
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Sdk
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Go
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4_1" id="__nav_4_1_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4_1">
+            <span class="md-nav__icon md-icon"></span>
+            Go
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="BlockDetailsModel.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    BlockDetailsModel
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="BlockProcessingPerformanceModel.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    BlockProcessingPerformanceModel
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="BlockTemplateModel.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    BlockTemplateModel
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="BlockTemplateRequestModel.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    BlockTemplateRequestModel
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="BlockUtilsSdkClientGo.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    \BlockUtilsSdkClientGo
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="DbStatInfoModel.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    DbStatInfoModel
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="HeightModel.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    HeightModel
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    InfoModel
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="InfoModel.html" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    InfoModel
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#properties" class="md-nav__link">
+    <span class="md-ellipsis">
+      Properties
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      Methods
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Methods">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#newinfomodel" class="md-nav__link">
+    <span class="md-ellipsis">
+      NewInfoModel
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#newinfomodelwithdefaults" class="md-nav__link">
+    <span class="md-ellipsis">
+      NewInfoModelWithDefaults
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getheight" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetHeight
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getheightok" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetHeightOk
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setheight" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetHeight
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hasheight" class="md-nav__link">
+    <span class="md-ellipsis">
+      HasHeight
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gettxcount" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetTxCount
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gettxcountok" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetTxCountOk
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#settxcount" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetTxCount
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hastxcount" class="md-nav__link">
+    <span class="md-ellipsis">
+      HasTxCount
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gettxpoolsize" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetTxPoolSize
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gettxpoolsizeok" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetTxPoolSizeOk
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#settxpoolsize" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetTxPoolSize
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hastxpoolsize" class="md-nav__link">
+    <span class="md-ellipsis">
+      HasTxPoolSize
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getaltblockscount" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetAltBlocksCount
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getaltblockscountok" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetAltBlocksCountOk
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setaltblockscount" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetAltBlocksCount
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hasaltblockscount" class="md-nav__link">
+    <span class="md-ellipsis">
+      HasAltBlocksCount
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getoutgoingconnectionscount" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetOutgoingConnectionsCount
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getoutgoingconnectionscountok" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetOutgoingConnectionsCountOk
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setoutgoingconnectionscount" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetOutgoingConnectionsCount
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hasoutgoingconnectionscount" class="md-nav__link">
+    <span class="md-ellipsis">
+      HasOutgoingConnectionsCount
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getincomingconnectionscount" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetIncomingConnectionsCount
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getincomingconnectionscountok" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetIncomingConnectionsCountOk
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setincomingconnectionscount" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetIncomingConnectionsCount
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hasincomingconnectionscount" class="md-nav__link">
+    <span class="md-ellipsis">
+      HasIncomingConnectionsCount
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getsynchronizedconnectionscount" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetSynchronizedConnectionsCount
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getsynchronizedconnectionscountok" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetSynchronizedConnectionsCountOk
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setsynchronizedconnectionscount" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetSynchronizedConnectionsCount
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hassynchronizedconnectionscount" class="md-nav__link">
+    <span class="md-ellipsis">
+      HasSynchronizedConnectionsCount
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getwhitepeerlistsize" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetWhitePeerlistSize
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getwhitepeerlistsizeok" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetWhitePeerlistSizeOk
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setwhitepeerlistsize" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetWhitePeerlistSize
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#haswhitepeerlistsize" class="md-nav__link">
+    <span class="md-ellipsis">
+      HasWhitePeerlistSize
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getgreypeerlistsize" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetGreyPeerlistSize
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getgreypeerlistsizeok" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetGreyPeerlistSizeOk
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setgreypeerlistsize" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetGreyPeerlistSize
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hasgreypeerlistsize" class="md-nav__link">
+    <span class="md-ellipsis">
+      HasGreyPeerlistSize
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getcurrentblocksmedian" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetCurrentBlocksMedian
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getcurrentblocksmedianok" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetCurrentBlocksMedianOk
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setcurrentblocksmedian" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetCurrentBlocksMedian
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hascurrentblocksmedian" class="md-nav__link">
+    <span class="md-ellipsis">
+      HasCurrentBlocksMedian
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getaliascount" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetAliasCount
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getaliascountok" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetAliasCountOk
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setaliascount" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetAliasCount
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hasaliascount" class="md-nav__link">
+    <span class="md-ellipsis">
+      HasAliasCount
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getcurrentmaxallowedblocksize" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetCurrentMaxAllowedBlockSize
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getcurrentmaxallowedblocksizeok" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetCurrentMaxAllowedBlockSizeOk
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setcurrentmaxallowedblocksize" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetCurrentMaxAllowedBlockSize
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hascurrentmaxallowedblocksize" class="md-nav__link">
+    <span class="md-ellipsis">
+      HasCurrentMaxAllowedBlockSize
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getdaemonnetworkstate" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetDaemonNetworkState
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getdaemonnetworkstateok" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetDaemonNetworkStateOk
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setdaemonnetworkstate" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetDaemonNetworkState
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hasdaemonnetworkstate" class="md-nav__link">
+    <span class="md-ellipsis">
+      HasDaemonNetworkState
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getsynchronizationstartheight" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetSynchronizationStartHeight
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getsynchronizationstartheightok" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetSynchronizationStartHeightOk
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setsynchronizationstartheight" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetSynchronizationStartHeight
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hassynchronizationstartheight" class="md-nav__link">
+    <span class="md-ellipsis">
+      HasSynchronizationStartHeight
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getmaxnetseenheight" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetMaxNetSeenHeight
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getmaxnetseenheightok" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetMaxNetSeenHeightOk
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setmaxnetseenheight" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetMaxNetSeenHeight
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hasmaxnetseenheight" class="md-nav__link">
+    <span class="md-ellipsis">
+      HasMaxNetSeenHeight
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getmi" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetMi
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getmiok" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetMiOk
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setmi" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetMi
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hasmi" class="md-nav__link">
+    <span class="md-ellipsis">
+      HasMi
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getposallowed" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetPosAllowed
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getposallowedok" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetPosAllowedOk
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setposallowed" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetPosAllowed
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hasposallowed" class="md-nav__link">
+    <span class="md-ellipsis">
+      HasPosAllowed
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getposdifficulty" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetPosDifficulty
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getposdifficultyok" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetPosDifficultyOk
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setposdifficulty" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetPosDifficulty
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hasposdifficulty" class="md-nav__link">
+    <span class="md-ellipsis">
+      HasPosDifficulty
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getpowdifficulty" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetPowDifficulty
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getpowdifficultyok" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetPowDifficultyOk
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setpowdifficulty" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetPowDifficulty
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#haspowdifficulty" class="md-nav__link">
+    <span class="md-ellipsis">
+      HasPowDifficulty
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getdefaultfee" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetDefaultFee
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getdefaultfeeok" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetDefaultFeeOk
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setdefaultfee" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetDefaultFee
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hasdefaultfee" class="md-nav__link">
+    <span class="md-ellipsis">
+      HasDefaultFee
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getminimumfee" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetMinimumFee
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getminimumfeeok" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetMinimumFeeOk
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setminimumfee" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetMinimumFee
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hasminimumfee" class="md-nav__link">
+    <span class="md-ellipsis">
+      HasMinimumFee
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getishardforkactive" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetIsHardforkActive
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getishardforkactiveok" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetIsHardforkActiveOk
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setishardforkactive" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetIsHardforkActive
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hasishardforkactive" class="md-nav__link">
+    <span class="md-ellipsis">
+      HasIsHardforkActive
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getnettimedeltamedian" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetNetTimeDeltaMedian
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getnettimedeltamedianok" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetNetTimeDeltaMedianOk
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setnettimedeltamedian" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetNetTimeDeltaMedian
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hasnettimedeltamedian" class="md-nav__link">
+    <span class="md-ellipsis">
+      HasNetTimeDeltaMedian
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getcurrentnetworkhashrate50" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetCurrentNetworkHashrate50
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getcurrentnetworkhashrate50ok" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetCurrentNetworkHashrate50Ok
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setcurrentnetworkhashrate50" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetCurrentNetworkHashrate50
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hascurrentnetworkhashrate50" class="md-nav__link">
+    <span class="md-ellipsis">
+      HasCurrentNetworkHashrate50
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getcurrentnetworkhashrate350" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetCurrentNetworkHashrate350
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getcurrentnetworkhashrate350ok" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetCurrentNetworkHashrate350Ok
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setcurrentnetworkhashrate350" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetCurrentNetworkHashrate350
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hascurrentnetworkhashrate350" class="md-nav__link">
+    <span class="md-ellipsis">
+      HasCurrentNetworkHashrate350
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getsecondsfor10blocks" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetSecondsFor10Blocks
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getsecondsfor10blocksok" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetSecondsFor10BlocksOk
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setsecondsfor10blocks" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetSecondsFor10Blocks
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hassecondsfor10blocks" class="md-nav__link">
+    <span class="md-ellipsis">
+      HasSecondsFor10Blocks
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getsecondsfor30blocks" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetSecondsFor30Blocks
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getsecondsfor30blocksok" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetSecondsFor30BlocksOk
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setsecondsfor30blocks" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetSecondsFor30Blocks
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hassecondsfor30blocks" class="md-nav__link">
+    <span class="md-ellipsis">
+      HasSecondsFor30Blocks
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gettransactionscntperday" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetTransactionsCntPerDay
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gettransactionscntperdayok" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetTransactionsCntPerDayOk
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#settransactionscntperday" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetTransactionsCntPerDay
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hastransactionscntperday" class="md-nav__link">
+    <span class="md-ellipsis">
+      HasTransactionsCntPerDay
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gettransactionsvolumeperday" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetTransactionsVolumePerDay
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gettransactionsvolumeperdayok" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetTransactionsVolumePerDayOk
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#settransactionsvolumeperday" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetTransactionsVolumePerDay
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hastransactionsvolumeperday" class="md-nav__link">
+    <span class="md-ellipsis">
+      HasTransactionsVolumePerDay
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getlastpostimestamp" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetLastPosTimestamp
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getlastpostimestampok" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetLastPosTimestampOk
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setlastpostimestamp" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetLastPosTimestamp
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#haslastpostimestamp" class="md-nav__link">
+    <span class="md-ellipsis">
+      HasLastPosTimestamp
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getlastpowtimestamp" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetLastPowTimestamp
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getlastpowtimestampok" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetLastPowTimestampOk
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setlastpowtimestamp" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetLastPowTimestamp
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#haslastpowtimestamp" class="md-nav__link">
+    <span class="md-ellipsis">
+      HasLastPowTimestamp
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gettotalcoins" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetTotalCoins
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gettotalcoinsok" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetTotalCoinsOk
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#settotalcoins" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetTotalCoins
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hastotalcoins" class="md-nav__link">
+    <span class="md-ellipsis">
+      HasTotalCoins
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getlastblocksize" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetLastBlockSize
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getlastblocksizeok" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetLastBlockSizeOk
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setlastblocksize" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetLastBlockSize
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#haslastblocksize" class="md-nav__link">
+    <span class="md-ellipsis">
+      HasLastBlockSize
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gettxcountinlastblock" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetTxCountInLastBlock
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gettxcountinlastblockok" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetTxCountInLastBlockOk
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#settxcountinlastblock" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetTxCountInLastBlock
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hastxcountinlastblock" class="md-nav__link">
+    <span class="md-ellipsis">
+      HasTxCountInLastBlock
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getpossequencefactor" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetPosSequenceFactor
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getpossequencefactorok" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetPosSequenceFactorOk
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setpossequencefactor" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetPosSequenceFactor
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#haspossequencefactor" class="md-nav__link">
+    <span class="md-ellipsis">
+      HasPosSequenceFactor
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getpowsequencefactor" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetPowSequenceFactor
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getpowsequencefactorok" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetPowSequenceFactorOk
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setpowsequencefactor" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetPowSequenceFactor
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#haspowsequencefactor" class="md-nav__link">
+    <span class="md-ellipsis">
+      HasPowSequenceFactor
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getblockreward" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetBlockReward
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getblockrewardok" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetBlockRewardOk
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setblockreward" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetBlockReward
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hasblockreward" class="md-nav__link">
+    <span class="md-ellipsis">
+      HasBlockReward
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getlastblocktotalreward" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetLastBlockTotalReward
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getlastblocktotalrewardok" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetLastBlockTotalRewardOk
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setlastblocktotalreward" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetLastBlockTotalReward
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#haslastblocktotalreward" class="md-nav__link">
+    <span class="md-ellipsis">
+      HasLastBlockTotalReward
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getposdifftotalcoinsrate" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetPosDiffTotalCoinsRate
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getposdifftotalcoinsrateok" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetPosDiffTotalCoinsRateOk
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setposdifftotalcoinsrate" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetPosDiffTotalCoinsRate
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hasposdifftotalcoinsrate" class="md-nav__link">
+    <span class="md-ellipsis">
+      HasPosDiffTotalCoinsRate
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getlastblocktimestamp" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetLastBlockTimestamp
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getlastblocktimestampok" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetLastBlockTimestampOk
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setlastblocktimestamp" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetLastBlockTimestamp
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#haslastblocktimestamp" class="md-nav__link">
+    <span class="md-ellipsis">
+      HasLastBlockTimestamp
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getlastblockhash" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetLastBlockHash
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getlastblockhashok" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetLastBlockHashOk
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setlastblockhash" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetLastBlockHash
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#haslastblockhash" class="md-nav__link">
+    <span class="md-ellipsis">
+      HasLastBlockHash
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getposblocktsshiftvsactual" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetPosBlockTsShiftVsActual
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getposblocktsshiftvsactualok" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetPosBlockTsShiftVsActualOk
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setposblocktsshiftvsactual" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetPosBlockTsShiftVsActual
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hasposblocktsshiftvsactual" class="md-nav__link">
+    <span class="md-ellipsis">
+      HasPosBlockTsShiftVsActual
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getoutsstat" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetOutsStat
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getoutsstatok" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetOutsStatOk
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setoutsstat" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetOutsStat
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hasoutsstat" class="md-nav__link">
+    <span class="md-ellipsis">
+      HasOutsStat
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getperformancedata" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetPerformanceData
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getperformancedataok" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetPerformanceDataOk
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setperformancedata" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetPerformanceData
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hasperformancedata" class="md-nav__link">
+    <span class="md-ellipsis">
+      HasPerformanceData
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getofferscount" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetOffersCount
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getofferscountok" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetOffersCountOk
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setofferscount" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetOffersCount
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hasofferscount" class="md-nav__link">
+    <span class="md-ellipsis">
+      HasOffersCount
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getexpirationmediantimestamp" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetExpirationMedianTimestamp
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getexpirationmediantimestampok" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetExpirationMedianTimestampOk
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setexpirationmediantimestamp" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetExpirationMedianTimestamp
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hasexpirationmediantimestamp" class="md-nav__link">
+    <span class="md-ellipsis">
+      HasExpirationMedianTimestamp
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="InfoUtilsSdkClientGo.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    \InfoUtilsSdkClientGo
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="MaintainersInfoModel.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    MaintainersInfoModel
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="PerformanceModel.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    PerformanceModel
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="PosEntryModel.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    PosEntryModel
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="SubmitBlockRequestModel.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    SubmitBlockRequestModel
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="SubmitBlockResponseModel.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    SubmitBlockResponseModel
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="TransactionAttachmentModel.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    TransactionAttachmentModel
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="TransactionDetailsModel.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    TransactionDetailsModel
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="TransactionExtraModel.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    TransactionExtraModel
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="TransactionInputModel.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    TransactionInputModel
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="TransactionOutputModel.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    TransactionOutputModel
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="TxGenerationContextModel.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    TxGenerationContextModel
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="TxPoolPerformanceModel.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    TxPoolPerformanceModel
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="TxProcessingPerformanceModel.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    TxProcessingPerformanceModel
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="VersionModel.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    VersionModel
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../updates/index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Updates
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Updates
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_2" id="__nav_5_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Archive
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_2">
+            <span class="md-nav__icon md-icon"></span>
+            Archive
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../updates/archive/2025.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    2025
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_3" id="__nav_5_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Categories
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_3">
+            <span class="md-nav__icon md-icon"></span>
+            Categories
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../updates/category/development.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Development
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../web3/index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Web3
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6" id="__nav_6_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Web3
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../web3/config.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Notable Configuration Settings
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../web3/tokenomics.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Tokenomics
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_4" id="__nav_6_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Labs
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_4">
+            <span class="md-nav__icon md-icon"></span>
+            Labs
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../web3/labs/gateway.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Lethean Gateway (CM-OS)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#properties" class="md-nav__link">
+    <span class="md-ellipsis">
+      Properties
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      Methods
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Methods">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#newinfomodel" class="md-nav__link">
+    <span class="md-ellipsis">
+      NewInfoModel
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#newinfomodelwithdefaults" class="md-nav__link">
+    <span class="md-ellipsis">
+      NewInfoModelWithDefaults
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getheight" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetHeight
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getheightok" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetHeightOk
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setheight" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetHeight
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hasheight" class="md-nav__link">
+    <span class="md-ellipsis">
+      HasHeight
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gettxcount" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetTxCount
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gettxcountok" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetTxCountOk
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#settxcount" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetTxCount
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hastxcount" class="md-nav__link">
+    <span class="md-ellipsis">
+      HasTxCount
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gettxpoolsize" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetTxPoolSize
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gettxpoolsizeok" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetTxPoolSizeOk
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#settxpoolsize" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetTxPoolSize
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hastxpoolsize" class="md-nav__link">
+    <span class="md-ellipsis">
+      HasTxPoolSize
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getaltblockscount" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetAltBlocksCount
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getaltblockscountok" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetAltBlocksCountOk
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setaltblockscount" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetAltBlocksCount
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hasaltblockscount" class="md-nav__link">
+    <span class="md-ellipsis">
+      HasAltBlocksCount
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getoutgoingconnectionscount" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetOutgoingConnectionsCount
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getoutgoingconnectionscountok" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetOutgoingConnectionsCountOk
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setoutgoingconnectionscount" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetOutgoingConnectionsCount
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hasoutgoingconnectionscount" class="md-nav__link">
+    <span class="md-ellipsis">
+      HasOutgoingConnectionsCount
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getincomingconnectionscount" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetIncomingConnectionsCount
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getincomingconnectionscountok" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetIncomingConnectionsCountOk
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setincomingconnectionscount" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetIncomingConnectionsCount
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hasincomingconnectionscount" class="md-nav__link">
+    <span class="md-ellipsis">
+      HasIncomingConnectionsCount
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getsynchronizedconnectionscount" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetSynchronizedConnectionsCount
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getsynchronizedconnectionscountok" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetSynchronizedConnectionsCountOk
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setsynchronizedconnectionscount" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetSynchronizedConnectionsCount
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hassynchronizedconnectionscount" class="md-nav__link">
+    <span class="md-ellipsis">
+      HasSynchronizedConnectionsCount
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getwhitepeerlistsize" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetWhitePeerlistSize
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getwhitepeerlistsizeok" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetWhitePeerlistSizeOk
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setwhitepeerlistsize" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetWhitePeerlistSize
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#haswhitepeerlistsize" class="md-nav__link">
+    <span class="md-ellipsis">
+      HasWhitePeerlistSize
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getgreypeerlistsize" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetGreyPeerlistSize
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getgreypeerlistsizeok" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetGreyPeerlistSizeOk
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setgreypeerlistsize" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetGreyPeerlistSize
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hasgreypeerlistsize" class="md-nav__link">
+    <span class="md-ellipsis">
+      HasGreyPeerlistSize
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getcurrentblocksmedian" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetCurrentBlocksMedian
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getcurrentblocksmedianok" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetCurrentBlocksMedianOk
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setcurrentblocksmedian" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetCurrentBlocksMedian
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hascurrentblocksmedian" class="md-nav__link">
+    <span class="md-ellipsis">
+      HasCurrentBlocksMedian
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getaliascount" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetAliasCount
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getaliascountok" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetAliasCountOk
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setaliascount" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetAliasCount
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hasaliascount" class="md-nav__link">
+    <span class="md-ellipsis">
+      HasAliasCount
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getcurrentmaxallowedblocksize" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetCurrentMaxAllowedBlockSize
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getcurrentmaxallowedblocksizeok" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetCurrentMaxAllowedBlockSizeOk
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setcurrentmaxallowedblocksize" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetCurrentMaxAllowedBlockSize
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hascurrentmaxallowedblocksize" class="md-nav__link">
+    <span class="md-ellipsis">
+      HasCurrentMaxAllowedBlockSize
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getdaemonnetworkstate" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetDaemonNetworkState
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getdaemonnetworkstateok" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetDaemonNetworkStateOk
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setdaemonnetworkstate" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetDaemonNetworkState
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hasdaemonnetworkstate" class="md-nav__link">
+    <span class="md-ellipsis">
+      HasDaemonNetworkState
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getsynchronizationstartheight" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetSynchronizationStartHeight
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getsynchronizationstartheightok" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetSynchronizationStartHeightOk
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setsynchronizationstartheight" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetSynchronizationStartHeight
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hassynchronizationstartheight" class="md-nav__link">
+    <span class="md-ellipsis">
+      HasSynchronizationStartHeight
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getmaxnetseenheight" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetMaxNetSeenHeight
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getmaxnetseenheightok" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetMaxNetSeenHeightOk
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setmaxnetseenheight" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetMaxNetSeenHeight
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hasmaxnetseenheight" class="md-nav__link">
+    <span class="md-ellipsis">
+      HasMaxNetSeenHeight
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getmi" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetMi
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getmiok" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetMiOk
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setmi" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetMi
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hasmi" class="md-nav__link">
+    <span class="md-ellipsis">
+      HasMi
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getposallowed" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetPosAllowed
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getposallowedok" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetPosAllowedOk
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setposallowed" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetPosAllowed
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hasposallowed" class="md-nav__link">
+    <span class="md-ellipsis">
+      HasPosAllowed
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getposdifficulty" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetPosDifficulty
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getposdifficultyok" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetPosDifficultyOk
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setposdifficulty" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetPosDifficulty
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hasposdifficulty" class="md-nav__link">
+    <span class="md-ellipsis">
+      HasPosDifficulty
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getpowdifficulty" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetPowDifficulty
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getpowdifficultyok" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetPowDifficultyOk
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setpowdifficulty" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetPowDifficulty
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#haspowdifficulty" class="md-nav__link">
+    <span class="md-ellipsis">
+      HasPowDifficulty
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getdefaultfee" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetDefaultFee
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getdefaultfeeok" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetDefaultFeeOk
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setdefaultfee" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetDefaultFee
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hasdefaultfee" class="md-nav__link">
+    <span class="md-ellipsis">
+      HasDefaultFee
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getminimumfee" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetMinimumFee
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getminimumfeeok" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetMinimumFeeOk
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setminimumfee" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetMinimumFee
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hasminimumfee" class="md-nav__link">
+    <span class="md-ellipsis">
+      HasMinimumFee
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getishardforkactive" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetIsHardforkActive
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getishardforkactiveok" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetIsHardforkActiveOk
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setishardforkactive" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetIsHardforkActive
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hasishardforkactive" class="md-nav__link">
+    <span class="md-ellipsis">
+      HasIsHardforkActive
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getnettimedeltamedian" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetNetTimeDeltaMedian
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getnettimedeltamedianok" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetNetTimeDeltaMedianOk
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setnettimedeltamedian" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetNetTimeDeltaMedian
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hasnettimedeltamedian" class="md-nav__link">
+    <span class="md-ellipsis">
+      HasNetTimeDeltaMedian
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getcurrentnetworkhashrate50" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetCurrentNetworkHashrate50
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getcurrentnetworkhashrate50ok" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetCurrentNetworkHashrate50Ok
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setcurrentnetworkhashrate50" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetCurrentNetworkHashrate50
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hascurrentnetworkhashrate50" class="md-nav__link">
+    <span class="md-ellipsis">
+      HasCurrentNetworkHashrate50
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getcurrentnetworkhashrate350" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetCurrentNetworkHashrate350
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getcurrentnetworkhashrate350ok" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetCurrentNetworkHashrate350Ok
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setcurrentnetworkhashrate350" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetCurrentNetworkHashrate350
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hascurrentnetworkhashrate350" class="md-nav__link">
+    <span class="md-ellipsis">
+      HasCurrentNetworkHashrate350
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getsecondsfor10blocks" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetSecondsFor10Blocks
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getsecondsfor10blocksok" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetSecondsFor10BlocksOk
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setsecondsfor10blocks" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetSecondsFor10Blocks
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hassecondsfor10blocks" class="md-nav__link">
+    <span class="md-ellipsis">
+      HasSecondsFor10Blocks
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getsecondsfor30blocks" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetSecondsFor30Blocks
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getsecondsfor30blocksok" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetSecondsFor30BlocksOk
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setsecondsfor30blocks" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetSecondsFor30Blocks
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hassecondsfor30blocks" class="md-nav__link">
+    <span class="md-ellipsis">
+      HasSecondsFor30Blocks
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gettransactionscntperday" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetTransactionsCntPerDay
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gettransactionscntperdayok" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetTransactionsCntPerDayOk
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#settransactionscntperday" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetTransactionsCntPerDay
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hastransactionscntperday" class="md-nav__link">
+    <span class="md-ellipsis">
+      HasTransactionsCntPerDay
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gettransactionsvolumeperday" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetTransactionsVolumePerDay
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gettransactionsvolumeperdayok" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetTransactionsVolumePerDayOk
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#settransactionsvolumeperday" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetTransactionsVolumePerDay
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hastransactionsvolumeperday" class="md-nav__link">
+    <span class="md-ellipsis">
+      HasTransactionsVolumePerDay
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getlastpostimestamp" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetLastPosTimestamp
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getlastpostimestampok" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetLastPosTimestampOk
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setlastpostimestamp" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetLastPosTimestamp
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#haslastpostimestamp" class="md-nav__link">
+    <span class="md-ellipsis">
+      HasLastPosTimestamp
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getlastpowtimestamp" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetLastPowTimestamp
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getlastpowtimestampok" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetLastPowTimestampOk
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setlastpowtimestamp" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetLastPowTimestamp
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#haslastpowtimestamp" class="md-nav__link">
+    <span class="md-ellipsis">
+      HasLastPowTimestamp
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gettotalcoins" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetTotalCoins
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gettotalcoinsok" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetTotalCoinsOk
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#settotalcoins" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetTotalCoins
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hastotalcoins" class="md-nav__link">
+    <span class="md-ellipsis">
+      HasTotalCoins
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getlastblocksize" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetLastBlockSize
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getlastblocksizeok" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetLastBlockSizeOk
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setlastblocksize" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetLastBlockSize
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#haslastblocksize" class="md-nav__link">
+    <span class="md-ellipsis">
+      HasLastBlockSize
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gettxcountinlastblock" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetTxCountInLastBlock
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gettxcountinlastblockok" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetTxCountInLastBlockOk
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#settxcountinlastblock" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetTxCountInLastBlock
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hastxcountinlastblock" class="md-nav__link">
+    <span class="md-ellipsis">
+      HasTxCountInLastBlock
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getpossequencefactor" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetPosSequenceFactor
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getpossequencefactorok" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetPosSequenceFactorOk
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setpossequencefactor" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetPosSequenceFactor
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#haspossequencefactor" class="md-nav__link">
+    <span class="md-ellipsis">
+      HasPosSequenceFactor
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getpowsequencefactor" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetPowSequenceFactor
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getpowsequencefactorok" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetPowSequenceFactorOk
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setpowsequencefactor" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetPowSequenceFactor
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#haspowsequencefactor" class="md-nav__link">
+    <span class="md-ellipsis">
+      HasPowSequenceFactor
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getblockreward" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetBlockReward
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getblockrewardok" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetBlockRewardOk
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setblockreward" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetBlockReward
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hasblockreward" class="md-nav__link">
+    <span class="md-ellipsis">
+      HasBlockReward
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getlastblocktotalreward" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetLastBlockTotalReward
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getlastblocktotalrewardok" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetLastBlockTotalRewardOk
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setlastblocktotalreward" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetLastBlockTotalReward
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#haslastblocktotalreward" class="md-nav__link">
+    <span class="md-ellipsis">
+      HasLastBlockTotalReward
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getposdifftotalcoinsrate" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetPosDiffTotalCoinsRate
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getposdifftotalcoinsrateok" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetPosDiffTotalCoinsRateOk
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setposdifftotalcoinsrate" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetPosDiffTotalCoinsRate
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hasposdifftotalcoinsrate" class="md-nav__link">
+    <span class="md-ellipsis">
+      HasPosDiffTotalCoinsRate
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getlastblocktimestamp" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetLastBlockTimestamp
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getlastblocktimestampok" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetLastBlockTimestampOk
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setlastblocktimestamp" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetLastBlockTimestamp
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#haslastblocktimestamp" class="md-nav__link">
+    <span class="md-ellipsis">
+      HasLastBlockTimestamp
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getlastblockhash" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetLastBlockHash
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getlastblockhashok" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetLastBlockHashOk
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setlastblockhash" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetLastBlockHash
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#haslastblockhash" class="md-nav__link">
+    <span class="md-ellipsis">
+      HasLastBlockHash
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getposblocktsshiftvsactual" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetPosBlockTsShiftVsActual
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getposblocktsshiftvsactualok" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetPosBlockTsShiftVsActualOk
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setposblocktsshiftvsactual" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetPosBlockTsShiftVsActual
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hasposblocktsshiftvsactual" class="md-nav__link">
+    <span class="md-ellipsis">
+      HasPosBlockTsShiftVsActual
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getoutsstat" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetOutsStat
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getoutsstatok" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetOutsStatOk
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setoutsstat" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetOutsStat
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hasoutsstat" class="md-nav__link">
+    <span class="md-ellipsis">
+      HasOutsStat
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getperformancedata" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetPerformanceData
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getperformancedataok" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetPerformanceDataOk
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setperformancedata" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetPerformanceData
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hasperformancedata" class="md-nav__link">
+    <span class="md-ellipsis">
+      HasPerformanceData
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getofferscount" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetOffersCount
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getofferscountok" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetOffersCountOk
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setofferscount" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetOffersCount
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hasofferscount" class="md-nav__link">
+    <span class="md-ellipsis">
+      HasOffersCount
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getexpirationmediantimestamp" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetExpirationMedianTimestamp
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getexpirationmediantimestampok" class="md-nav__link">
+    <span class="md-ellipsis">
+      GetExpirationMedianTimestampOk
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setexpirationmediantimestamp" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetExpirationMedianTimestamp
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hasexpirationmediantimestamp" class="md-nav__link">
+    <span class="md-ellipsis">
+      HasExpirationMedianTimestamp
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+    <a href="https://github.com/letheanVPN/documentation/edit/main/docs/sdk/go/InfoModel.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75z"/></svg>
+    </a>
+  
+  
+    
+      
+    
+    <a href="https://github.com/letheanVPN/documentation/raw/main/docs/sdk/go/InfoModel.md" title="View source of this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0 8a5 5 0 0 1-5-5 5 5 0 0 1 5-5 5 5 0 0 1 5 5 5 5 0 0 1-5 5m0-12.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5"/></svg>
+    </a>
+  
+
+
+<h1 id="infomodel">InfoModel<a class="headerlink" href="#infomodel" title="Permanent link">&para;</a></h1>
+<h2 id="properties">Properties<a class="headerlink" href="#properties" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Height</strong></td>
+<td>Pointer to <strong>int32</strong></td>
+<td></td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>TxCount</strong></td>
+<td>Pointer to <strong>int32</strong></td>
+<td></td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>TxPoolSize</strong></td>
+<td>Pointer to <strong>int32</strong></td>
+<td></td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>AltBlocksCount</strong></td>
+<td>Pointer to <strong>int32</strong></td>
+<td></td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>OutgoingConnectionsCount</strong></td>
+<td>Pointer to <strong>int32</strong></td>
+<td></td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>IncomingConnectionsCount</strong></td>
+<td>Pointer to <strong>int32</strong></td>
+<td></td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>SynchronizedConnectionsCount</strong></td>
+<td>Pointer to <strong>int32</strong></td>
+<td></td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>WhitePeerlistSize</strong></td>
+<td>Pointer to <strong>int32</strong></td>
+<td></td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>GreyPeerlistSize</strong></td>
+<td>Pointer to <strong>int32</strong></td>
+<td></td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>CurrentBlocksMedian</strong></td>
+<td>Pointer to <strong>int32</strong></td>
+<td></td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>AliasCount</strong></td>
+<td>Pointer to <strong>int32</strong></td>
+<td></td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>CurrentMaxAllowedBlockSize</strong></td>
+<td>Pointer to <strong>int32</strong></td>
+<td></td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>DaemonNetworkState</strong></td>
+<td>Pointer to <strong>string</strong></td>
+<td></td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>SynchronizationStartHeight</strong></td>
+<td>Pointer to <strong>int32</strong></td>
+<td></td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>MaxNetSeenHeight</strong></td>
+<td>Pointer to <strong>int32</strong></td>
+<td></td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>Mi</strong></td>
+<td>Pointer to <a href="MaintainersInfoModel.html"><strong>MaintainersInfoModel</strong></a></td>
+<td></td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>PosAllowed</strong></td>
+<td>Pointer to <strong>bool</strong></td>
+<td></td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>PosDifficulty</strong></td>
+<td>Pointer to <strong>string</strong></td>
+<td></td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>PowDifficulty</strong></td>
+<td>Pointer to <strong>int32</strong></td>
+<td></td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>DefaultFee</strong></td>
+<td>Pointer to <strong>int32</strong></td>
+<td></td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>MinimumFee</strong></td>
+<td>Pointer to <strong>int32</strong></td>
+<td></td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>IsHardforkActive</strong></td>
+<td>Pointer to <strong>[]bool</strong></td>
+<td></td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>NetTimeDeltaMedian</strong></td>
+<td>Pointer to <strong>int64</strong></td>
+<td></td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>CurrentNetworkHashrate50</strong></td>
+<td>Pointer to <strong>int32</strong></td>
+<td></td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>CurrentNetworkHashrate350</strong></td>
+<td>Pointer to <strong>int32</strong></td>
+<td></td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>SecondsFor10Blocks</strong></td>
+<td>Pointer to <strong>int32</strong></td>
+<td></td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>SecondsFor30Blocks</strong></td>
+<td>Pointer to <strong>int32</strong></td>
+<td></td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>TransactionsCntPerDay</strong></td>
+<td>Pointer to <strong>[]int32</strong></td>
+<td></td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>TransactionsVolumePerDay</strong></td>
+<td>Pointer to <strong>[]int32</strong></td>
+<td></td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>LastPosTimestamp</strong></td>
+<td>Pointer to <strong>int32</strong></td>
+<td></td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>LastPowTimestamp</strong></td>
+<td>Pointer to <strong>int32</strong></td>
+<td></td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>TotalCoins</strong></td>
+<td>Pointer to <strong>string</strong></td>
+<td></td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>LastBlockSize</strong></td>
+<td>Pointer to <strong>int32</strong></td>
+<td></td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>TxCountInLastBlock</strong></td>
+<td>Pointer to <strong>int32</strong></td>
+<td></td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>PosSequenceFactor</strong></td>
+<td>Pointer to <strong>float64</strong></td>
+<td></td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>PowSequenceFactor</strong></td>
+<td>Pointer to <strong>float64</strong></td>
+<td></td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>BlockReward</strong></td>
+<td>Pointer to <strong>int32</strong></td>
+<td></td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>LastBlockTotalReward</strong></td>
+<td>Pointer to <strong>int32</strong></td>
+<td></td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>PosDiffTotalCoinsRate</strong></td>
+<td>Pointer to <strong>int32</strong></td>
+<td></td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>LastBlockTimestamp</strong></td>
+<td>Pointer to <strong>int32</strong></td>
+<td></td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>LastBlockHash</strong></td>
+<td>Pointer to <strong>string</strong></td>
+<td></td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>PosBlockTsShiftVsActual</strong></td>
+<td>Pointer to <strong>int64</strong></td>
+<td></td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>OutsStat</strong></td>
+<td>Pointer to <strong>map[string]int32</strong></td>
+<td></td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>PerformanceData</strong></td>
+<td>Pointer to <a href="PerformanceModel.html"><strong>PerformanceModel</strong></a></td>
+<td></td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>OffersCount</strong></td>
+<td>Pointer to <strong>int32</strong></td>
+<td></td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>ExpirationMedianTimestamp</strong></td>
+<td>Pointer to <strong>int32</strong></td>
+<td></td>
+<td>[optional]</td>
+</tr>
+</tbody>
+</table>
+<h2 id="methods">Methods<a class="headerlink" href="#methods" title="Permanent link">&para;</a></h2>
+<h3 id="newinfomodel">NewInfoModel<a class="headerlink" href="#newinfomodel" title="Permanent link">&para;</a></h3>
+<p><code>func NewInfoModel() *InfoModel</code></p>
+<p>NewInfoModel instantiates a new InfoModel object
+This constructor will assign default values to properties that have it defined,
+and makes sure properties required by API are set, but the set of arguments
+will change when the set of required properties is changed</p>
+<h3 id="newinfomodelwithdefaults">NewInfoModelWithDefaults<a class="headerlink" href="#newinfomodelwithdefaults" title="Permanent link">&para;</a></h3>
+<p><code>func NewInfoModelWithDefaults() *InfoModel</code></p>
+<p>NewInfoModelWithDefaults instantiates a new InfoModel object
+This constructor will only assign default values to properties that have it defined,
+but it doesn't guarantee that properties required by API are set</p>
+<h3 id="getheight">GetHeight<a class="headerlink" href="#getheight" title="Permanent link">&para;</a></h3>
+<p><code>func (o *InfoModel) GetHeight() int32</code></p>
+<p>GetHeight returns the Height field if non-nil, zero value otherwise.</p>
+<h3 id="getheightok">GetHeightOk<a class="headerlink" href="#getheightok" title="Permanent link">&para;</a></h3>
+<p><code>func (o *InfoModel) GetHeightOk() (*int32, bool)</code></p>
+<p>GetHeightOk returns a tuple with the Height field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.</p>
+<h3 id="setheight">SetHeight<a class="headerlink" href="#setheight" title="Permanent link">&para;</a></h3>
+<p><code>func (o *InfoModel) SetHeight(v int32)</code></p>
+<p>SetHeight sets Height field to given value.</p>
+<h3 id="hasheight">HasHeight<a class="headerlink" href="#hasheight" title="Permanent link">&para;</a></h3>
+<p><code>func (o *InfoModel) HasHeight() bool</code></p>
+<p>HasHeight returns a boolean if a field has been set.</p>
+<h3 id="gettxcount">GetTxCount<a class="headerlink" href="#gettxcount" title="Permanent link">&para;</a></h3>
+<p><code>func (o *InfoModel) GetTxCount() int32</code></p>
+<p>GetTxCount returns the TxCount field if non-nil, zero value otherwise.</p>
+<h3 id="gettxcountok">GetTxCountOk<a class="headerlink" href="#gettxcountok" title="Permanent link">&para;</a></h3>
+<p><code>func (o *InfoModel) GetTxCountOk() (*int32, bool)</code></p>
+<p>GetTxCountOk returns a tuple with the TxCount field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.</p>
+<h3 id="settxcount">SetTxCount<a class="headerlink" href="#settxcount" title="Permanent link">&para;</a></h3>
+<p><code>func (o *InfoModel) SetTxCount(v int32)</code></p>
+<p>SetTxCount sets TxCount field to given value.</p>
+<h3 id="hastxcount">HasTxCount<a class="headerlink" href="#hastxcount" title="Permanent link">&para;</a></h3>
+<p><code>func (o *InfoModel) HasTxCount() bool</code></p>
+<p>HasTxCount returns a boolean if a field has been set.</p>
+<h3 id="gettxpoolsize">GetTxPoolSize<a class="headerlink" href="#gettxpoolsize" title="Permanent link">&para;</a></h3>
+<p><code>func (o *InfoModel) GetTxPoolSize() int32</code></p>
+<p>GetTxPoolSize returns the TxPoolSize field if non-nil, zero value otherwise.</p>
+<h3 id="gettxpoolsizeok">GetTxPoolSizeOk<a class="headerlink" href="#gettxpoolsizeok" title="Permanent link">&para;</a></h3>
+<p><code>func (o *InfoModel) GetTxPoolSizeOk() (*int32, bool)</code></p>
+<p>GetTxPoolSizeOk returns a tuple with the TxPoolSize field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.</p>
+<h3 id="settxpoolsize">SetTxPoolSize<a class="headerlink" href="#settxpoolsize" title="Permanent link">&para;</a></h3>
+<p><code>func (o *InfoModel) SetTxPoolSize(v int32)</code></p>
+<p>SetTxPoolSize sets TxPoolSize field to given value.</p>
+<h3 id="hastxpoolsize">HasTxPoolSize<a class="headerlink" href="#hastxpoolsize" title="Permanent link">&para;</a></h3>
+<p><code>func (o *InfoModel) HasTxPoolSize() bool</code></p>
+<p>HasTxPoolSize returns a boolean if a field has been set.</p>
+<h3 id="getaltblockscount">GetAltBlocksCount<a class="headerlink" href="#getaltblockscount" title="Permanent link">&para;</a></h3>
+<p><code>func (o *InfoModel) GetAltBlocksCount() int32</code></p>
+<p>GetAltBlocksCount returns the AltBlocksCount field if non-nil, zero value otherwise.</p>
+<h3 id="getaltblockscountok">GetAltBlocksCountOk<a class="headerlink" href="#getaltblockscountok" title="Permanent link">&para;</a></h3>
+<p><code>func (o *InfoModel) GetAltBlocksCountOk() (*int32, bool)</code></p>
+<p>GetAltBlocksCountOk returns a tuple with the AltBlocksCount field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.</p>
+<h3 id="setaltblockscount">SetAltBlocksCount<a class="headerlink" href="#setaltblockscount" title="Permanent link">&para;</a></h3>
+<p><code>func (o *InfoModel) SetAltBlocksCount(v int32)</code></p>
+<p>SetAltBlocksCount sets AltBlocksCount field to given value.</p>
+<h3 id="hasaltblockscount">HasAltBlocksCount<a class="headerlink" href="#hasaltblockscount" title="Permanent link">&para;</a></h3>
+<p><code>func (o *InfoModel) HasAltBlocksCount() bool</code></p>
+<p>HasAltBlocksCount returns a boolean if a field has been set.</p>
+<h3 id="getoutgoingconnectionscount">GetOutgoingConnectionsCount<a class="headerlink" href="#getoutgoingconnectionscount" title="Permanent link">&para;</a></h3>
+<p><code>func (o *InfoModel) GetOutgoingConnectionsCount() int32</code></p>
+<p>GetOutgoingConnectionsCount returns the OutgoingConnectionsCount field if non-nil, zero value otherwise.</p>
+<h3 id="getoutgoingconnectionscountok">GetOutgoingConnectionsCountOk<a class="headerlink" href="#getoutgoingconnectionscountok" title="Permanent link">&para;</a></h3>
+<p><code>func (o *InfoModel) GetOutgoingConnectionsCountOk() (*int32, bool)</code></p>
+<p>GetOutgoingConnectionsCountOk returns a tuple with the OutgoingConnectionsCount field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.</p>
+<h3 id="setoutgoingconnectionscount">SetOutgoingConnectionsCount<a class="headerlink" href="#setoutgoingconnectionscount" title="Permanent link">&para;</a></h3>
+<p><code>func (o *InfoModel) SetOutgoingConnectionsCount(v int32)</code></p>
+<p>SetOutgoingConnectionsCount sets OutgoingConnectionsCount field to given value.</p>
+<h3 id="hasoutgoingconnectionscount">HasOutgoingConnectionsCount<a class="headerlink" href="#hasoutgoingconnectionscount" title="Permanent link">&para;</a></h3>
+<p><code>func (o *InfoModel) HasOutgoingConnectionsCount() bool</code></p>
+<p>HasOutgoingConnectionsCount returns a boolean if a field has been set.</p>
+<h3 id="getincomingconnectionscount">GetIncomingConnectionsCount<a class="headerlink" href="#getincomingconnectionscount" title="Permanent link">&para;</a></h3>
+<p><code>func (o *InfoModel) GetIncomingConnectionsCount() int32</code></p>
+<p>GetIncomingConnectionsCount returns the IncomingConnectionsCount field if non-nil, zero value otherwise.</p>
+<h3 id="getincomingconnectionscountok">GetIncomingConnectionsCountOk<a class="headerlink" href="#getincomingconnectionscountok" title="Permanent link">&para;</a></h3>
+<p><code>func (o *InfoModel) GetIncomingConnectionsCountOk() (*int32, bool)</code></p>
+<p>GetIncomingConnectionsCountOk returns a tuple with the IncomingConnectionsCount field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.</p>
+<h3 id="setincomingconnectionscount">SetIncomingConnectionsCount<a class="headerlink" href="#setincomingconnectionscount" title="Permanent link">&para;</a></h3>
+<p><code>func (o *InfoModel) SetIncomingConnectionsCount(v int32)</code></p>
+<p>SetIncomingConnectionsCount sets IncomingConnectionsCount field to given value.</p>
+<h3 id="hasincomingconnectionscount">HasIncomingConnectionsCount<a class="headerlink" href="#hasincomingconnectionscount" title="Permanent link">&para;</a></h3>
+<p><code>func (o *InfoModel) HasIncomingConnectionsCount() bool</code></p>
+<p>HasIncomingConnectionsCount returns a boolean if a field has been set.</p>
+<h3 id="getsynchronizedconnectionscount">GetSynchronizedConnectionsCount<a class="headerlink" href="#getsynchronizedconnectionscount" title="Permanent link">&para;</a></h3>
+<p><code>func (o *InfoModel) GetSynchronizedConnectionsCount() int32</code></p>
+<p>GetSynchronizedConnectionsCount returns the SynchronizedConnectionsCount field if non-nil, zero value otherwise.</p>
+<h3 id="getsynchronizedconnectionscountok">GetSynchronizedConnectionsCountOk<a class="headerlink" href="#getsynchronizedconnectionscountok" title="Permanent link">&para;</a></h3>
+<p><code>func (o *InfoModel) GetSynchronizedConnectionsCountOk() (*int32, bool)</code></p>
+<p>GetSynchronizedConnectionsCountOk returns a tuple with the SynchronizedConnectionsCount field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.</p>
+<h3 id="setsynchronizedconnectionscount">SetSynchronizedConnectionsCount<a class="headerlink" href="#setsynchronizedconnectionscount" title="Permanent link">&para;</a></h3>
+<p><code>func (o *InfoModel) SetSynchronizedConnectionsCount(v int32)</code></p>
+<p>SetSynchronizedConnectionsCount sets SynchronizedConnectionsCount field to given value.</p>
+<h3 id="hassynchronizedconnectionscount">HasSynchronizedConnectionsCount<a class="headerlink" href="#hassynchronizedconnectionscount" title="Permanent link">&para;</a></h3>
+<p><code>func (o *InfoModel) HasSynchronizedConnectionsCount() bool</code></p>
+<p>HasSynchronizedConnectionsCount returns a boolean if a field has been set.</p>
+<h3 id="getwhitepeerlistsize">GetWhitePeerlistSize<a class="headerlink" href="#getwhitepeerlistsize" title="Permanent link">&para;</a></h3>
+<p><code>func (o *InfoModel) GetWhitePeerlistSize() int32</code></p>
+<p>GetWhitePeerlistSize returns the WhitePeerlistSize field if non-nil, zero value otherwise.</p>
+<h3 id="getwhitepeerlistsizeok">GetWhitePeerlistSizeOk<a class="headerlink" href="#getwhitepeerlistsizeok" title="Permanent link">&para;</a></h3>
+<p><code>func (o *InfoModel) GetWhitePeerlistSizeOk() (*int32, bool)</code></p>
+<p>GetWhitePeerlistSizeOk returns a tuple with the WhitePeerlistSize field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.</p>
+<h3 id="setwhitepeerlistsize">SetWhitePeerlistSize<a class="headerlink" href="#setwhitepeerlistsize" title="Permanent link">&para;</a></h3>
+<p><code>func (o *InfoModel) SetWhitePeerlistSize(v int32)</code></p>
+<p>SetWhitePeerlistSize sets WhitePeerlistSize field to given value.</p>
+<h3 id="haswhitepeerlistsize">HasWhitePeerlistSize<a class="headerlink" href="#haswhitepeerlistsize" title="Permanent link">&para;</a></h3>
+<p><code>func (o *InfoModel) HasWhitePeerlistSize() bool</code></p>
+<p>HasWhitePeerlistSize returns a boolean if a field has been set.</p>
+<h3 id="getgreypeerlistsize">GetGreyPeerlistSize<a class="headerlink" href="#getgreypeerlistsize" title="Permanent link">&para;</a></h3>
+<p><code>func (o *InfoModel) GetGreyPeerlistSize() int32</code></p>
+<p>GetGreyPeerlistSize returns the GreyPeerlistSize field if non-nil, zero value otherwise.</p>
+<h3 id="getgreypeerlistsizeok">GetGreyPeerlistSizeOk<a class="headerlink" href="#getgreypeerlistsizeok" title="Permanent link">&para;</a></h3>
+<p><code>func (o *InfoModel) GetGreyPeerlistSizeOk() (*int32, bool)</code></p>
+<p>GetGreyPeerlistSizeOk returns a tuple with the GreyPeerlistSize field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.</p>
+<h3 id="setgreypeerlistsize">SetGreyPeerlistSize<a class="headerlink" href="#setgreypeerlistsize" title="Permanent link">&para;</a></h3>
+<p><code>func (o *InfoModel) SetGreyPeerlistSize(v int32)</code></p>
+<p>SetGreyPeerlistSize sets GreyPeerlistSize field to given value.</p>
+<h3 id="hasgreypeerlistsize">HasGreyPeerlistSize<a class="headerlink" href="#hasgreypeerlistsize" title="Permanent link">&para;</a></h3>
+<p><code>func (o *InfoModel) HasGreyPeerlistSize() bool</code></p>
+<p>HasGreyPeerlistSize returns a boolean if a field has been set.</p>
+<h3 id="getcurrentblocksmedian">GetCurrentBlocksMedian<a class="headerlink" href="#getcurrentblocksmedian" title="Permanent link">&para;</a></h3>
+<p><code>func (o *InfoModel) GetCurrentBlocksMedian() int32</code></p>
+<p>GetCurrentBlocksMedian returns the CurrentBlocksMedian field if non-nil, zero value otherwise.</p>
+<h3 id="getcurrentblocksmedianok">GetCurrentBlocksMedianOk<a class="headerlink" href="#getcurrentblocksmedianok" title="Permanent link">&para;</a></h3>
+<p><code>func (o *InfoModel) GetCurrentBlocksMedianOk() (*int32, bool)</code></p>
+<p>GetCurrentBlocksMedianOk returns a tuple with the CurrentBlocksMedian field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.</p>
+<h3 id="setcurrentblocksmedian">SetCurrentBlocksMedian<a class="headerlink" href="#setcurrentblocksmedian" title="Permanent link">&para;</a></h3>
+<p><code>func (o *InfoModel) SetCurrentBlocksMedian(v int32)</code></p>
+<p>SetCurrentBlocksMedian sets CurrentBlocksMedian field to given value.</p>
+<h3 id="hascurrentblocksmedian">HasCurrentBlocksMedian<a class="headerlink" href="#hascurrentblocksmedian" title="Permanent link">&para;</a></h3>
+<p><code>func (o *InfoModel) HasCurrentBlocksMedian() bool</code></p>
+<p>HasCurrentBlocksMedian returns a boolean if a field has been set.</p>
+<h3 id="getaliascount">GetAliasCount<a class="headerlink" href="#getaliascount" title="Permanent link">&para;</a></h3>
+<p><code>func (o *InfoModel) GetAliasCount() int32</code></p>
+<p>GetAliasCount returns the AliasCount field if non-nil, zero value otherwise.</p>
+<h3 id="getaliascountok">GetAliasCountOk<a class="headerlink" href="#getaliascountok" title="Permanent link">&para;</a></h3>
+<p><code>func (o *InfoModel) GetAliasCountOk() (*int32, bool)</code></p>
+<p>GetAliasCountOk returns a tuple with the AliasCount field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.</p>
+<h3 id="setaliascount">SetAliasCount<a class="headerlink" href="#setaliascount" title="Permanent link">&para;</a></h3>
+<p><code>func (o *InfoModel) SetAliasCount(v int32)</code></p>
+<p>SetAliasCount sets AliasCount field to given value.</p>
+<h3 id="hasaliascount">HasAliasCount<a class="headerlink" href="#hasaliascount" title="Permanent link">&para;</a></h3>
+<p><code>func (o *InfoModel) HasAliasCount() bool</code></p>
+<p>HasAliasCount returns a boolean if a field has been set.</p>
+<h3 id="getcurrentmaxallowedblocksize">GetCurrentMaxAllowedBlockSize<a class="headerlink" href="#getcurrentmaxallowedblocksize" title="Permanent link">&para;</a></h3>
+<p><code>func (o *InfoModel) GetCurrentMaxAllowedBlockSize() int32</code></p>
+<p>GetCurrentMaxAllowedBlockSize returns the CurrentMaxAllowedBlockSize field if non-nil, zero value otherwise.</p>
+<h3 id="getcurrentmaxallowedblocksizeok">GetCurrentMaxAllowedBlockSizeOk<a class="headerlink" href="#getcurrentmaxallowedblocksizeok" title="Permanent link">&para;</a></h3>
+<p><code>func (o *InfoModel) GetCurrentMaxAllowedBlockSizeOk() (*int32, bool)</code></p>
+<p>GetCurrentMaxAllowedBlockSizeOk returns a tuple with the CurrentMaxAllowedBlockSize field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.</p>
+<h3 id="setcurrentmaxallowedblocksize">SetCurrentMaxAllowedBlockSize<a class="headerlink" href="#setcurrentmaxallowedblocksize" title="Permanent link">&para;</a></h3>
+<p><code>func (o *InfoModel) SetCurrentMaxAllowedBlockSize(v int32)</code></p>
+<p>SetCurrentMaxAllowedBlockSize sets CurrentMaxAllowedBlockSize field to given value.</p>
+<h3 id="hascurrentmaxallowedblocksize">HasCurrentMaxAllowedBlockSize<a class="headerlink" href="#hascurrentmaxallowedblocksize" title="Permanent link">&para;</a></h3>
+<p><code>func (o *InfoModel) HasCurrentMaxAllowedBlockSize() bool</code></p>
+<p>HasCurrentMaxAllowedBlockSize returns a boolean if a field has been set.</p>
+<h3 id="getdaemonnetworkstate">GetDaemonNetworkState<a class="headerlink" href="#getdaemonnetworkstate" title="Permanent link">&para;</a></h3>
+<p><code>func (o *InfoModel) GetDaemonNetworkState() string</code></p>
+<p>GetDaemonNetworkState returns the DaemonNetworkState field if non-nil, zero value otherwise.</p>
+<h3 id="getdaemonnetworkstateok">GetDaemonNetworkStateOk<a class="headerlink" href="#getdaemonnetworkstateok" title="Permanent link">&para;</a></h3>
+<p><code>func (o *InfoModel) GetDaemonNetworkStateOk() (*string, bool)</code></p>
+<p>GetDaemonNetworkStateOk returns a tuple with the DaemonNetworkState field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.</p>
+<h3 id="setdaemonnetworkstate">SetDaemonNetworkState<a class="headerlink" href="#setdaemonnetworkstate" title="Permanent link">&para;</a></h3>
+<p><code>func (o *InfoModel) SetDaemonNetworkState(v string)</code></p>
+<p>SetDaemonNetworkState sets DaemonNetworkState field to given value.</p>
+<h3 id="hasdaemonnetworkstate">HasDaemonNetworkState<a class="headerlink" href="#hasdaemonnetworkstate" title="Permanent link">&para;</a></h3>
+<p><code>func (o *InfoModel) HasDaemonNetworkState() bool</code></p>
+<p>HasDaemonNetworkState returns a boolean if a field has been set.</p>
+<h3 id="getsynchronizationstartheight">GetSynchronizationStartHeight<a class="headerlink" href="#getsynchronizationstartheight" title="Permanent link">&para;</a></h3>
+<p><code>func (o *InfoModel) GetSynchronizationStartHeight() int32</code></p>
+<p>GetSynchronizationStartHeight returns the SynchronizationStartHeight field if non-nil, zero value otherwise.</p>
+<h3 id="getsynchronizationstartheightok">GetSynchronizationStartHeightOk<a class="headerlink" href="#getsynchronizationstartheightok" title="Permanent link">&para;</a></h3>
+<p><code>func (o *InfoModel) GetSynchronizationStartHeightOk() (*int32, bool)</code></p>
+<p>GetSynchronizationStartHeightOk returns a tuple with the SynchronizationStartHeight field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.</p>
+<h3 id="setsynchronizationstartheight">SetSynchronizationStartHeight<a class="headerlink" href="#setsynchronizationstartheight" title="Permanent link">&para;</a></h3>
+<p><code>func (o *InfoModel) SetSynchronizationStartHeight(v int32)</code></p>
+<p>SetSynchronizationStartHeight sets SynchronizationStartHeight field to given value.</p>
+<h3 id="hassynchronizationstartheight">HasSynchronizationStartHeight<a class="headerlink" href="#hassynchronizationstartheight" title="Permanent link">&para;</a></h3>
+<p><code>func (o *InfoModel) HasSynchronizationStartHeight() bool</code></p>
+<p>HasSynchronizationStartHeight returns a boolean if a field has been set.</p>
+<h3 id="getmaxnetseenheight">GetMaxNetSeenHeight<a class="headerlink" href="#getmaxnetseenheight" title="Permanent link">&para;</a></h3>
+<p><code>func (o *InfoModel) GetMaxNetSeenHeight() int32</code></p>
+<p>GetMaxNetSeenHeight returns the MaxNetSeenHeight field if non-nil, zero value otherwise.</p>
+<h3 id="getmaxnetseenheightok">GetMaxNetSeenHeightOk<a class="headerlink" href="#getmaxnetseenheightok" title="Permanent link">&para;</a></h3>
+<p><code>func (o *InfoModel) GetMaxNetSeenHeightOk() (*int32, bool)</code></p>
+<p>GetMaxNetSeenHeightOk returns a tuple with the MaxNetSeenHeight field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.</p>
+<h3 id="setmaxnetseenheight">SetMaxNetSeenHeight<a class="headerlink" href="#setmaxnetseenheight" title="Permanent link">&para;</a></h3>
+<p><code>func (o *InfoModel) SetMaxNetSeenHeight(v int32)</code></p>
+<p>SetMaxNetSeenHeight sets MaxNetSeenHeight field to given value.</p>
+<h3 id="hasmaxnetseenheight">HasMaxNetSeenHeight<a class="headerlink" href="#hasmaxnetseenheight" title="Permanent link">&para;</a></h3>
+<p><code>func (o *InfoModel) HasMaxNetSeenHeight() bool</code></p>
+<p>HasMaxNetSeenHeight returns a boolean if a field has been set.</p>
+<h3 id="getmi">GetMi<a class="headerlink" href="#getmi" title="Permanent link">&para;</a></h3>
+<p><code>func (o *InfoModel) GetMi() MaintainersInfoModel</code></p>
+<p>GetMi returns the Mi field if non-nil, zero value otherwise.</p>
+<h3 id="getmiok">GetMiOk<a class="headerlink" href="#getmiok" title="Permanent link">&para;</a></h3>
+<p><code>func (o *InfoModel) GetMiOk() (*MaintainersInfoModel, bool)</code></p>
+<p>GetMiOk returns a tuple with the Mi field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.</p>
+<h3 id="setmi">SetMi<a class="headerlink" href="#setmi" title="Permanent link">&para;</a></h3>
+<p><code>func (o *InfoModel) SetMi(v MaintainersInfoModel)</code></p>
+<p>SetMi sets Mi field to given value.</p>
+<h3 id="hasmi">HasMi<a class="headerlink" href="#hasmi" title="Permanent link">&para;</a></h3>
+<p><code>func (o *InfoModel) HasMi() bool</code></p>
+<p>HasMi returns a boolean if a field has been set.</p>
+<h3 id="getposallowed">GetPosAllowed<a class="headerlink" href="#getposallowed" title="Permanent link">&para;</a></h3>
+<p><code>func (o *InfoModel) GetPosAllowed() bool</code></p>
+<p>GetPosAllowed returns the PosAllowed field if non-nil, zero value otherwise.</p>
+<h3 id="getposallowedok">GetPosAllowedOk<a class="headerlink" href="#getposallowedok" title="Permanent link">&para;</a></h3>
+<p><code>func (o *InfoModel) GetPosAllowedOk() (*bool, bool)</code></p>
+<p>GetPosAllowedOk returns a tuple with the PosAllowed field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.</p>
+<h3 id="setposallowed">SetPosAllowed<a class="headerlink" href="#setposallowed" title="Permanent link">&para;</a></h3>
+<p><code>func (o *InfoModel) SetPosAllowed(v bool)</code></p>
+<p>SetPosAllowed sets PosAllowed field to given value.</p>
+<h3 id="hasposallowed">HasPosAllowed<a class="headerlink" href="#hasposallowed" title="Permanent link">&para;</a></h3>
+<p><code>func (o *InfoModel) HasPosAllowed() bool</code></p>
+<p>HasPosAllowed returns a boolean if a field has been set.</p>
+<h3 id="getposdifficulty">GetPosDifficulty<a class="headerlink" href="#getposdifficulty" title="Permanent link">&para;</a></h3>
+<p><code>func (o *InfoModel) GetPosDifficulty() string</code></p>
+<p>GetPosDifficulty returns the PosDifficulty field if non-nil, zero value otherwise.</p>
+<h3 id="getposdifficultyok">GetPosDifficultyOk<a class="headerlink" href="#getposdifficultyok" title="Permanent link">&para;</a></h3>
+<p><code>func (o *InfoModel) GetPosDifficultyOk() (*string, bool)</code></p>
+<p>GetPosDifficultyOk returns a tuple with the PosDifficulty field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.</p>
+<h3 id="setposdifficulty">SetPosDifficulty<a class="headerlink" href="#setposdifficulty" title="Permanent link">&para;</a></h3>
+<p><code>func (o *InfoModel) SetPosDifficulty(v string)</code></p>
+<p>SetPosDifficulty sets PosDifficulty field to given value.</p>
+<h3 id="hasposdifficulty">HasPosDifficulty<a class="headerlink" href="#hasposdifficulty" title="Permanent link">&para;</a></h3>
+<p><code>func (o *InfoModel) HasPosDifficulty() bool</code></p>
+<p>HasPosDifficulty returns a boolean if a field has been set.</p>
+<h3 id="getpowdifficulty">GetPowDifficulty<a class="headerlink" href="#getpowdifficulty" title="Permanent link">&para;</a></h3>
+<p><code>func (o *InfoModel) GetPowDifficulty() int32</code></p>
+<p>GetPowDifficulty returns the PowDifficulty field if non-nil, zero value otherwise.</p>
+<h3 id="getpowdifficultyok">GetPowDifficultyOk<a class="headerlink" href="#getpowdifficultyok" title="Permanent link">&para;</a></h3>
+<p><code>func (o *InfoModel) GetPowDifficultyOk() (*int32, bool)</code></p>
+<p>GetPowDifficultyOk returns a tuple with the PowDifficulty field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.</p>
+<h3 id="setpowdifficulty">SetPowDifficulty<a class="headerlink" href="#setpowdifficulty" title="Permanent link">&para;</a></h3>
+<p><code>func (o *InfoModel) SetPowDifficulty(v int32)</code></p>
+<p>SetPowDifficulty sets PowDifficulty field to given value.</p>
+<h3 id="haspowdifficulty">HasPowDifficulty<a class="headerlink" href="#haspowdifficulty" title="Permanent link">&para;</a></h3>
+<p><code>func (o *InfoModel) HasPowDifficulty() bool</code></p>
+<p>HasPowDifficulty returns a boolean if a field has been set.</p>
+<h3 id="getdefaultfee">GetDefaultFee<a class="headerlink" href="#getdefaultfee" title="Permanent link">&para;</a></h3>
+<p><code>func (o *InfoModel) GetDefaultFee() int32</code></p>
+<p>GetDefaultFee returns the DefaultFee field if non-nil, zero value otherwise.</p>
+<h3 id="getdefaultfeeok">GetDefaultFeeOk<a class="headerlink" href="#getdefaultfeeok" title="Permanent link">&para;</a></h3>
+<p><code>func (o *InfoModel) GetDefaultFeeOk() (*int32, bool)</code></p>
+<p>GetDefaultFeeOk returns a tuple with the DefaultFee field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.</p>
+<h3 id="setdefaultfee">SetDefaultFee<a class="headerlink" href="#setdefaultfee" title="Permanent link">&para;</a></h3>
+<p><code>func (o *InfoModel) SetDefaultFee(v int32)</code></p>
+<p>SetDefaultFee sets DefaultFee field to given value.</p>
+<h3 id="hasdefaultfee">HasDefaultFee<a class="headerlink" href="#hasdefaultfee" title="Permanent link">&para;</a></h3>
+<p><code>func (o *InfoModel) HasDefaultFee() bool</code></p>
+<p>HasDefaultFee returns a boolean if a field has been set.</p>
+<h3 id="getminimumfee">GetMinimumFee<a class="headerlink" href="#getminimumfee" title="Permanent link">&para;</a></h3>
+<p><code>func (o *InfoModel) GetMinimumFee() int32</code></p>
+<p>GetMinimumFee returns the MinimumFee field if non-nil, zero value otherwise.</p>
+<h3 id="getminimumfeeok">GetMinimumFeeOk<a class="headerlink" href="#getminimumfeeok" title="Permanent link">&para;</a></h3>
+<p><code>func (o *InfoModel) GetMinimumFeeOk() (*int32, bool)</code></p>
+<p>GetMinimumFeeOk returns a tuple with the MinimumFee field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.</p>
+<h3 id="setminimumfee">SetMinimumFee<a class="headerlink" href="#setminimumfee" title="Permanent link">&para;</a></h3>
+<p><code>func (o *InfoModel) SetMinimumFee(v int32)</code></p>
+<p>SetMinimumFee sets MinimumFee field to given value.</p>
+<h3 id="hasminimumfee">HasMinimumFee<a class="headerlink" href="#hasminimumfee" title="Permanent link">&para;</a></h3>
+<p><code>func (o *InfoModel) HasMinimumFee() bool</code></p>
+<p>HasMinimumFee returns a boolean if a field has been set.</p>
+<h3 id="getishardforkactive">GetIsHardforkActive<a class="headerlink" href="#getishardforkactive" title="Permanent link">&para;</a></h3>
+<p><code>func (o *InfoModel) GetIsHardforkActive() []bool</code></p>
+<p>GetIsHardforkActive returns the IsHardforkActive field if non-nil, zero value otherwise.</p>
+<h3 id="getishardforkactiveok">GetIsHardforkActiveOk<a class="headerlink" href="#getishardforkactiveok" title="Permanent link">&para;</a></h3>
+<p><code>func (o *InfoModel) GetIsHardforkActiveOk() (*[]bool, bool)</code></p>
+<p>GetIsHardforkActiveOk returns a tuple with the IsHardforkActive field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.</p>
+<h3 id="setishardforkactive">SetIsHardforkActive<a class="headerlink" href="#setishardforkactive" title="Permanent link">&para;</a></h3>
+<p><code>func (o *InfoModel) SetIsHardforkActive(v []bool)</code></p>
+<p>SetIsHardforkActive sets IsHardforkActive field to given value.</p>
+<h3 id="hasishardforkactive">HasIsHardforkActive<a class="headerlink" href="#hasishardforkactive" title="Permanent link">&para;</a></h3>
+<p><code>func (o *InfoModel) HasIsHardforkActive() bool</code></p>
+<p>HasIsHardforkActive returns a boolean if a field has been set.</p>
+<h3 id="getnettimedeltamedian">GetNetTimeDeltaMedian<a class="headerlink" href="#getnettimedeltamedian" title="Permanent link">&para;</a></h3>
+<p><code>func (o *InfoModel) GetNetTimeDeltaMedian() int64</code></p>
+<p>GetNetTimeDeltaMedian returns the NetTimeDeltaMedian field if non-nil, zero value otherwise.</p>
+<h3 id="getnettimedeltamedianok">GetNetTimeDeltaMedianOk<a class="headerlink" href="#getnettimedeltamedianok" title="Permanent link">&para;</a></h3>
+<p><code>func (o *InfoModel) GetNetTimeDeltaMedianOk() (*int64, bool)</code></p>
+<p>GetNetTimeDeltaMedianOk returns a tuple with the NetTimeDeltaMedian field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.</p>
+<h3 id="setnettimedeltamedian">SetNetTimeDeltaMedian<a class="headerlink" href="#setnettimedeltamedian" title="Permanent link">&para;</a></h3>
+<p><code>func (o *InfoModel) SetNetTimeDeltaMedian(v int64)</code></p>
+<p>SetNetTimeDeltaMedian sets NetTimeDeltaMedian field to given value.</p>
+<h3 id="hasnettimedeltamedian">HasNetTimeDeltaMedian<a class="headerlink" href="#hasnettimedeltamedian" title="Permanent link">&para;</a></h3>
+<p><code>func (o *InfoModel) HasNetTimeDeltaMedian() bool</code></p>
+<p>HasNetTimeDeltaMedian returns a boolean if a field has been set.</p>
+<h3 id="getcurrentnetworkhashrate50">GetCurrentNetworkHashrate50<a class="headerlink" href="#getcurrentnetworkhashrate50" title="Permanent link">&para;</a></h3>
+<p><code>func (o *InfoModel) GetCurrentNetworkHashrate50() int32</code></p>
+<p>GetCurrentNetworkHashrate50 returns the CurrentNetworkHashrate50 field if non-nil, zero value otherwise.</p>
+<h3 id="getcurrentnetworkhashrate50ok">GetCurrentNetworkHashrate50Ok<a class="headerlink" href="#getcurrentnetworkhashrate50ok" title="Permanent link">&para;</a></h3>
+<p><code>func (o *InfoModel) GetCurrentNetworkHashrate50Ok() (*int32, bool)</code></p>
+<p>GetCurrentNetworkHashrate50Ok returns a tuple with the CurrentNetworkHashrate50 field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.</p>
+<h3 id="setcurrentnetworkhashrate50">SetCurrentNetworkHashrate50<a class="headerlink" href="#setcurrentnetworkhashrate50" title="Permanent link">&para;</a></h3>
+<p><code>func (o *InfoModel) SetCurrentNetworkHashrate50(v int32)</code></p>
+<p>SetCurrentNetworkHashrate50 sets CurrentNetworkHashrate50 field to given value.</p>
+<h3 id="hascurrentnetworkhashrate50">HasCurrentNetworkHashrate50<a class="headerlink" href="#hascurrentnetworkhashrate50" title="Permanent link">&para;</a></h3>
+<p><code>func (o *InfoModel) HasCurrentNetworkHashrate50() bool</code></p>
+<p>HasCurrentNetworkHashrate50 returns a boolean if a field has been set.</p>
+<h3 id="getcurrentnetworkhashrate350">GetCurrentNetworkHashrate350<a class="headerlink" href="#getcurrentnetworkhashrate350" title="Permanent link">&para;</a></h3>
+<p><code>func (o *InfoModel) GetCurrentNetworkHashrate350() int32</code></p>
+<p>GetCurrentNetworkHashrate350 returns the CurrentNetworkHashrate350 field if non-nil, zero value otherwise.</p>
+<h3 id="getcurrentnetworkhashrate350ok">GetCurrentNetworkHashrate350Ok<a class="headerlink" href="#getcurrentnetworkhashrate350ok" title="Permanent link">&para;</a></h3>
+<p><code>func (o *InfoModel) GetCurrentNetworkHashrate350Ok() (*int32, bool)</code></p>
+<p>GetCurrentNetworkHashrate350Ok returns a tuple with the CurrentNetworkHashrate350 field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.</p>
+<h3 id="setcurrentnetworkhashrate350">SetCurrentNetworkHashrate350<a class="headerlink" href="#setcurrentnetworkhashrate350" title="Permanent link">&para;</a></h3>
+<p><code>func (o *InfoModel) SetCurrentNetworkHashrate350(v int32)</code></p>
+<p>SetCurrentNetworkHashrate350 sets CurrentNetworkHashrate350 field to given value.</p>
+<h3 id="hascurrentnetworkhashrate350">HasCurrentNetworkHashrate350<a class="headerlink" href="#hascurrentnetworkhashrate350" title="Permanent link">&para;</a></h3>
+<p><code>func (o *InfoModel) HasCurrentNetworkHashrate350() bool</code></p>
+<p>HasCurrentNetworkHashrate350 returns a boolean if a field has been set.</p>
+<h3 id="getsecondsfor10blocks">GetSecondsFor10Blocks<a class="headerlink" href="#getsecondsfor10blocks" title="Permanent link">&para;</a></h3>
+<p><code>func (o *InfoModel) GetSecondsFor10Blocks() int32</code></p>
+<p>GetSecondsFor10Blocks returns the SecondsFor10Blocks field if non-nil, zero value otherwise.</p>
+<h3 id="getsecondsfor10blocksok">GetSecondsFor10BlocksOk<a class="headerlink" href="#getsecondsfor10blocksok" title="Permanent link">&para;</a></h3>
+<p><code>func (o *InfoModel) GetSecondsFor10BlocksOk() (*int32, bool)</code></p>
+<p>GetSecondsFor10BlocksOk returns a tuple with the SecondsFor10Blocks field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.</p>
+<h3 id="setsecondsfor10blocks">SetSecondsFor10Blocks<a class="headerlink" href="#setsecondsfor10blocks" title="Permanent link">&para;</a></h3>
+<p><code>func (o *InfoModel) SetSecondsFor10Blocks(v int32)</code></p>
+<p>SetSecondsFor10Blocks sets SecondsFor10Blocks field to given value.</p>
+<h3 id="hassecondsfor10blocks">HasSecondsFor10Blocks<a class="headerlink" href="#hassecondsfor10blocks" title="Permanent link">&para;</a></h3>
+<p><code>func (o *InfoModel) HasSecondsFor10Blocks() bool</code></p>
+<p>HasSecondsFor10Blocks returns a boolean if a field has been set.</p>
+<h3 id="getsecondsfor30blocks">GetSecondsFor30Blocks<a class="headerlink" href="#getsecondsfor30blocks" title="Permanent link">&para;</a></h3>
+<p><code>func (o *InfoModel) GetSecondsFor30Blocks() int32</code></p>
+<p>GetSecondsFor30Blocks returns the SecondsFor30Blocks field if non-nil, zero value otherwise.</p>
+<h3 id="getsecondsfor30blocksok">GetSecondsFor30BlocksOk<a class="headerlink" href="#getsecondsfor30blocksok" title="Permanent link">&para;</a></h3>
+<p><code>func (o *InfoModel) GetSecondsFor30BlocksOk() (*int32, bool)</code></p>
+<p>GetSecondsFor30BlocksOk returns a tuple with the SecondsFor30Blocks field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.</p>
+<h3 id="setsecondsfor30blocks">SetSecondsFor30Blocks<a class="headerlink" href="#setsecondsfor30blocks" title="Permanent link">&para;</a></h3>
+<p><code>func (o *InfoModel) SetSecondsFor30Blocks(v int32)</code></p>
+<p>SetSecondsFor30Blocks sets SecondsFor30Blocks field to given value.</p>
+<h3 id="hassecondsfor30blocks">HasSecondsFor30Blocks<a class="headerlink" href="#hassecondsfor30blocks" title="Permanent link">&para;</a></h3>
+<p><code>func (o *InfoModel) HasSecondsFor30Blocks() bool</code></p>
+<p>HasSecondsFor30Blocks returns a boolean if a field has been set.</p>
+<h3 id="gettransactionscntperday">GetTransactionsCntPerDay<a class="headerlink" href="#gettransactionscntperday" title="Permanent link">&para;</a></h3>
+<p><code>func (o *InfoModel) GetTransactionsCntPerDay() []int32</code></p>
+<p>GetTransactionsCntPerDay returns the TransactionsCntPerDay field if non-nil, zero value otherwise.</p>
+<h3 id="gettransactionscntperdayok">GetTransactionsCntPerDayOk<a class="headerlink" href="#gettransactionscntperdayok" title="Permanent link">&para;</a></h3>
+<p><code>func (o *InfoModel) GetTransactionsCntPerDayOk() (*[]int32, bool)</code></p>
+<p>GetTransactionsCntPerDayOk returns a tuple with the TransactionsCntPerDay field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.</p>
+<h3 id="settransactionscntperday">SetTransactionsCntPerDay<a class="headerlink" href="#settransactionscntperday" title="Permanent link">&para;</a></h3>
+<p><code>func (o *InfoModel) SetTransactionsCntPerDay(v []int32)</code></p>
+<p>SetTransactionsCntPerDay sets TransactionsCntPerDay field to given value.</p>
+<h3 id="hastransactionscntperday">HasTransactionsCntPerDay<a class="headerlink" href="#hastransactionscntperday" title="Permanent link">&para;</a></h3>
+<p><code>func (o *InfoModel) HasTransactionsCntPerDay() bool</code></p>
+<p>HasTransactionsCntPerDay returns a boolean if a field has been set.</p>
+<h3 id="gettransactionsvolumeperday">GetTransactionsVolumePerDay<a class="headerlink" href="#gettransactionsvolumeperday" title="Permanent link">&para;</a></h3>
+<p><code>func (o *InfoModel) GetTransactionsVolumePerDay() []int32</code></p>
+<p>GetTransactionsVolumePerDay returns the TransactionsVolumePerDay field if non-nil, zero value otherwise.</p>
+<h3 id="gettransactionsvolumeperdayok">GetTransactionsVolumePerDayOk<a class="headerlink" href="#gettransactionsvolumeperdayok" title="Permanent link">&para;</a></h3>
+<p><code>func (o *InfoModel) GetTransactionsVolumePerDayOk() (*[]int32, bool)</code></p>
+<p>GetTransactionsVolumePerDayOk returns a tuple with the TransactionsVolumePerDay field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.</p>
+<h3 id="settransactionsvolumeperday">SetTransactionsVolumePerDay<a class="headerlink" href="#settransactionsvolumeperday" title="Permanent link">&para;</a></h3>
+<p><code>func (o *InfoModel) SetTransactionsVolumePerDay(v []int32)</code></p>
+<p>SetTransactionsVolumePerDay sets TransactionsVolumePerDay field to given value.</p>
+<h3 id="hastransactionsvolumeperday">HasTransactionsVolumePerDay<a class="headerlink" href="#hastransactionsvolumeperday" title="Permanent link">&para;</a></h3>
+<p><code>func (o *InfoModel) HasTransactionsVolumePerDay() bool</code></p>
+<p>HasTransactionsVolumePerDay returns a boolean if a field has been set.</p>
+<h3 id="getlastpostimestamp">GetLastPosTimestamp<a class="headerlink" href="#getlastpostimestamp" title="Permanent link">&para;</a></h3>
+<p><code>func (o *InfoModel) GetLastPosTimestamp() int32</code></p>
+<p>GetLastPosTimestamp returns the LastPosTimestamp field if non-nil, zero value otherwise.</p>
+<h3 id="getlastpostimestampok">GetLastPosTimestampOk<a class="headerlink" href="#getlastpostimestampok" title="Permanent link">&para;</a></h3>
+<p><code>func (o *InfoModel) GetLastPosTimestampOk() (*int32, bool)</code></p>
+<p>GetLastPosTimestampOk returns a tuple with the LastPosTimestamp field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.</p>
+<h3 id="setlastpostimestamp">SetLastPosTimestamp<a class="headerlink" href="#setlastpostimestamp" title="Permanent link">&para;</a></h3>
+<p><code>func (o *InfoModel) SetLastPosTimestamp(v int32)</code></p>
+<p>SetLastPosTimestamp sets LastPosTimestamp field to given value.</p>
+<h3 id="haslastpostimestamp">HasLastPosTimestamp<a class="headerlink" href="#haslastpostimestamp" title="Permanent link">&para;</a></h3>
+<p><code>func (o *InfoModel) HasLastPosTimestamp() bool</code></p>
+<p>HasLastPosTimestamp returns a boolean if a field has been set.</p>
+<h3 id="getlastpowtimestamp">GetLastPowTimestamp<a class="headerlink" href="#getlastpowtimestamp" title="Permanent link">&para;</a></h3>
+<p><code>func (o *InfoModel) GetLastPowTimestamp() int32</code></p>
+<p>GetLastPowTimestamp returns the LastPowTimestamp field if non-nil, zero value otherwise.</p>
+<h3 id="getlastpowtimestampok">GetLastPowTimestampOk<a class="headerlink" href="#getlastpowtimestampok" title="Permanent link">&para;</a></h3>
+<p><code>func (o *InfoModel) GetLastPowTimestampOk() (*int32, bool)</code></p>
+<p>GetLastPowTimestampOk returns a tuple with the LastPowTimestamp field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.</p>
+<h3 id="setlastpowtimestamp">SetLastPowTimestamp<a class="headerlink" href="#setlastpowtimestamp" title="Permanent link">&para;</a></h3>
+<p><code>func (o *InfoModel) SetLastPowTimestamp(v int32)</code></p>
+<p>SetLastPowTimestamp sets LastPowTimestamp field to given value.</p>
+<h3 id="haslastpowtimestamp">HasLastPowTimestamp<a class="headerlink" href="#haslastpowtimestamp" title="Permanent link">&para;</a></h3>
+<p><code>func (o *InfoModel) HasLastPowTimestamp() bool</code></p>
+<p>HasLastPowTimestamp returns a boolean if a field has been set.</p>
+<h3 id="gettotalcoins">GetTotalCoins<a class="headerlink" href="#gettotalcoins" title="Permanent link">&para;</a></h3>
+<p><code>func (o *InfoModel) GetTotalCoins() string</code></p>
+<p>GetTotalCoins returns the TotalCoins field if non-nil, zero value otherwise.</p>
+<h3 id="gettotalcoinsok">GetTotalCoinsOk<a class="headerlink" href="#gettotalcoinsok" title="Permanent link">&para;</a></h3>
+<p><code>func (o *InfoModel) GetTotalCoinsOk() (*string, bool)</code></p>
+<p>GetTotalCoinsOk returns a tuple with the TotalCoins field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.</p>
+<h3 id="settotalcoins">SetTotalCoins<a class="headerlink" href="#settotalcoins" title="Permanent link">&para;</a></h3>
+<p><code>func (o *InfoModel) SetTotalCoins(v string)</code></p>
+<p>SetTotalCoins sets TotalCoins field to given value.</p>
+<h3 id="hastotalcoins">HasTotalCoins<a class="headerlink" href="#hastotalcoins" title="Permanent link">&para;</a></h3>
+<p><code>func (o *InfoModel) HasTotalCoins() bool</code></p>
+<p>HasTotalCoins returns a boolean if a field has been set.</p>
+<h3 id="getlastblocksize">GetLastBlockSize<a class="headerlink" href="#getlastblocksize" title="Permanent link">&para;</a></h3>
+<p><code>func (o *InfoModel) GetLastBlockSize() int32</code></p>
+<p>GetLastBlockSize returns the LastBlockSize field if non-nil, zero value otherwise.</p>
+<h3 id="getlastblocksizeok">GetLastBlockSizeOk<a class="headerlink" href="#getlastblocksizeok" title="Permanent link">&para;</a></h3>
+<p><code>func (o *InfoModel) GetLastBlockSizeOk() (*int32, bool)</code></p>
+<p>GetLastBlockSizeOk returns a tuple with the LastBlockSize field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.</p>
+<h3 id="setlastblocksize">SetLastBlockSize<a class="headerlink" href="#setlastblocksize" title="Permanent link">&para;</a></h3>
+<p><code>func (o *InfoModel) SetLastBlockSize(v int32)</code></p>
+<p>SetLastBlockSize sets LastBlockSize field to given value.</p>
+<h3 id="haslastblocksize">HasLastBlockSize<a class="headerlink" href="#haslastblocksize" title="Permanent link">&para;</a></h3>
+<p><code>func (o *InfoModel) HasLastBlockSize() bool</code></p>
+<p>HasLastBlockSize returns a boolean if a field has been set.</p>
+<h3 id="gettxcountinlastblock">GetTxCountInLastBlock<a class="headerlink" href="#gettxcountinlastblock" title="Permanent link">&para;</a></h3>
+<p><code>func (o *InfoModel) GetTxCountInLastBlock() int32</code></p>
+<p>GetTxCountInLastBlock returns the TxCountInLastBlock field if non-nil, zero value otherwise.</p>
+<h3 id="gettxcountinlastblockok">GetTxCountInLastBlockOk<a class="headerlink" href="#gettxcountinlastblockok" title="Permanent link">&para;</a></h3>
+<p><code>func (o *InfoModel) GetTxCountInLastBlockOk() (*int32, bool)</code></p>
+<p>GetTxCountInLastBlockOk returns a tuple with the TxCountInLastBlock field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.</p>
+<h3 id="settxcountinlastblock">SetTxCountInLastBlock<a class="headerlink" href="#settxcountinlastblock" title="Permanent link">&para;</a></h3>
+<p><code>func (o *InfoModel) SetTxCountInLastBlock(v int32)</code></p>
+<p>SetTxCountInLastBlock sets TxCountInLastBlock field to given value.</p>
+<h3 id="hastxcountinlastblock">HasTxCountInLastBlock<a class="headerlink" href="#hastxcountinlastblock" title="Permanent link">&para;</a></h3>
+<p><code>func (o *InfoModel) HasTxCountInLastBlock() bool</code></p>
+<p>HasTxCountInLastBlock returns a boolean if a field has been set.</p>
+<h3 id="getpossequencefactor">GetPosSequenceFactor<a class="headerlink" href="#getpossequencefactor" title="Permanent link">&para;</a></h3>
+<p><code>func (o *InfoModel) GetPosSequenceFactor() float64</code></p>
+<p>GetPosSequenceFactor returns the PosSequenceFactor field if non-nil, zero value otherwise.</p>
+<h3 id="getpossequencefactorok">GetPosSequenceFactorOk<a class="headerlink" href="#getpossequencefactorok" title="Permanent link">&para;</a></h3>
+<p><code>func (o *InfoModel) GetPosSequenceFactorOk() (*float64, bool)</code></p>
+<p>GetPosSequenceFactorOk returns a tuple with the PosSequenceFactor field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.</p>
+<h3 id="setpossequencefactor">SetPosSequenceFactor<a class="headerlink" href="#setpossequencefactor" title="Permanent link">&para;</a></h3>
+<p><code>func (o *InfoModel) SetPosSequenceFactor(v float64)</code></p>
+<p>SetPosSequenceFactor sets PosSequenceFactor field to given value.</p>
+<h3 id="haspossequencefactor">HasPosSequenceFactor<a class="headerlink" href="#haspossequencefactor" title="Permanent link">&para;</a></h3>
+<p><code>func (o *InfoModel) HasPosSequenceFactor() bool</code></p>
+<p>HasPosSequenceFactor returns a boolean if a field has been set.</p>
+<h3 id="getpowsequencefactor">GetPowSequenceFactor<a class="headerlink" href="#getpowsequencefactor" title="Permanent link">&para;</a></h3>
+<p><code>func (o *InfoModel) GetPowSequenceFactor() float64</code></p>
+<p>GetPowSequenceFactor returns the PowSequenceFactor field if non-nil, zero value otherwise.</p>
+<h3 id="getpowsequencefactorok">GetPowSequenceFactorOk<a class="headerlink" href="#getpowsequencefactorok" title="Permanent link">&para;</a></h3>
+<p><code>func (o *InfoModel) GetPowSequenceFactorOk() (*float64, bool)</code></p>
+<p>GetPowSequenceFactorOk returns a tuple with the PowSequenceFactor field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.</p>
+<h3 id="setpowsequencefactor">SetPowSequenceFactor<a class="headerlink" href="#setpowsequencefactor" title="Permanent link">&para;</a></h3>
+<p><code>func (o *InfoModel) SetPowSequenceFactor(v float64)</code></p>
+<p>SetPowSequenceFactor sets PowSequenceFactor field to given value.</p>
+<h3 id="haspowsequencefactor">HasPowSequenceFactor<a class="headerlink" href="#haspowsequencefactor" title="Permanent link">&para;</a></h3>
+<p><code>func (o *InfoModel) HasPowSequenceFactor() bool</code></p>
+<p>HasPowSequenceFactor returns a boolean if a field has been set.</p>
+<h3 id="getblockreward">GetBlockReward<a class="headerlink" href="#getblockreward" title="Permanent link">&para;</a></h3>
+<p><code>func (o *InfoModel) GetBlockReward() int32</code></p>
+<p>GetBlockReward returns the BlockReward field if non-nil, zero value otherwise.</p>
+<h3 id="getblockrewardok">GetBlockRewardOk<a class="headerlink" href="#getblockrewardok" title="Permanent link">&para;</a></h3>
+<p><code>func (o *InfoModel) GetBlockRewardOk() (*int32, bool)</code></p>
+<p>GetBlockRewardOk returns a tuple with the BlockReward field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.</p>
+<h3 id="setblockreward">SetBlockReward<a class="headerlink" href="#setblockreward" title="Permanent link">&para;</a></h3>
+<p><code>func (o *InfoModel) SetBlockReward(v int32)</code></p>
+<p>SetBlockReward sets BlockReward field to given value.</p>
+<h3 id="hasblockreward">HasBlockReward<a class="headerlink" href="#hasblockreward" title="Permanent link">&para;</a></h3>
+<p><code>func (o *InfoModel) HasBlockReward() bool</code></p>
+<p>HasBlockReward returns a boolean if a field has been set.</p>
+<h3 id="getlastblocktotalreward">GetLastBlockTotalReward<a class="headerlink" href="#getlastblocktotalreward" title="Permanent link">&para;</a></h3>
+<p><code>func (o *InfoModel) GetLastBlockTotalReward() int32</code></p>
+<p>GetLastBlockTotalReward returns the LastBlockTotalReward field if non-nil, zero value otherwise.</p>
+<h3 id="getlastblocktotalrewardok">GetLastBlockTotalRewardOk<a class="headerlink" href="#getlastblocktotalrewardok" title="Permanent link">&para;</a></h3>
+<p><code>func (o *InfoModel) GetLastBlockTotalRewardOk() (*int32, bool)</code></p>
+<p>GetLastBlockTotalRewardOk returns a tuple with the LastBlockTotalReward field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.</p>
+<h3 id="setlastblocktotalreward">SetLastBlockTotalReward<a class="headerlink" href="#setlastblocktotalreward" title="Permanent link">&para;</a></h3>
+<p><code>func (o *InfoModel) SetLastBlockTotalReward(v int32)</code></p>
+<p>SetLastBlockTotalReward sets LastBlockTotalReward field to given value.</p>
+<h3 id="haslastblocktotalreward">HasLastBlockTotalReward<a class="headerlink" href="#haslastblocktotalreward" title="Permanent link">&para;</a></h3>
+<p><code>func (o *InfoModel) HasLastBlockTotalReward() bool</code></p>
+<p>HasLastBlockTotalReward returns a boolean if a field has been set.</p>
+<h3 id="getposdifftotalcoinsrate">GetPosDiffTotalCoinsRate<a class="headerlink" href="#getposdifftotalcoinsrate" title="Permanent link">&para;</a></h3>
+<p><code>func (o *InfoModel) GetPosDiffTotalCoinsRate() int32</code></p>
+<p>GetPosDiffTotalCoinsRate returns the PosDiffTotalCoinsRate field if non-nil, zero value otherwise.</p>
+<h3 id="getposdifftotalcoinsrateok">GetPosDiffTotalCoinsRateOk<a class="headerlink" href="#getposdifftotalcoinsrateok" title="Permanent link">&para;</a></h3>
+<p><code>func (o *InfoModel) GetPosDiffTotalCoinsRateOk() (*int32, bool)</code></p>
+<p>GetPosDiffTotalCoinsRateOk returns a tuple with the PosDiffTotalCoinsRate field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.</p>
+<h3 id="setposdifftotalcoinsrate">SetPosDiffTotalCoinsRate<a class="headerlink" href="#setposdifftotalcoinsrate" title="Permanent link">&para;</a></h3>
+<p><code>func (o *InfoModel) SetPosDiffTotalCoinsRate(v int32)</code></p>
+<p>SetPosDiffTotalCoinsRate sets PosDiffTotalCoinsRate field to given value.</p>
+<h3 id="hasposdifftotalcoinsrate">HasPosDiffTotalCoinsRate<a class="headerlink" href="#hasposdifftotalcoinsrate" title="Permanent link">&para;</a></h3>
+<p><code>func (o *InfoModel) HasPosDiffTotalCoinsRate() bool</code></p>
+<p>HasPosDiffTotalCoinsRate returns a boolean if a field has been set.</p>
+<h3 id="getlastblocktimestamp">GetLastBlockTimestamp<a class="headerlink" href="#getlastblocktimestamp" title="Permanent link">&para;</a></h3>
+<p><code>func (o *InfoModel) GetLastBlockTimestamp() int32</code></p>
+<p>GetLastBlockTimestamp returns the LastBlockTimestamp field if non-nil, zero value otherwise.</p>
+<h3 id="getlastblocktimestampok">GetLastBlockTimestampOk<a class="headerlink" href="#getlastblocktimestampok" title="Permanent link">&para;</a></h3>
+<p><code>func (o *InfoModel) GetLastBlockTimestampOk() (*int32, bool)</code></p>
+<p>GetLastBlockTimestampOk returns a tuple with the LastBlockTimestamp field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.</p>
+<h3 id="setlastblocktimestamp">SetLastBlockTimestamp<a class="headerlink" href="#setlastblocktimestamp" title="Permanent link">&para;</a></h3>
+<p><code>func (o *InfoModel) SetLastBlockTimestamp(v int32)</code></p>
+<p>SetLastBlockTimestamp sets LastBlockTimestamp field to given value.</p>
+<h3 id="haslastblocktimestamp">HasLastBlockTimestamp<a class="headerlink" href="#haslastblocktimestamp" title="Permanent link">&para;</a></h3>
+<p><code>func (o *InfoModel) HasLastBlockTimestamp() bool</code></p>
+<p>HasLastBlockTimestamp returns a boolean if a field has been set.</p>
+<h3 id="getlastblockhash">GetLastBlockHash<a class="headerlink" href="#getlastblockhash" title="Permanent link">&para;</a></h3>
+<p><code>func (o *InfoModel) GetLastBlockHash() string</code></p>
+<p>GetLastBlockHash returns the LastBlockHash field if non-nil, zero value otherwise.</p>
+<h3 id="getlastblockhashok">GetLastBlockHashOk<a class="headerlink" href="#getlastblockhashok" title="Permanent link">&para;</a></h3>
+<p><code>func (o *InfoModel) GetLastBlockHashOk() (*string, bool)</code></p>
+<p>GetLastBlockHashOk returns a tuple with the LastBlockHash field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.</p>
+<h3 id="setlastblockhash">SetLastBlockHash<a class="headerlink" href="#setlastblockhash" title="Permanent link">&para;</a></h3>
+<p><code>func (o *InfoModel) SetLastBlockHash(v string)</code></p>
+<p>SetLastBlockHash sets LastBlockHash field to given value.</p>
+<h3 id="haslastblockhash">HasLastBlockHash<a class="headerlink" href="#haslastblockhash" title="Permanent link">&para;</a></h3>
+<p><code>func (o *InfoModel) HasLastBlockHash() bool</code></p>
+<p>HasLastBlockHash returns a boolean if a field has been set.</p>
+<h3 id="getposblocktsshiftvsactual">GetPosBlockTsShiftVsActual<a class="headerlink" href="#getposblocktsshiftvsactual" title="Permanent link">&para;</a></h3>
+<p><code>func (o *InfoModel) GetPosBlockTsShiftVsActual() int64</code></p>
+<p>GetPosBlockTsShiftVsActual returns the PosBlockTsShiftVsActual field if non-nil, zero value otherwise.</p>
+<h3 id="getposblocktsshiftvsactualok">GetPosBlockTsShiftVsActualOk<a class="headerlink" href="#getposblocktsshiftvsactualok" title="Permanent link">&para;</a></h3>
+<p><code>func (o *InfoModel) GetPosBlockTsShiftVsActualOk() (*int64, bool)</code></p>
+<p>GetPosBlockTsShiftVsActualOk returns a tuple with the PosBlockTsShiftVsActual field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.</p>
+<h3 id="setposblocktsshiftvsactual">SetPosBlockTsShiftVsActual<a class="headerlink" href="#setposblocktsshiftvsactual" title="Permanent link">&para;</a></h3>
+<p><code>func (o *InfoModel) SetPosBlockTsShiftVsActual(v int64)</code></p>
+<p>SetPosBlockTsShiftVsActual sets PosBlockTsShiftVsActual field to given value.</p>
+<h3 id="hasposblocktsshiftvsactual">HasPosBlockTsShiftVsActual<a class="headerlink" href="#hasposblocktsshiftvsactual" title="Permanent link">&para;</a></h3>
+<p><code>func (o *InfoModel) HasPosBlockTsShiftVsActual() bool</code></p>
+<p>HasPosBlockTsShiftVsActual returns a boolean if a field has been set.</p>
+<h3 id="getoutsstat">GetOutsStat<a class="headerlink" href="#getoutsstat" title="Permanent link">&para;</a></h3>
+<p><code>func (o *InfoModel) GetOutsStat() map[string]int32</code></p>
+<p>GetOutsStat returns the OutsStat field if non-nil, zero value otherwise.</p>
+<h3 id="getoutsstatok">GetOutsStatOk<a class="headerlink" href="#getoutsstatok" title="Permanent link">&para;</a></h3>
+<p><code>func (o *InfoModel) GetOutsStatOk() (*map[string]int32, bool)</code></p>
+<p>GetOutsStatOk returns a tuple with the OutsStat field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.</p>
+<h3 id="setoutsstat">SetOutsStat<a class="headerlink" href="#setoutsstat" title="Permanent link">&para;</a></h3>
+<p><code>func (o *InfoModel) SetOutsStat(v map[string]int32)</code></p>
+<p>SetOutsStat sets OutsStat field to given value.</p>
+<h3 id="hasoutsstat">HasOutsStat<a class="headerlink" href="#hasoutsstat" title="Permanent link">&para;</a></h3>
+<p><code>func (o *InfoModel) HasOutsStat() bool</code></p>
+<p>HasOutsStat returns a boolean if a field has been set.</p>
+<h3 id="getperformancedata">GetPerformanceData<a class="headerlink" href="#getperformancedata" title="Permanent link">&para;</a></h3>
+<p><code>func (o *InfoModel) GetPerformanceData() PerformanceModel</code></p>
+<p>GetPerformanceData returns the PerformanceData field if non-nil, zero value otherwise.</p>
+<h3 id="getperformancedataok">GetPerformanceDataOk<a class="headerlink" href="#getperformancedataok" title="Permanent link">&para;</a></h3>
+<p><code>func (o *InfoModel) GetPerformanceDataOk() (*PerformanceModel, bool)</code></p>
+<p>GetPerformanceDataOk returns a tuple with the PerformanceData field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.</p>
+<h3 id="setperformancedata">SetPerformanceData<a class="headerlink" href="#setperformancedata" title="Permanent link">&para;</a></h3>
+<p><code>func (o *InfoModel) SetPerformanceData(v PerformanceModel)</code></p>
+<p>SetPerformanceData sets PerformanceData field to given value.</p>
+<h3 id="hasperformancedata">HasPerformanceData<a class="headerlink" href="#hasperformancedata" title="Permanent link">&para;</a></h3>
+<p><code>func (o *InfoModel) HasPerformanceData() bool</code></p>
+<p>HasPerformanceData returns a boolean if a field has been set.</p>
+<h3 id="getofferscount">GetOffersCount<a class="headerlink" href="#getofferscount" title="Permanent link">&para;</a></h3>
+<p><code>func (o *InfoModel) GetOffersCount() int32</code></p>
+<p>GetOffersCount returns the OffersCount field if non-nil, zero value otherwise.</p>
+<h3 id="getofferscountok">GetOffersCountOk<a class="headerlink" href="#getofferscountok" title="Permanent link">&para;</a></h3>
+<p><code>func (o *InfoModel) GetOffersCountOk() (*int32, bool)</code></p>
+<p>GetOffersCountOk returns a tuple with the OffersCount field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.</p>
+<h3 id="setofferscount">SetOffersCount<a class="headerlink" href="#setofferscount" title="Permanent link">&para;</a></h3>
+<p><code>func (o *InfoModel) SetOffersCount(v int32)</code></p>
+<p>SetOffersCount sets OffersCount field to given value.</p>
+<h3 id="hasofferscount">HasOffersCount<a class="headerlink" href="#hasofferscount" title="Permanent link">&para;</a></h3>
+<p><code>func (o *InfoModel) HasOffersCount() bool</code></p>
+<p>HasOffersCount returns a boolean if a field has been set.</p>
+<h3 id="getexpirationmediantimestamp">GetExpirationMedianTimestamp<a class="headerlink" href="#getexpirationmediantimestamp" title="Permanent link">&para;</a></h3>
+<p><code>func (o *InfoModel) GetExpirationMedianTimestamp() int32</code></p>
+<p>GetExpirationMedianTimestamp returns the ExpirationMedianTimestamp field if non-nil, zero value otherwise.</p>
+<h3 id="getexpirationmediantimestampok">GetExpirationMedianTimestampOk<a class="headerlink" href="#getexpirationmediantimestampok" title="Permanent link">&para;</a></h3>
+<p><code>func (o *InfoModel) GetExpirationMedianTimestampOk() (*int32, bool)</code></p>
+<p>GetExpirationMedianTimestampOk returns a tuple with the ExpirationMedianTimestamp field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.</p>
+<h3 id="setexpirationmediantimestamp">SetExpirationMedianTimestamp<a class="headerlink" href="#setexpirationmediantimestamp" title="Permanent link">&para;</a></h3>
+<p><code>func (o *InfoModel) SetExpirationMedianTimestamp(v int32)</code></p>
+<p>SetExpirationMedianTimestamp sets ExpirationMedianTimestamp field to given value.</p>
+<h3 id="hasexpirationmediantimestamp">HasExpirationMedianTimestamp<a class="headerlink" href="#hasexpirationmediantimestamp" title="Permanent link">&para;</a></h3>
+<p><code>func (o *InfoModel) HasExpirationMedianTimestamp() bool</code></p>
+<p>HasExpirationMedianTimestamp returns a boolean if a field has been set.</p>
+<p><a href="index.html#documentation-for-models">[Back to Model list]</a> <a href="index.html#documentation-for-api-endpoints">[Back to API list]</a> <a href="index.html">[Back to README]</a></p>
+
+
+
+
+
+
+
+  
+    
+  
+  
+    
+  
+
+
+  <aside class="md-source-file">
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Last update">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="October 19, 2025 19:00:10 UTC">October 19, 2025</span>
+  </span>
+
+    
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Created">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="October 19, 2025 19:00:10 UTC">October 19, 2025</span>
+  </span>
+
+    
+    
+    
+      
+  <span class="md-source-file__fact">
+    
+      
+  <span class="md-icon" title="Contributors">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33s1.71.11 2.5.33c1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2"/></svg>
+  </span>
+  <span>GitHub</span>
+
+    
+    <nav>
+      
+        <a href="https://github.com/Snider" class="md-author" title="@Snider">
+          
+          <img src="https://avatars.githubusercontent.com/u/631881?v=4&size=72" alt="Snider">
+        </a>
+      
+      
+      
+    </nav>
+  </span>
+
+    
+  </aside>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      LetheanVPN &copy; EUPL-1.2 &mdash; 2017 to &infin; and beyond
+    </div>
+  
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://twitter.com/letheanVPN" target="_blank" rel="noopener" title="twitter.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M459.4 151.7c.3 4.5.3 9.1.3 13.6 0 138.7-105.6 298.6-298.6 298.6-59.5 0-114.7-17.2-161.1-47.1 8.4 1 16.6 1.3 25.3 1.3 49.1 0 94.2-16.6 130.3-44.8-46.1-1-84.8-31.2-98.1-72.8 6.5 1 13 1.6 19.8 1.6 9.4 0 18.8-1.3 27.6-3.6-48.1-9.7-84.1-52-84.1-103v-1.3c14 7.8 30.2 12.7 47.4 13.3-28.3-18.8-46.8-51-46.8-87.4 0-19.5 5.2-37.4 14.3-53C87.4 130.8 165 172.4 252.1 176.9c-1.6-7.8-2.6-15.9-2.6-24C249.5 95.1 296.3 48 354.4 48c30.2 0 57.5 12.7 76.7 33.1 23.7-4.5 46.5-13.3 66.6-25.3-7.8 24.4-24.4 44.8-46.1 57.8 21.1-2.3 41.6-8.1 60.4-16.2-14.3 20.8-32.2 39.3-52.6 54.3"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://hub.docker.com/u/lthn" target="_blank" rel="noopener" title="hub.docker.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M349.9 236.3h-66.1v-59.4h66.1zm0-204.3h-66.1v60.7h66.1zm78.2 144.8H362v59.4h66.1zm-156.3-72.1h-66.1v60.1h66.1zm78.1 0h-66.1v60.1h66.1zm276.8 100c-14.4-9.7-47.6-13.2-73.1-8.4-3.3-24-16.7-44.9-41.1-63.7l-14-9.3-9.3 14c-18.4 27.8-23.4 73.6-3.7 103.8-8.7 4.7-25.8 11.1-48.4 10.7H2.4c-8.7 50.8 5.8 116.8 44 162.1 37.1 43.9 92.7 66.2 165.4 66.2 157.4 0 273.9-72.5 328.4-204.2 21.4.4 67.6.1 91.3-45.2 1.5-2.5 6.6-13.2 8.5-17.1zm-511.1-27.9h-66v59.4h66.1v-59.4zm78.1 0h-66.1v59.4h66.1zm78.1 0h-66.1v59.4h66.1zm-78.1-72.1h-66.1v60.1h66.1z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/letheanVPN" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      <div class="md-progress" data-md-component="progress" role="progressbar"></div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.instant.prefetch", "navigation.instant.progress", "navigation.instant.preview", "navigation.tracking", "navigation.tabs", "navigation.indexes", "navigation.expand", "navigation.sections", "navigation.path", "navigation.top", "search.suggest", "search.highlight", "search.share", "announce.dismiss", "content.tabs.link", "content.action.edit", "content.action.view", "content.code.copy"], "search": "../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+  
+      <script src="../../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+    
+
+  <!-- Extra JavaScript (can't be set in mkdocs.yml due to content hash) -->
+  <script src="../../assets/javascripts/custom.js"></script>
+
+  </body>
+</html>
