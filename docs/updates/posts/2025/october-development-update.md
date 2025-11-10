@@ -16,7 +16,6 @@ title: Development Update
 
 With the closure of the old chain, its network difficulty dropped to a point a single thread can mine it. The SWAP height is: `2,040,903`
 
-![](https://media.discordapp.net/attachments/1006194868890128526/1422327172948951173/image.png?ex=68e973e7&is=68e82267&hm=992ffc7864dc30045985390d7a01e81b86ca80c4021b9e80ea983cd2cb7722ac&=&format=webp&quality=lossless&width=2172&height=678)
 
 This post covers what's next as the Lethean community starts our new chain, and the first feature after recent build stability updates.
 
@@ -81,7 +80,6 @@ The framework was recently load-tested to handle 5 million concurrent web socket
 The personal version will include the features of `lethean-api` in the `lethean-chain-node` binary, but without `stratum`, `market`, or anything likely to become geographically problematic in the coming years.
 
 A CryptoNote chain with a local OpenAPI Server + Docs interface & SDKs in your programming language, anyone?
-![](https://media.discordapp.net/attachments/1006194868890128526/1425825214599790703/image.png?ex=68e8feb5&is=68e7ad35&hm=ea6939aabfc4d0a4f20462f74b16bb8729df4f35a52f8ba8f171ebf2de670f92&=&format=webp&quality=lossless&width=2912&height=1586)
 
 The first "cool" feature I'll add on top is an in-binary torrent of the chain's pre-download file, with the seed nodes and people who select to share the torrent seeding.
 

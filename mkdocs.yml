@@ -82,31 +82,25 @@ plugins:
       listings: true
   - meta:
   - blog:
+      authors_profiles_name: Developers
+      authors_profiles: true
+      archive_toc: true
+      categories_toc: true
       blog_dir: updates
-  # CI=1 mkdocs build
-  - group:
-      enabled: !ENV CI
-      plugins:
-        - git-revision-date-localized:
-            type: date
-            fallback_to_build_date: true
-            enable_creation_date: true
-        - git-committers:
-            repository: letheanVPN/documentation
-            branch: main
-  # INSIDERS=1 mkdocs build
-  - group:
-      enabled: !ENV INSIDERS
-      plugins:
-        - meta
-        - optimize
-        - typeset
-        - privacy:
-            links_attr_map:
-              target: _blank
-            assets_exclude:
-              - giscus.app/*
-  
+      git-revision-date-localized:
+          type: date
+          fallback_to_build_date: true
+          enable_creation_date: true
+      git-committers:
+          repository: letheanVPN/documentation
+          branch: main
+  - meta:
+  - optimize:
+  - typeset:
+  - privacy:
+      links_noopener: true
+      links_attr_map:
+        target: _blank
   - search:
       lang:
         - en

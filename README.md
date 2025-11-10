@@ -6,7 +6,7 @@ Merging PR's will automatically update the documentation website.
 ## Install deps
 
 ```shell
-pip install mkdocs-material mkdocs-git-revision-date-localized-plugin
+pip3 install mkdocs-material mkdocs-git-revision-date-localized-plugin
 ```
 ## Run Documentation Server
 ```shell
