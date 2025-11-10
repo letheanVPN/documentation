@@ -2,174 +2,182 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://lt.hn/index.html</loc>
-         <lastmod>2025-10-25</lastmod>
+         <lastmod>2025-11-10</lastmod>
     </url>
     <url>
          <loc>https://lt.hn/getting-started/index.html</loc>
-         <lastmod>2025-10-25</lastmod>
+         <lastmod>2025-11-10</lastmod>
     </url>
     <url>
          <loc>https://lt.hn/getting-started/chain.html</loc>
-         <lastmod>2025-10-25</lastmod>
+         <lastmod>2025-11-10</lastmod>
     </url>
     <url>
          <loc>https://lt.hn/getting-started/wallet.html</loc>
-         <lastmod>2025-10-25</lastmod>
+         <lastmod>2025-11-10</lastmod>
     </url>
     <url>
          <loc>https://lt.hn/getting-started/developer/index.html</loc>
-         <lastmod>2025-10-25</lastmod>
+         <lastmod>2025-11-10</lastmod>
     </url>
     <url>
          <loc>https://lt.hn/getting-started/developer/build.html</loc>
-         <lastmod>2025-10-25</lastmod>
+         <lastmod>2025-11-10</lastmod>
     </url>
     <url>
          <loc>https://lt.hn/getting-started/developer/docker.html</loc>
-         <lastmod>2025-10-25</lastmod>
+         <lastmod>2025-11-10</lastmod>
     </url>
     <url>
          <loc>https://lt.hn/getting-started/developer/sdks.html</loc>
-         <lastmod>2025-10-25</lastmod>
+         <lastmod>2025-11-10</lastmod>
     </url>
     <url>
          <loc>https://lt.hn/network/index.html</loc>
-         <lastmod>2025-10-25</lastmod>
+         <lastmod>2025-11-10</lastmod>
     </url>
     <url>
          <loc>https://lt.hn/network/vpn.html</loc>
-         <lastmod>2025-10-25</lastmod>
+         <lastmod>2025-11-10</lastmod>
     </url>
     <url>
          <loc>https://lt.hn/sdk/go/index.html</loc>
-         <lastmod>2025-10-25</lastmod>
+         <lastmod>2025-11-10</lastmod>
     </url>
     <url>
          <loc>https://lt.hn/sdk/go/BlockDetailsModel.html</loc>
-         <lastmod>2025-10-25</lastmod>
+         <lastmod>2025-11-10</lastmod>
     </url>
     <url>
          <loc>https://lt.hn/sdk/go/BlockProcessingPerformanceModel.html</loc>
-         <lastmod>2025-10-25</lastmod>
+         <lastmod>2025-11-10</lastmod>
     </url>
     <url>
          <loc>https://lt.hn/sdk/go/BlockTemplateModel.html</loc>
-         <lastmod>2025-10-25</lastmod>
+         <lastmod>2025-11-10</lastmod>
     </url>
     <url>
          <loc>https://lt.hn/sdk/go/BlockTemplateRequestModel.html</loc>
-         <lastmod>2025-10-25</lastmod>
+         <lastmod>2025-11-10</lastmod>
     </url>
     <url>
          <loc>https://lt.hn/sdk/go/BlockUtilsSdkClientGo.html</loc>
-         <lastmod>2025-10-25</lastmod>
+         <lastmod>2025-11-10</lastmod>
     </url>
     <url>
          <loc>https://lt.hn/sdk/go/DbStatInfoModel.html</loc>
-         <lastmod>2025-10-25</lastmod>
+         <lastmod>2025-11-10</lastmod>
     </url>
     <url>
          <loc>https://lt.hn/sdk/go/HeightModel.html</loc>
-         <lastmod>2025-10-25</lastmod>
+         <lastmod>2025-11-10</lastmod>
     </url>
     <url>
          <loc>https://lt.hn/sdk/go/InfoModel.html</loc>
-         <lastmod>2025-10-25</lastmod>
+         <lastmod>2025-11-10</lastmod>
     </url>
     <url>
          <loc>https://lt.hn/sdk/go/InfoUtilsSdkClientGo.html</loc>
-         <lastmod>2025-10-25</lastmod>
+         <lastmod>2025-11-10</lastmod>
     </url>
     <url>
          <loc>https://lt.hn/sdk/go/MaintainersInfoModel.html</loc>
-         <lastmod>2025-10-25</lastmod>
+         <lastmod>2025-11-10</lastmod>
     </url>
     <url>
          <loc>https://lt.hn/sdk/go/PerformanceModel.html</loc>
-         <lastmod>2025-10-25</lastmod>
+         <lastmod>2025-11-10</lastmod>
     </url>
     <url>
          <loc>https://lt.hn/sdk/go/PosEntryModel.html</loc>
-         <lastmod>2025-10-25</lastmod>
+         <lastmod>2025-11-10</lastmod>
     </url>
     <url>
          <loc>https://lt.hn/sdk/go/SubmitBlockRequestModel.html</loc>
-         <lastmod>2025-10-25</lastmod>
+         <lastmod>2025-11-10</lastmod>
     </url>
     <url>
          <loc>https://lt.hn/sdk/go/SubmitBlockResponseModel.html</loc>
-         <lastmod>2025-10-25</lastmod>
+         <lastmod>2025-11-10</lastmod>
     </url>
     <url>
          <loc>https://lt.hn/sdk/go/TransactionAttachmentModel.html</loc>
-         <lastmod>2025-10-25</lastmod>
+         <lastmod>2025-11-10</lastmod>
     </url>
     <url>
          <loc>https://lt.hn/sdk/go/TransactionDetailsModel.html</loc>
-         <lastmod>2025-10-25</lastmod>
+         <lastmod>2025-11-10</lastmod>
     </url>
     <url>
          <loc>https://lt.hn/sdk/go/TransactionExtraModel.html</loc>
-         <lastmod>2025-10-25</lastmod>
+         <lastmod>2025-11-10</lastmod>
     </url>
     <url>
          <loc>https://lt.hn/sdk/go/TransactionInputModel.html</loc>
-         <lastmod>2025-10-25</lastmod>
+         <lastmod>2025-11-10</lastmod>
     </url>
     <url>
          <loc>https://lt.hn/sdk/go/TransactionOutputModel.html</loc>
-         <lastmod>2025-10-25</lastmod>
+         <lastmod>2025-11-10</lastmod>
     </url>
     <url>
          <loc>https://lt.hn/sdk/go/TxGenerationContextModel.html</loc>
-         <lastmod>2025-10-25</lastmod>
+         <lastmod>2025-11-10</lastmod>
     </url>
     <url>
          <loc>https://lt.hn/sdk/go/TxPoolPerformanceModel.html</loc>
-         <lastmod>2025-10-25</lastmod>
+         <lastmod>2025-11-10</lastmod>
     </url>
     <url>
          <loc>https://lt.hn/sdk/go/TxProcessingPerformanceModel.html</loc>
-         <lastmod>2025-10-25</lastmod>
+         <lastmod>2025-11-10</lastmod>
     </url>
     <url>
          <loc>https://lt.hn/sdk/go/VersionModel.html</loc>
-         <lastmod>2025-10-25</lastmod>
+         <lastmod>2025-11-10</lastmod>
     </url>
     <url>
          <loc>https://lt.hn/updates/index.html</loc>
-         <lastmod>2025-10-25</lastmod>
+         <lastmod>2025-11-10</lastmod>
+    </url>
+    <url>
+         <loc>https://lt.hn/updates/2025/11/10/november-development-update.html</loc>
+         <lastmod>2025-11-10</lastmod>
     </url>
     <url>
          <loc>https://lt.hn/updates/2025/10/09/development-update.html</loc>
-         <lastmod>2025-10-25</lastmod>
+         <lastmod>2025-11-10</lastmod>
     </url>
     <url>
          <loc>https://lt.hn/updates/2025/10/17/why-ethics.html</loc>
-         <lastmod>2025-10-25</lastmod>
+         <lastmod>2025-11-10</lastmod>
     </url>
     <url>
          <loc>https://lt.hn/web3/index.html</loc>
-         <lastmod>2025-10-25</lastmod>
+         <lastmod>2025-11-10</lastmod>
     </url>
     <url>
          <loc>https://lt.hn/web3/config.html</loc>
-         <lastmod>2025-10-25</lastmod>
+         <lastmod>2025-11-10</lastmod>
     </url>
     <url>
          <loc>https://lt.hn/web3/tokenomics.html</loc>
-         <lastmod>2025-10-25</lastmod>
+         <lastmod>2025-11-10</lastmod>
     </url>
     <url>
          <loc>https://lt.hn/web3/labs/gateway.html</loc>
-         <lastmod>2025-10-25</lastmod>
+         <lastmod>2025-11-10</lastmod>
     </url>
     <url>
          <loc>https://lt.hn/updates/archive/2025.html</loc>
-         <lastmod>2025-10-25</lastmod>
+         <lastmod>2025-11-10</lastmod>
     </url>
     <url>
          <loc>https://lt.hn/updates/category/development.html</loc>
-         <lastmod>2025-10-25</lastmod>
+         <lastmod>2025-11-10</lastmod>
+    </url>
+    <url>
+         <loc>https://lt.hn/updates/author/snider.html</loc>
+         <lastmod>2025-11-10</lastmod>
     </url>
 </urlset>
