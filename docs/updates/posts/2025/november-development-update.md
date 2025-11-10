@@ -35,9 +35,6 @@ Technical notes:
 
 - Purpose: Reference native-like desktop app integrating framework modules.
 - Frontend: HTML/CSS/TypeScript.
-- Packaging: Electron currently; Tauri experiments in progress for lighter builds.
-- Integrations: local RootFS worker, built-in DNS client, extensions/plugin system.
-- Dev: Run in dev mode to exercise Core.Framework, Core.Help, and Miner-CLI together.
 
 ## Core.Framework
 
@@ -52,13 +49,7 @@ Key features:
 - Modular plugin loader for app extensions.
 - Secure local storage and key handling (encrypted stores).
 - Cross-platform event/IPC primitives and lifecycle management.
-- Example integrations for Poindexter and RootFS datanode.
 
-Technical notes:
-
-- Language: TypeScript + Node.js runtime helpers.
-- Packaging: npm package(s) for frontend/runtime bindings; Python helpers for native bits documented via pip-adjacent notes.
-- Tooling: TypeScript typings, lints, and CI unit tests in progress.
 
 ## Core.Help
 
@@ -67,14 +58,6 @@ Status: Alpha — usable and embeddable.
 ![img_2.png](img_2.png)
 
 Provides client-side deep-linkable help documentation that opens in its own window.
-
-Technical notes:
-
-- Content stored as Markdown with simple frontmatter.
-- Viewer is a lightweight webview window with indexed search and fragment support.
-- rich search ranking and offline indexing
-- Deep linking supports structured topics and URL fragments for contextual help.
-- Designed to be embedded into multiple host apps with minimal API surface.
 
 
 ## dns.lthn.io
