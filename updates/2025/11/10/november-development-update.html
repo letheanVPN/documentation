@@ -2638,7 +2638,7 @@
                           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a8 8 0 0 0 8-8 8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10 10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67-.75 1.23L11 13V7z"/></svg>
                           <span class="md-ellipsis">
                             
-                              4 min read
+                              3 min read
                             
                           </span>
                         </div>
@@ -2708,9 +2708,6 @@
 <ul>
 <li>Purpose: Reference native-like desktop app integrating framework modules.</li>
 <li>Frontend: HTML/CSS/TypeScript.</li>
-<li>Packaging: Electron currently; Tauri experiments in progress for lighter builds.</li>
-<li>Integrations: local RootFS worker, built-in DNS client, extensions/plugin system.</li>
-<li>Dev: Run in dev mode to exercise Core.Framework, Core.Help, and Miner-CLI together.</li>
 </ul>
 <h2 id="coreframework">Core.Framework<a class="headerlink" href="#coreframework" title="Permanent link">&para;</a></h2>
 <p>Status: Beta — expanding API coverage and examples.</p>
@@ -2721,26 +2718,11 @@
 <li>Modular plugin loader for app extensions.</li>
 <li>Secure local storage and key handling (encrypted stores).</li>
 <li>Cross-platform event/IPC primitives and lifecycle management.</li>
-<li>Example integrations for Poindexter and RootFS datanode.</li>
-</ul>
-<p>Technical notes:</p>
-<ul>
-<li>Language: TypeScript + Node.js runtime helpers.</li>
-<li>Packaging: npm package(s) for frontend/runtime bindings; Python helpers for native bits documented via pip-adjacent notes.</li>
-<li>Tooling: TypeScript typings, lints, and CI unit tests in progress.</li>
 </ul>
 <h2 id="corehelp">Core.Help<a class="headerlink" href="#corehelp" title="Permanent link">&para;</a></h2>
 <p>Status: Alpha — usable and embeddable.</p>
 <p><img alt="img_2.png" src="../../img_2.png" /></p>
 <p>Provides client-side deep-linkable help documentation that opens in its own window.</p>
-<p>Technical notes:</p>
-<ul>
-<li>Content stored as Markdown with simple frontmatter.</li>
-<li>Viewer is a lightweight webview window with indexed search and fragment support.</li>
-<li>rich search ranking and offline indexing</li>
-<li>Deep linking supports structured topics and URL fragments for contextual help.</li>
-<li>Designed to be embedded into multiple host apps with minimal API surface.</li>
-</ul>
 <h2 id="dnslthnio">dns.lthn.io<a class="headerlink" href="#dnslthnio" title="Permanent link">&para;</a></h2>
 <p>Status: Live — monitoring enabled.</p>
 <p><img alt="img_3.png" src="../../img_3.png" /></p>
